@@ -74,7 +74,13 @@ This project is a basketball shot clock timer application designed to replicate 
 ## Changelog
 
 - July 04, 2025. Initial setup
+- July 04, 2025. Removed all branding (ESA, SCT-4, Court 1, Electronic Scoreboards Australia)
+- July 04, 2025. Changed timer display to always show red numbers
+- July 04, 2025. Optimized mobile layout with compact spacing and responsive design
+- July 04, 2025. Added +1/-1 indicators on START/RESET buttons
+- July 04, 2025. Added PayPal support link for hosting costs
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Contact: kasugars@gmail.com for support/donations

@@ -49,28 +49,56 @@ class ShotClockTimer {
             this.stopBtn.classList.remove('pressed');
         });
         
-        // Start button
+        // Start button - handle both click and touch
         this.startBtn.addEventListener('click', (e) => {
             e.preventDefault();
             if (this.isStopPressed) {
                 // Add 1 second when STOP is held
                 this.adjustTime(1);
+                this.addButtonFeedback(this.startBtn);
             } else {
                 this.startTimer();
+                this.addButtonFeedback(this.startBtn);
             }
-            this.addButtonFeedback(this.startBtn);
+        });
+
+        // Touch events for start button
+        this.startBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            if (this.isStopPressed) {
+                // Add 1 second when STOP is held
+                this.adjustTime(1);
+                this.addButtonFeedback(this.startBtn);
+            } else {
+                this.startTimer();
+                this.addButtonFeedback(this.startBtn);
+            }
         });
         
-        // Reset button
+        // Reset button - handle both click and touch
         this.resetBtn.addEventListener('click', (e) => {
             e.preventDefault();
             if (this.isStopPressed) {
                 // Subtract 1 second when STOP is held
                 this.adjustTime(-1);
+                this.addButtonFeedback(this.resetBtn);
             } else {
                 this.resetTimer(24);
+                this.addButtonFeedback(this.resetBtn);
             }
-            this.addButtonFeedback(this.resetBtn);
+        });
+
+        // Touch events for reset button
+        this.resetBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            if (this.isStopPressed) {
+                // Subtract 1 second when STOP is held
+                this.adjustTime(-1);
+                this.addButtonFeedback(this.resetBtn);
+            } else {
+                this.resetTimer(24);
+                this.addButtonFeedback(this.resetBtn);
+            }
         });
         
         // Alt Reset button
@@ -170,6 +198,12 @@ class ShotClockTimer {
         this.isExpired = false;
         this.timeDisplay.classList.remove('expired');
         this.updateDisplay();
+        
+        // Visual feedback for adjustment
+        this.timeDisplay.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+            this.timeDisplay.style.transform = 'scale(1)';
+        }, 150);
     }
     
     expireTimer() {

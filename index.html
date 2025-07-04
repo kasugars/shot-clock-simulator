@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCT-4 Shot Clock Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="court-label">SCT-4</div>
+            <div class="court-number">COURT 1</div>
+            <div class="esa-logo">ESA</div>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="main-title">SHOT CLOCK TIMER</h1>
+
+        <!-- Shot Clock Display -->
+        <div class="shot-clock-display">
+            <div id="timeDisplay" class="time-display">24</div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="button-row">
+                <button id="stopBtn" class="control-btn stop-btn" data-action="stop">
+                    <span class="btn-text">STOP</span>
+                </button>
+                <button id="startBtn" class="control-btn start-btn" data-action="start">
+                    <span class="btn-text">START</span>
+                </button>
+                <button id="resetBtn" class="control-btn reset-btn" data-action="reset">
+                    <span class="btn-text">RESET</span>
+                </button>
+                <button id="altResetBtn" class="control-btn alt-reset-btn" data-action="alt-reset">
+                    <span class="btn-text">ALT<br>RESET</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <div class="instruction-left">
+                To adjust time, press and<br>
+                hold STOP then +1 or -1
+            </div>
+            <div class="instruction-right">
+                To blank display while shot<br>
+                is in progress press and hold<br>
+                RESET button
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="company-logo">△</div>
+            <div class="company-name">Electronic Scoreboards Australia</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

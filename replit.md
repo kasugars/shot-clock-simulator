@@ -1,8 +1,8 @@
-# SCT-4 Shot Clock Timer
+# Shot Clock Trainer
 
 ## Overview
 
-This project is a basketball shot clock timer application designed to replicate the functionality of professional shot clock systems. The application provides a digital countdown timer with manual controls for starting, stopping, and resetting the clock. It features a clean, hardware-inspired interface that mimics the appearance of actual court-side timing equipment.
+This project is a basketball shot clock trainer application designed to help players practice with authentic shot clock timing. The application provides a digital countdown timer with manual controls for starting, stopping, and resetting the clock. It features a clean, mobile-optimized interface perfect for basketball training sessions.
 
 ## System Architecture
 

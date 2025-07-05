@@ -20,7 +20,7 @@
         <div class="basketball-court">
             <div class="court-container">
                 <!-- Front Court (Shot Clock Trainer) -->
-                <div class="court-half front-court" onclick="goToShotClock()">
+                <div class="court-half front-court" onclick="goToShotClockFixed()">
                     <div class="court-content">
                         <div class="court-label">FRONT COURT</div>
                         <div class="training-option">
@@ -64,6 +64,10 @@
         
         function goToShotClock() {
             window.location.href = 'shot-clock.html';
+        }
+        
+        function goToShotClockFixed() {
+            window.location.href = 'shot-clock-fixed.html';
         }
         
         function goToScoreboard() {

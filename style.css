@@ -870,10 +870,9 @@ body {
 }
 
 .lcd-screen {
-    background: #2a2a2a;
+    background: #d3d3d3;
     padding: 20px;
     border-radius: 8px;
-    border: 3px inset #666;
 }
 
 .team-row-a, .team-row-b {
@@ -908,31 +907,27 @@ body {
     font-family: 'Orbitron', monospace;
     font-size: 2.5em;
     font-weight: 900;
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00;
-    background: #000;
+    color: #000000;
+    background: #d3d3d3;
     padding: 10px;
     border-radius: 6px;
     text-align: center;
-    border: 2px inset #444;
 }
 
 .time-display {
     font-family: 'Orbitron', monospace;
     font-size: 3em;
     font-weight: 900;
-    color: #00ff00;
-    text-shadow: 0 0 15px #00ff00;
-    background: #000;
+    color: #000000;
+    background: #d3d3d3;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
-    border: 2px inset #444;
 }
 
 .possession-section {
     font-size: 2em;
-    color: #00ff00;
+    color: #000000;
     text-align: center;
 }
 

@@ -578,3 +578,239 @@ body {
     50% { transform: scale(0.95); }
     100% { transform: scale(1); }
 }
+
+/* Basketball Court Navigation Styles */
+.main-menu {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2c5530, #1e4d23);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-header h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.menu-header p {
+    font-size: 1.2em;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.basketball-court {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.court-container {
+    position: relative;
+    background: #d2691e;
+    border: 4px solid white;
+    border-radius: 8px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.court-half {
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.court-half:hover {
+    transform: scale(1.02);
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.2);
+}
+
+.front-court {
+    background: linear-gradient(180deg, #ff6b35 0%, #f7931e 100%);
+    border-radius: 4px 4px 0 0;
+}
+
+.back-court {
+    background: linear-gradient(0deg, #4a90e2 0%, #357abd 100%);
+    border-radius: 0 0 4px 4px;
+}
+
+.court-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.court-label {
+    font-size: 0.9em;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.training-option h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.training-option p {
+    font-size: 1em;
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.court-icon {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.center-line {
+    position: relative;
+    height: 4px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-circle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: #d2691e;
+    position: absolute;
+}
+
+.menu-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.menu-footer p {
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.paypal-link {
+    display: inline-block;
+    background: #ff6b35;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+}
+
+.paypal-link:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+}
+
+/* Back Navigation */
+.back-nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-btn {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* Mobile Responsive for Basketball Court */
+@media (max-width: 768px) {
+    .main-menu {
+        padding: 15px;
+    }
+    
+    .menu-header h1 {
+        font-size: 2em;
+    }
+    
+    .court-container {
+        min-height: 350px;
+    }
+    
+    .training-option h2 {
+        font-size: 1.5em;
+    }
+    
+    .training-option p {
+        font-size: 0.9em;
+    }
+    
+    .court-content {
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-menu {
+        padding: 10px;
+    }
+    
+    .menu-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .court-container {
+        min-height: 300px;
+    }
+    
+    .training-option h2 {
+        font-size: 1.3em;
+    }
+    
+    .court-content {
+        padding: 20px 10px;
+    }
+    
+    .center-circle {
+        width: 40px;
+        height: 40px;
+    }
+}

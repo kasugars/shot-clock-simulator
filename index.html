@@ -3,109 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shot Clock Trainer</title>
+    <title>Basketball Training Suite</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-
-
-        <!-- Main Title -->
-        <h1 class="main-title">SHOT CLOCK TRAINER</h1>
-
-        <!-- Shot Clock Display -->
-        <div class="shot-clock-display">
-            <div id="timeDisplay" class="time-display">24</div>
+    <div class="main-menu">
+        <div class="menu-header">
+            <h1>Basketball Training Suite</h1>
+            <p>Choose your training mode</p>
         </div>
-
-        <!-- Control Panel -->
-        <div class="control-panel">
-            <div class="button-row">
-                <button id="stopBtn" class="control-btn stop-btn" data-action="stop">
-                    <span class="btn-text">STOP</span>
-                </button>
-                <button id="startBtn" class="control-btn start-btn" data-action="start">
-                    <span class="btn-text">START</span>
-                    <span class="btn-small-text">+1</span>
-                </button>
-                <button id="resetBtn" class="control-btn reset-btn" data-action="reset">
-                    <span class="btn-text">RESET</span>
-                    <span class="btn-small-text">-1</span>
-                </button>
-                <button id="altResetBtn" class="control-btn alt-reset-btn" data-action="alt-reset">
-                    <span class="btn-text">ALT<br>RESET</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Instructions -->
-        <div class="instructions">
-            <div class="instruction-left">
-                Hold STOP + tap START for +1 sec<br>
-                Hold STOP + tap RESET for -1 sec
-            </div>
-            <div class="instruction-right">
-                Tap multiple times while<br>
-                holding STOP to adjust quickly
-            </div>
-        </div>
-
-        <!-- Keyboard Controls -->
-        <div class="keyboard-controls">
-            <h4>Keyboard Controls:</h4>
-            <div class="controls-grid">
-                <div class="control-item">
-                    <span class="key">A</span>
-                    <span class="action">STOP</span>
+        
+        <div class="basketball-court">
+            <div class="court-container">
+                <!-- Front Court (Shot Clock Trainer) -->
+                <div class="court-half front-court" onclick="goToShotClock()">
+                    <div class="court-content">
+                        <div class="court-label">FRONT COURT</div>
+                        <div class="training-option">
+                            <h2>Shot Clock Trainer</h2>
+                            <p>Practice timing with 24/14 second shot clocks</p>
+                            <div class="court-icon">🏀</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="control-item">
-                    <span class="key">S</span>
-                    <span class="action">START (+1 if holding A)</span>
+                
+                <!-- Center Line -->
+                <div class="center-line">
+                    <div class="center-circle"></div>
                 </div>
-                <div class="control-item">
-                    <span class="key">D</span>
-                    <span class="action">RESET (-1 if holding A)</span>
-                </div>
-                <div class="control-item">
-                    <span class="key">F</span>
-                    <span class="action">ALT RESET</span>
+                
+                <!-- Back Court (Scoreboard Trainer) -->
+                <div class="court-half back-court" onclick="goToScoreboard()">
+                    <div class="court-content">
+                        <div class="court-label">BACK COURT</div>
+                        <div class="training-option">
+                            <h2>Scoreboard Trainer</h2>
+                            <p>Coming Soon - Practice with game scenarios</p>
+                            <div class="court-icon">📊</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
-
-        <!-- Mobile Orientation Notice -->
-        <div class="mobile-notice">
-            Works better in landscape mode on handheld devices
-        </div>
-
-        <!-- Practice Tip -->
-        <div class="practice-tip">
-            <strong>PRACTICE TIP:</strong> Watch a Basketball game with your phone and try to match what is happening with the shot clock. In 2 games you will be a master.
-        </div>
-
-        <!-- Rules Section -->
-        <div class="rules-section">
-            <p>📋 <a href="https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf" target="_blank" class="rules-link">Section 29 - Official FIBA Shot Clock Rules</a></p>
-        </div>
-
-        <!-- Support Section -->
-        <div class="support-section">
-            <p class="support-title">HELP KEEP THIS SHOT CLOCK RUNNING</p>
-            <a href="https://paypal.me/kelvinsugars?country.x=AU&locale.x=en_AU" target="_blank" class="support-link">
-                ☕ Buy me a coffee
+        
+        <div class="menu-footer">
+            <p>Built by a parent for the betterment of kids and the sport of basketball.</p>
+            <a href="https://paypal.me/kelvinsugars?country.x=AU&locale.x=en_AU" class="paypal-link" target="_blank">
+                ☕ Support via PayPal
             </a>
-            <p class="support-story">
-                This website was built by a once stressed out parent at the thought of scoring. Built this for the betterment of our kids and the sport. There are costs to this website, but it's worth it. Please feel free to contribute.
-            </p>
         </div>
-
-
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function goToShotClock() {
+            window.location.href = 'shot-clock.html';
+        }
+        
+        function goToScoreboard() {
+            // Coming soon
+            alert('Scoreboard Trainer coming soon!');
+        }
+    </script>
 </body>
 </html>

@@ -2,14 +2,15 @@
 
 ## Overview
 
-This project is a basketball shot clock trainer application designed to help players practice with authentic shot clock timing. The application provides a digital countdown timer with manual controls for starting, stopping, and resetting the clock. It features a clean, mobile-optimized interface perfect for basketball training sessions.
+This project is a basketball training suite featuring two applications: a shot clock trainer and an upcoming scoreboard trainer. The main interface uses a basketball court-themed navigation design where users select between front court (Shot Clock Trainer) and back court (Scoreboard Trainer). The shot clock trainer provides a digital countdown timer with manual controls for starting, stopping, and resetting the clock, featuring a clean, mobile-optimized interface perfect for basketball training sessions.
 
 ## System Architecture
 
 ### Frontend Architecture
-- **Pure HTML/CSS/JavaScript**: Single-page application built without frameworks
+- **Multi-page Application**: Basketball court-themed navigation with separate pages for each trainer
+- **Pure HTML/CSS/JavaScript**: Built without frameworks for maximum compatibility
 - **Responsive Design**: Mobile-first approach with touch and mouse event support
-- **Component-based Structure**: Modular HTML layout with distinct sections for display and controls
+- **Basketball Court Navigation**: Visual court layout with front/back court selection zones
 - **Real-time Updates**: JavaScript interval-based timer with 100ms precision
 
 ### Key Design Decisions
@@ -19,19 +20,27 @@ This project is a basketball shot clock trainer application designed to help pla
 
 ## Key Components
 
-### Timer Engine (`ShotClockTimer` class)
-- **Purpose**: Core timer logic and state management
+### Navigation System (index.html)
+- **Basketball Court Design**: Visual representation of basketball court with front/back court zones
+- **Front Court Zone**: Links to Shot Clock Trainer (orange gradient)
+- **Back Court Zone**: Links to Scoreboard Trainer (blue gradient, coming soon)
+- **Center Line & Circle**: Authentic court design elements
+- **Responsive Layout**: Adapts to different screen sizes
+
+### Timer Engine (shot-clock.html)
+- **ShotClockTimer Class**: Core timer logic and state management
 - **Features**: 
   - Countdown functionality with 24-second default
   - Start/stop/reset controls
   - Expiration detection and visual feedback
   - State persistence across operations
+- **Back Navigation**: Return to main menu functionality
 
 ### Control Interface
 - **STOP Button**: Pauses timer with visual press feedback
 - **START Button**: Initiates or resumes countdown
 - **RESET Button**: Returns timer to 24 seconds
-- **ALT RESET Button**: Alternative reset functionality (implementation pending)
+- **ALT RESET Button**: Alternative reset functionality (14 seconds)
 
 ### Display System
 - **Large Digital Display**: Central countdown visualization
@@ -79,6 +88,11 @@ This project is a basketball shot clock trainer application designed to help pla
 - July 04, 2025. Optimized mobile layout with compact spacing and responsive design
 - July 04, 2025. Added +1/-1 indicators on START/RESET buttons
 - July 04, 2025. Added PayPal support link for hosting costs
+- July 05, 2025. **Major Architecture Change**: Converted to multi-page Basketball Training Suite
+- July 05, 2025. Added basketball court-themed navigation page (index.html)
+- July 05, 2025. Moved shot clock trainer to separate page (shot-clock.html)
+- July 05, 2025. Implemented front court/back court navigation zones
+- July 05, 2025. Added placeholders for upcoming Scoreboard Trainer
 
 ## User Preferences
 

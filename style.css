@@ -857,7 +857,7 @@ body {
 
 .lcd-header-row {
     display: grid;
-    grid-template-columns: auto 1fr 1fr 1fr 2fr;
+    grid-template-columns: 100px 80px 120px 100px 140px;
     gap: 15px;
     text-align: center;
     font-size: 0.8em;
@@ -877,7 +877,7 @@ body {
 
 .team-row-a, .team-row-b {
     display: grid;
-    grid-template-columns: auto 1fr 1fr 1fr 2fr;
+    grid-template-columns: 100px 80px 120px 100px 140px;
     gap: 15px;
     align-items: center;
     margin-bottom: 15px;
@@ -905,23 +905,24 @@ body {
 
 .number-display {
     font-family: 'Orbitron', monospace;
-    font-size: 2.5em;
+    font-size: 1.8em;
     font-weight: 900;
     color: #000000;
     background: #d3d3d3;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 5px;
+    border-radius: 4px;
     text-align: center;
+    min-width: 50px;
 }
 
 .time-display {
     font-family: 'Orbitron', monospace;
-    font-size: 3em;
+    font-size: 2.2em;
     font-weight: 900;
     color: #000000;
     background: #d3d3d3;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 8px;
+    border-radius: 6px;
     text-align: center;
 }
 

@@ -1054,16 +1054,17 @@ button.back-btn:hover {
     /* Empty spacer to maintain grid alignment for Team B row */
 }
 
-/* Larger arrows for possession buttons */
+/* Possession arrow buttons - same size as all others */
 .possession-arrow-btn {
     font-size: 1.35em !important; /* 50% larger than base 0.9em */
+    width: 100% !important;
+    min-width: 0 !important;
+    flex: none !important;
 }
 
+/* Possession buttons group - disabled for uniform grid */
 .possession-buttons-group {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
+    display: contents;
 }
 
 
@@ -1207,6 +1208,8 @@ button.back-btn:hover {
     cursor: pointer;
     text-align: center;
     height: 60px;
+    width: 100%;
+    min-width: 0;
     line-height: 1.2;
     display: flex;
     align-items: center;

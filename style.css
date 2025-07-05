@@ -80,9 +80,10 @@ body {
 
 .button-row {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     flex: 1;
+    justify-content: center;
 }
 
 .control-btn {
@@ -486,6 +487,7 @@ body {
         grid-template-rows: repeat(2, 1fr);
         gap: 4px;
         padding: 6px;
+        justify-content: center;
     }
 
     .instructions {

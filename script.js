@@ -14,7 +14,18 @@ class ShotClockTimer {
         this.altResetBtn = document.getElementById('altResetBtn');
         
         this.initializeEventListeners();
+        this.initializeAudio();
         this.updateDisplay();
+    }
+    
+    initializeAudio() {
+        // Create audio context for button sound
+        this.audioContext = null;
+        try {
+            this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        } catch (e) {
+            console.log('Audio context not supported');
+        }
     }
     
     initializeEventListeners() {
@@ -23,6 +34,7 @@ class ShotClockTimer {
             this.isStopPressed = true;
             this.stopBtn.classList.add('pressed');
             this.stopTimer();
+            this.playButtonSound();
         });
         
         this.stopBtn.addEventListener('mouseup', () => {
@@ -41,6 +53,7 @@ class ShotClockTimer {
             this.isStopPressed = true;
             this.stopBtn.classList.add('pressed');
             this.stopTimer();
+            this.playButtonSound();
         });
         
         this.stopBtn.addEventListener('touchend', (e) => {
@@ -60,6 +73,7 @@ class ShotClockTimer {
                 this.startTimer();
                 this.addButtonFeedback(this.startBtn);
             }
+            this.playButtonSound();
         });
 
         // Touch events for start button
@@ -73,6 +87,7 @@ class ShotClockTimer {
                 this.startTimer();
                 this.addButtonFeedback(this.startBtn);
             }
+            this.playButtonSound();
         });
         
         // Reset button - handle both click and touch
@@ -86,6 +101,7 @@ class ShotClockTimer {
                 this.resetTimer(24);
                 this.addButtonFeedback(this.resetBtn);
             }
+            this.playButtonSound();
         });
 
         // Touch events for reset button
@@ -99,6 +115,7 @@ class ShotClockTimer {
                 this.resetTimer(24);
                 this.addButtonFeedback(this.resetBtn);
             }
+            this.playButtonSound();
         });
         
         // Alt Reset button
@@ -106,6 +123,15 @@ class ShotClockTimer {
             e.preventDefault();
             this.resetTimer(14);
             this.addButtonFeedback(this.altResetBtn);
+            this.playButtonSound();
+        });
+        
+        // Touch events for alt reset button
+        this.altResetBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            this.resetTimer(14);
+            this.addButtonFeedback(this.altResetBtn);
+            this.playButtonSound();
         });
         
         // Prevent context menu on long press
@@ -123,6 +149,7 @@ class ShotClockTimer {
                     this.isStopPressed = true;
                     this.stopBtn.classList.add('pressed');
                     this.stopTimer();
+                    this.playButtonSound();
                     break;
                 case 'KeyS':
                     e.preventDefault();
@@ -133,6 +160,7 @@ class ShotClockTimer {
                         this.startTimer();
                     }
                     this.addButtonFeedback(this.startBtn);
+                    this.playButtonSound();
                     break;
                 case 'KeyD':
                     e.preventDefault();
@@ -143,19 +171,23 @@ class ShotClockTimer {
                         this.resetTimer(24);
                     }
                     this.addButtonFeedback(this.resetBtn);
+                    this.playButtonSound();
                     break;
                 case 'KeyF':
                     e.preventDefault();
                     this.resetTimer(14);
                     this.addButtonFeedback(this.altResetBtn);
+                    this.playButtonSound();
                     break;
                 case 'ArrowUp':
                     e.preventDefault();
                     this.adjustTime(1);
+                    this.playButtonSound();
                     break;
                 case 'ArrowDown':
                     e.preventDefault();
                     this.adjustTime(-1);
+                    this.playButtonSound();
                     break;
             }
         });
@@ -279,6 +311,23 @@ class ShotClockTimer {
     
     getIsExpired() {
         return this.isExpired;
+    }
+    
+    playButtonSound() {
+        if (this.audioContext) {
+            const oscillator = this.audioContext.createOscillator();
+            const gainNode = this.audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(this.audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(1000, this.audioContext.currentTime);
+            gainNode.gain.setValueAtTime(0.1, this.audioContext.currentTime);
+            gainNode.gain.setValueAtTime(0, this.audioContext.currentTime + 0.1);
+            
+            oscillator.start(this.audioContext.currentTime);
+            oscillator.stop(this.audioContext.currentTime + 0.1);
+        }
     }
 }
 

@@ -12,7 +12,7 @@ class ScoreboardController {
             possession: 'A', // 'A' or 'B'
             indicatorA: false,
             indicatorB: false,
-            period: 1, // Current period (1-4)
+            period: 1, // Current period (1-4, then OT)
             lastAction: null // For error correction
         };
         
@@ -101,7 +101,11 @@ class ScoreboardController {
         // Update period display
         const periodElement = document.getElementById('period');
         if (periodElement) {
-            periodElement.textContent = this.gameState.period;
+            if (this.gameState.period <= 4) {
+                periodElement.textContent = this.gameState.period;
+            } else {
+                periodElement.textContent = 'OT';
+            }
         }
     }
 
@@ -168,9 +172,7 @@ class ScoreboardController {
 
     addPeriod() {
         this.saveStateToHistory('period', {});
-        if (this.gameState.period < 4) {
-            this.gameState.period += 1;
-        }
+        this.gameState.period += 1;
         this.updateDisplay();
         this.playButtonSound();
     }

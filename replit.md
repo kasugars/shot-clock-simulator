@@ -99,6 +99,8 @@ This project is a basketball training suite featuring two applications: a shot c
 - July 05, 2025. Included buzzer/siren audio feedback and button press sounds
 - July 05, 2025. **Critical Issue**: Browser caching preventing home button color changes despite multiple CSS and HTML approaches
 - July 05, 2025. **RESTORED**: Reverted scoreboard layout to working backup from 11:36 PM after failed uniform grid attempt
+- July 05, 2025. **FIXED**: Button width uniformity achieved by restructuring HTML grid layout (removed nested containers)
+- July 05, 2025. **ENHANCED**: Added overtime period support (1,2,3,4,OT) and functional timeout/foul counting
 
 ## User Preferences
 

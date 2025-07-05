@@ -1062,9 +1062,11 @@ button.back-btn:hover {
     flex: none !important;
 }
 
-/* Possession buttons group - removed for uniform grid */
 .possession-buttons-group {
-    display: none;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -1137,7 +1139,7 @@ button.back-btn:hover {
 
 .labels-row-with-offset {
     display: grid;
-    grid-template-columns: 25px repeat(7, 1fr);
+    grid-template-columns: 25px 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     margin-bottom: 15px;
     text-align: center;
@@ -1178,7 +1180,7 @@ button.back-btn:hover {
 
 .button-row {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     flex: 1;
 }

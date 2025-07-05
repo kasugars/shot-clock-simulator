@@ -70,8 +70,10 @@
                 <span class="wrapped-label">TIME<br>OUTS</span>
                 <span class="wrapped-label">INDICATOR<br>(SUBS)</span>
                 <span>ERROR</span>
-                <span>POSSESSION</span>
-                <span>CONTROLS</span>
+                <span class="possession-with-siren">
+                    POSSESSION
+                    <button onclick="playSiren()" class="siren-button">SIREN</button>
+                </span>
             </div>
             
             <!-- Row 1: Team A -->
@@ -83,8 +85,10 @@
                     <button class="btn-yellow" onclick="addTimeout('A')">+1</button>
                     <button class="btn-yellow" onclick="toggleIndicator('A')">On/Off</button>
                     <button class="btn-blue" onclick="undoLastAction()">UNDO</button>
-                    <button class="btn-blue possession-arrow-btn" onclick="togglePossession()">←</button>
-                    <button class="btn-blue possession-arrow-btn" onclick="togglePossession()">→</button>
+                    <div class="possession-buttons-group">
+                        <button class="btn-blue possession-arrow-btn" onclick="togglePossession()">←</button>
+                        <button class="btn-blue possession-arrow-btn" onclick="togglePossession()">→</button>
+                    </div>
                 </div>
             </div>
             
@@ -97,8 +101,10 @@
                     <button class="btn-orange" onclick="addTimeout('B')">+1</button>
                     <button class="btn-orange" onclick="toggleIndicator('B')">On/Off</button>
                     <button class="btn-blue" onclick="addPeriod()">+1P</button>
-                    <button class="btn-blue"></button>
-                    <button class="btn-blue"></button>
+                    <div class="possession-buttons-group">
+                        <button class="btn-blue"></button>
+                        <button class="btn-blue"></button>
+                    </div>
                 </div>
             </div>
             
@@ -112,7 +118,6 @@
                     <button class="btn-green" onclick="startTimer()">START</button>
                     <button class="btn-green" onclick="holdTimer()">HOLD</button>
                     <button class="btn-blue" onclick="newGame()">NEW GAME</button>
-                    <button class="btn-blue" onclick="playSiren()">SIREN</button>
                 </div>
             </div>
         </div>

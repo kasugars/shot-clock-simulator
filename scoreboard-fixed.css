@@ -1,0 +1,323 @@
+/* Fixed Scoreboard CSS - Force Browser Refresh */
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+.scoreboard-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.back-nav {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+
+.back-btn {
+    background: #2c3e50 !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.scoreboard-title {
+    text-align: center;
+    font-family: 'Orbitron', monospace;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 60px 0 30px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* LCD Display */
+.lcd-container {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    background: #c0c0c0;
+    border: 6px solid #666;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.lcd-header-row {
+    display: grid;
+    grid-template-columns: 100px 80px 120px 100px 140px 80px;
+    gap: 15px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    background: #b0b0b0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.lcd-screen {
+    background: #d3d3d3;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.team-row-a, .team-row-b {
+    display: grid;
+    grid-template-columns: 100px 80px 120px 100px 140px 80px;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.team-label-yellow {
+    background: #ffd700;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.team-label-orange {
+    background: #ff8c00;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.number-display {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #000000;
+    background: #d3d3d3;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 50px;
+}
+
+.time-display {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.2em;
+    font-weight: 900;
+    color: #000000;
+    background: #d3d3d3;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.possession-section {
+    font-size: 3em;
+    color: #000000;
+    text-align: center;
+}
+
+/* FIXED BUTTON MATRIX - NO CACHING ISSUES */
+.button-matrix {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* FIXED LABELS ROW */
+.labels-row-with-offset {
+    display: grid;
+    grid-template-columns: 25px 120px 120px 120px 120px 120px 240px;
+    gap: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #333;
+    align-items: center;
+}
+
+.label-spacer {
+    min-width: 25px;
+}
+
+.wrapped-label {
+    line-height: 1.1;
+}
+
+/* FIXED BUTTON ROW ALIGNMENT */
+.matrix-row-with-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.row-label {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #333;
+    min-width: 25px;
+    text-align: left;
+}
+
+/* CRITICAL FIX: EXACT BUTTON GRID ALIGNMENT */
+.button-row {
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px 120px 240px;
+    gap: 10px;
+    flex: 1;
+}
+
+/* Button Styles */
+.btn-yellow {
+    background: #ffd700;
+    color: #333;
+    border: 4px outset #e6c200;
+    border-radius: 8px;
+    padding: 12px 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.btn-orange {
+    background: #ff8c00;
+    color: white;
+    border: 4px outset #e67e00;
+    border-radius: 8px;
+    padding: 12px 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.btn-green {
+    background: #28a745;
+    color: white;
+    border: 4px outset #238e3d;
+    border-radius: 8px;
+    padding: 12px 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.btn-blue {
+    background: #007bff;
+    color: white;
+    border: 4px outset #0056b3;
+    border-radius: 8px;
+    padding: 12px 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Button Active States */
+.btn-yellow:active {
+    border: 4px inset #e6c200;
+    transform: translateY(2px);
+}
+
+.btn-orange:active {
+    border: 4px inset #e67e00;
+    transform: translateY(2px);
+}
+
+.btn-green:active {
+    border: 4px inset #238e3d;
+    transform: translateY(2px);
+}
+
+.btn-blue:active {
+    border: 4px inset #0056b3;
+    transform: translateY(2px);
+}
+
+/* POSSESSION BUTTONS GROUP FIX */
+.possession-buttons-group {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.possession-arrow-btn {
+    font-size: 1.35em !important;
+    flex: 1;
+}
+
+/* POSSESSION WITH SIREN */
+.possession-with-siren {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.siren-button {
+    background: #007bff;
+    color: white;
+    border: 4px outset #0056b3;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.7em;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 60px;
+}
+
+.siren-button:active {
+    border: 4px inset #0056b3;
+    transform: translateY(2px);
+}

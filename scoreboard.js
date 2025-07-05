@@ -1,3 +1,5 @@
+console.log('scoreboard.js file loaded successfully');
+
 class ScoreboardController {
     constructor() {
         this.gameState = {

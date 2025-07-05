@@ -837,6 +837,35 @@ button.back-btn:hover {
     background-color: rgba(52, 73, 94, 0.9) !important;
 }
 
+/* Custom home button class to override all styling */
+.home-button-custom {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    background: rgba(44, 62, 80, 0.8) !important;
+    background-color: rgba(44, 62, 80, 0.8) !important;
+    color: white !important;
+    border: none !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    font-size: 0.75em !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2) !important;
+    opacity: 0.9 !important;
+    outline: none !important;
+}
+
+.home-button-custom:hover {
+    background: rgba(52, 73, 94, 0.9) !important;
+    background-color: rgba(52, 73, 94, 0.9) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 3px 12px rgba(44, 62, 80, 0.3) !important;
+    opacity: 1 !important;
+}
+
 /* Mobile Responsive for Basketball Court */
 @media (max-width: 768px) {
     .main-menu {

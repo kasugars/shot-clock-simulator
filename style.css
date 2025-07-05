@@ -1002,12 +1002,31 @@ body {
     color: #333;
 }
 
+.labels-row-with-offset {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #333;
+}
+
+.label-spacer {
+    min-width: 25px;
+}
+
+.labels-row-with-offset > span:not(.label-spacer) {
+    flex: 1;
+    text-align: center;
+}
+
 .wrapped-label {
     line-height: 1.1;
 }
 
 .possession-label {
-    grid-column: span 2;
     text-align: center;
 }
 

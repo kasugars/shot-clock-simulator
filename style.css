@@ -857,7 +857,7 @@ body {
 
 .lcd-header-row {
     display: grid;
-    grid-template-columns: 100px 80px 120px 100px 140px;
+    grid-template-columns: 100px 80px 120px 100px 140px 80px;
     gap: 15px;
     text-align: center;
     font-size: 0.8em;
@@ -877,7 +877,7 @@ body {
 
 .team-row-a, .team-row-b {
     display: grid;
-    grid-template-columns: 100px 80px 120px 100px 140px;
+    grid-template-columns: 100px 80px 120px 100px 140px 80px;
     gap: 15px;
     align-items: center;
     margin-bottom: 15px;
@@ -930,6 +930,10 @@ body {
     font-size: 2em;
     color: #000000;
     text-align: center;
+}
+
+.period-spacer {
+    /* Empty spacer to maintain grid alignment for Team B row */
 }
 
 

@@ -28,6 +28,7 @@
                 <span>TEAM FOULS</span>
                 <span>TIME OUTS</span>
                 <span>TIME</span>
+                <span>PERIOD</span>
             </div>
             
             <div class="lcd-screen">
@@ -40,6 +41,7 @@
                     <div class="time-display">
                         <span id="minutes">20</span>:<span id="seconds">00</span>
                     </div>
+                    <div class="number-display" id="period">1</div>
                 </div>
                 
                 <!-- Team B Row -->
@@ -51,6 +53,7 @@
                     <div class="possession-section">
                         <span id="possessionArrow">→</span>
                     </div>
+                    <div class="period-spacer"></div>
                 </div>
                 
                 <div class="bottom-labels">
@@ -100,7 +103,7 @@
                     <button class="btn-orange" onclick="addTeamFoul('B')">+1</button>
                     <button class="btn-orange" onclick="addTimeout('B')">+1</button>
                     <button class="btn-orange" onclick="toggleIndicator('B')">On/Off</button>
-                    <button class="btn-blue" onclick="errorCorrection()">+1 Prev</button>
+                    <button class="btn-blue" onclick="addPeriod()">+1P</button>
                     <button class="btn-blue"></button>
                     <button class="btn-blue"></button>
                 </div>

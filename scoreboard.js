@@ -12,6 +12,7 @@ class ScoreboardController {
             possession: 'A', // 'A' or 'B'
             indicatorA: false,
             indicatorB: false,
+            period: 1, // Current period (1-4)
             lastAction: null // For error correction
         };
         
@@ -96,6 +97,12 @@ class ScoreboardController {
                 arrow.textContent = '→';
             }
         }
+        
+        // Update period display
+        const periodElement = document.getElementById('period');
+        if (periodElement) {
+            periodElement.textContent = this.gameState.period;
+        }
     }
 
     addScore(team, points) {
@@ -155,6 +162,15 @@ class ScoreboardController {
     togglePossession() {
         this.saveStateToHistory('possession', {});
         this.gameState.possession = this.gameState.possession === 'A' ? 'B' : 'A';
+        this.updateDisplay();
+        this.playButtonSound();
+    }
+
+    addPeriod() {
+        this.saveStateToHistory('period', {});
+        if (this.gameState.period < 4) {
+            this.gameState.period += 1;
+        }
         this.updateDisplay();
         this.playButtonSound();
     }
@@ -260,6 +276,7 @@ class ScoreboardController {
             possession: 'A',
             indicatorA: false,
             indicatorB: false,
+            period: 1,
             lastAction: null
         };
         this.actionHistory = []; // Clear undo history on game reset
@@ -377,4 +394,8 @@ function playSiren() {
 
 function undoLastAction() {
     scoreboard.undoLastAction();
+}
+
+function addPeriod() {
+    scoreboard.addPeriod();
 }

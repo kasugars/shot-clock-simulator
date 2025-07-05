@@ -103,7 +103,7 @@ class ScoreboardController {
         if (periodElement) {
             if (this.gameState.period <= 4) {
                 periodElement.textContent = this.gameState.period;
-            } else {
+            } else if (this.gameState.period === 5) {
                 periodElement.textContent = 'OT';
             }
         }
@@ -172,7 +172,13 @@ class ScoreboardController {
 
     addPeriod() {
         this.saveStateToHistory('period', {});
+        
+        // Cycle through 1,2,3,4,OT (5), then back to 1
         this.gameState.period += 1;
+        if (this.gameState.period > 5) {
+            this.gameState.period = 1;
+        }
+        
         this.updateDisplay();
         this.playButtonSound();
     }

@@ -101,11 +101,15 @@ class ScoreboardController {
         // Update period display
         const periodElement = document.getElementById('period');
         if (periodElement) {
+            console.log('Updating period display, period value:', this.gameState.period);
             if (this.gameState.period <= 4) {
                 periodElement.textContent = this.gameState.period;
             } else if (this.gameState.period === 5) {
                 periodElement.textContent = 'OT';
             }
+            console.log('Period element text is now:', periodElement.textContent);
+        } else {
+            console.log('Period element not found!');
         }
     }
 
@@ -179,6 +183,7 @@ class ScoreboardController {
             this.gameState.period = 1;
         }
         
+        console.log('Period is now:', this.gameState.period);
         this.updateDisplay();
         this.playButtonSound();
     }

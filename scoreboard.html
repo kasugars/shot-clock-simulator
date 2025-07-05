@@ -27,7 +27,10 @@
                 <span>SCORES</span>
                 <span>TEAM FOULS</span>
                 <span>TIME OUTS</span>
-                <span>TIME</span>
+                <span class="possession-header">
+                    POSSESSION
+                    <button onclick="playSiren()" class="siren-button">SIREN</button>
+                </span>
             </div>
             
             <div class="lcd-screen">
@@ -53,17 +56,10 @@
                     </div>
                 </div>
                 
-                <!-- Power and Bottom Labels -->
-                <div class="power-red">POWER</div>
                 <div class="bottom-labels">
                     <span>Per</span>
                     <span>F/P Pos</span>
                     <span>S/C</span>
-                </div>
-                
-                <!-- SIREN Button Above Matrix -->
-                <div class="siren-position">
-                    <button class="siren-button" onclick="playSiren()">SIREN</button>
                 </div>
             </div>
         </div>

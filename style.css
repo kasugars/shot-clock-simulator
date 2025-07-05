@@ -1062,9 +1062,9 @@ button.back-btn:hover {
     flex: none !important;
 }
 
-/* Possession buttons group - disabled for uniform grid */
+/* Possession buttons group - removed for uniform grid */
 .possession-buttons-group {
-    display: contents;
+    display: none;
 }
 
 

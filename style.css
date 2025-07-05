@@ -1136,7 +1136,7 @@ button.back-btn:hover {
 
 .labels-row-with-offset {
     display: grid;
-    grid-template-columns: 25px repeat(7, 1fr);
+    grid-template-columns: 25px 1fr 1fr 1fr 1fr 1fr 2fr;
     gap: 10px;
     margin-bottom: 15px;
     text-align: center;
@@ -1177,7 +1177,7 @@ button.back-btn:hover {
 
 .button-row {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
     gap: 10px;
     flex: 1;
 }

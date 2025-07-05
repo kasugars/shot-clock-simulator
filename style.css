@@ -1059,6 +1059,13 @@ button.back-btn:hover {
     font-size: 1.35em !important; /* 50% larger than base 0.9em */
 }
 
+.possession-buttons-group {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 .bottom-labels {
@@ -1129,7 +1136,7 @@ button.back-btn:hover {
 
 .labels-row-with-offset {
     display: grid;
-    grid-template-columns: 25px 1fr 1fr 1fr 1fr 1fr 2fr 0;
+    grid-template-columns: 25px 1fr 1fr 1fr 1fr 1fr 2fr;
     gap: 10px;
     margin-bottom: 15px;
     text-align: center;
@@ -1170,7 +1177,7 @@ button.back-btn:hover {
 
 .button-row {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
     gap: 10px;
     flex: 1;
 }

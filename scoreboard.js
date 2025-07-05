@@ -185,6 +185,25 @@ class ScoreboardController {
             this.gameState.period = 1;
         }
         
+        // Reset fouls to 0 every period change
+        this.gameState.foulsA = 0;
+        this.gameState.foulsB = 0;
+        
+        // Reset timeouts based on period
+        if (this.gameState.period === 3) {
+            // Period 3: Reset timeouts to 3 for both teams
+            this.gameState.timeoutsA = 3;
+            this.gameState.timeoutsB = 3;
+        } else if (this.gameState.period === 5) { // OT
+            // Overtime: Set timeouts to 1 for both teams
+            this.gameState.timeoutsA = 1;
+            this.gameState.timeoutsB = 1;
+        } else if (this.gameState.period === 1) {
+            // New game: Reset timeouts to 2 for both teams
+            this.gameState.timeoutsA = 2;
+            this.gameState.timeoutsB = 2;
+        }
+        
         console.log('Period is now:', this.gameState.period);
         this.updateDisplay();
         this.playButtonSound();

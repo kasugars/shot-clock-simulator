@@ -81,6 +81,7 @@ body {
     border: 3px solid #ccc;
     border-radius: 15px;
     padding: 15px;
+    text-align: center;
 }
 
 .button-row {
@@ -89,12 +90,14 @@ body {
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .control-btn {
     width: 80px;
     height: 60px;
-    border: none;
+    border: none !important;
     border-radius: 8px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -113,11 +116,13 @@ body {
 .control-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: none !important;
 }
 
 .control-btn:active {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: none !important;
 }
 
 .control-btn.pressed {

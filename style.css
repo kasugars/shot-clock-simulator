@@ -603,6 +603,16 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
+.menu-header h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    color: #fff;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
 .menu-header p {
     font-size: 1.2em;
     margin: 0;
@@ -705,6 +715,14 @@ body {
     position: absolute;
 }
 
+.center-circle-white {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+}
+
 .menu-footer {
     margin-top: 40px;
     text-align: center;
@@ -771,6 +789,10 @@ body {
         font-size: 2em;
     }
     
+    .menu-header h2 {
+        font-size: 1em;
+    }
+    
     .court-container {
         min-height: 350px;
     }
@@ -797,6 +819,10 @@ body {
         font-size: 1.8em;
     }
     
+    .menu-header h2 {
+        font-size: 0.9em;
+    }
+    
     .court-container {
         min-height: 300px;
     }
@@ -810,6 +836,11 @@ body {
     }
     
     .center-circle {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .center-circle-white {
         width: 40px;
         height: 40px;
     }

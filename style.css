@@ -591,7 +591,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #2c5530, #1e4d23);
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: white;
     font-family: 'Roboto', sans-serif;
     padding: 20px;

@@ -927,13 +927,18 @@ body {
 }
 
 .possession-section {
-    font-size: 2em;
+    font-size: 3em;
     color: #000000;
     text-align: center;
 }
 
 .period-spacer {
     /* Empty spacer to maintain grid alignment for Team B row */
+}
+
+/* Larger arrows for possession buttons */
+.possession-arrow-btn {
+    font-size: 1.35em !important; /* 50% larger than base 0.9em */
 }
 
 

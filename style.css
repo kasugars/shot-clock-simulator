@@ -1051,8 +1051,12 @@ body {
     font-weight: 700;
     cursor: pointer;
     text-align: center;
-    min-height: 55px;
+    height: 60px;
     line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .btn-yellow, .btn-orange, .btn-green, .btn-blue, .btn-red, .btn-gray:active {

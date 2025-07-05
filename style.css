@@ -236,13 +236,7 @@ body {
     font-size: 11px;
 }
 
-.arrow-controls {
-    text-align: center;
-    font-size: 11px;
-    color: #555;
-    border-top: 1px solid #ddd;
-    padding-top: 8px;
-}
+
 
 /* Mobile Notice */
 .mobile-notice {
@@ -391,10 +385,7 @@ body {
         font-size: 9px;
     }
 
-    .arrow-controls {
-        font-size: 9px;
-        padding-top: 6px;
-    }
+
 
     .mobile-notice {
         font-size: 10px;
@@ -498,10 +489,7 @@ body {
         font-size: 8px;
     }
 
-    .arrow-controls {
-        font-size: 8px;
-        padding-top: 4px;
-    }
+
 
     .mobile-notice {
         font-size: 9px;

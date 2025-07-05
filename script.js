@@ -218,7 +218,7 @@ class ShotClockTimer {
         
         this.currentTime += seconds;
         if (this.currentTime < 0) this.currentTime = 0;
-        if (this.currentTime > 99) this.currentTime = 99; // Maximum 99 seconds
+        if (this.currentTime > 24) this.currentTime = 24; // Maximum 24 seconds
         
         this.isExpired = false;
         this.timeDisplay.classList.remove('expired');

@@ -1182,7 +1182,7 @@ button.back-btn:hover {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
-    flex: 1;
+    width: 100%;
 }
 
 .matrix-row {
@@ -1215,7 +1215,6 @@ button.back-btn:hover {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    width: 100%;
 }
 
 .btn-yellow, .btn-orange, .btn-green, .btn-blue, .btn-red, .btn-gray:active {

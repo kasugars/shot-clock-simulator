@@ -13,10 +13,10 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Shot Clock Timer Server"
+args = "Basketball Training Server"
 
 [[workflows.workflow]]
-name = "Shot Clock Timer Server"
+name = "Basketball Training Server"
 author = "agent"
 
 [[workflows.workflow.tasks]]

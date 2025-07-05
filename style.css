@@ -1002,6 +1002,15 @@ body {
     color: #333;
 }
 
+.wrapped-label {
+    line-height: 1.1;
+}
+
+.possession-label {
+    grid-column: span 2;
+    text-align: center;
+}
+
 .matrix-row-with-label {
     display: flex;
     align-items: center;

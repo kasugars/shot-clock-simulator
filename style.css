@@ -76,29 +76,32 @@ body {
 /* Control Panel */
 .control-panel {
     margin-bottom: 15px;
+    background: #e8e8e8;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    padding: 15px;
 }
 
 .button-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    max-width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .control-btn {
-    height: 70px;
-    border: 3px solid #333;
-    border-radius: 10px;
+    width: 80px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 8px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 12px;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;

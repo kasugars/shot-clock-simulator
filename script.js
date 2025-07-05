@@ -118,21 +118,36 @@ class ShotClockTimer {
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
             switch(e.code) {
-                case 'Space':
+                case 'KeyA':
                     e.preventDefault();
-                    if (this.isRunning) {
-                        this.stopTimer();
+                    this.isStopPressed = true;
+                    this.stopBtn.classList.add('pressed');
+                    this.stopTimer();
+                    break;
+                case 'KeyS':
+                    e.preventDefault();
+                    if (this.isStopPressed) {
+                        // Add 1 second when A (STOP) is held
+                        this.adjustTime(1);
                     } else {
                         this.startTimer();
                     }
+                    this.addButtonFeedback(this.startBtn);
                     break;
-                case 'KeyR':
+                case 'KeyD':
                     e.preventDefault();
-                    this.resetTimer(24);
+                    if (this.isStopPressed) {
+                        // Subtract 1 second when A (STOP) is held
+                        this.adjustTime(-1);
+                    } else {
+                        this.resetTimer(24);
+                    }
+                    this.addButtonFeedback(this.resetBtn);
                     break;
-                case 'KeyT':
+                case 'KeyF':
                     e.preventDefault();
                     this.resetTimer(14);
+                    this.addButtonFeedback(this.altResetBtn);
                     break;
                 case 'ArrowUp':
                     e.preventDefault();
@@ -141,6 +156,16 @@ class ShotClockTimer {
                 case 'ArrowDown':
                     e.preventDefault();
                     this.adjustTime(-1);
+                    break;
+            }
+        });
+
+        // Keyboard key release
+        document.addEventListener('keyup', (e) => {
+            switch(e.code) {
+                case 'KeyA':
+                    this.isStopPressed = false;
+                    this.stopBtn.classList.remove('pressed');
                     break;
             }
         });

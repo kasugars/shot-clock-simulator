@@ -188,6 +188,62 @@ body {
     text-align: right;
 }
 
+/* Keyboard Controls */
+.keyboard-controls {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(50, 50, 50, 0.05);
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.keyboard-controls h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.control-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.key {
+    background: #333;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.action {
+    color: #555;
+    font-size: 11px;
+}
+
+.arrow-controls {
+    text-align: center;
+    font-size: 11px;
+    color: #555;
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+}
+
 /* Mobile Notice */
 .mobile-notice {
     text-align: center;
@@ -305,6 +361,41 @@ body {
         margin-bottom: 10px;
     }
 
+    .keyboard-controls {
+        margin-top: 10px;
+        padding: 8px;
+    }
+
+    .keyboard-controls h4 {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .controls-grid {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .control-item {
+        font-size: 10px;
+        gap: 6px;
+    }
+
+    .key {
+        font-size: 9px;
+        padding: 2px 4px;
+        min-width: 16px;
+    }
+
+    .action {
+        font-size: 9px;
+    }
+
+    .arrow-controls {
+        font-size: 9px;
+        padding-top: 6px;
+    }
+
     .mobile-notice {
         font-size: 10px;
         margin-top: 8px;
@@ -375,6 +466,41 @@ body {
     .instructions {
         font-size: 9px;
         margin-bottom: 8px;
+    }
+
+    .keyboard-controls {
+        margin-top: 6px;
+        padding: 6px;
+    }
+
+    .keyboard-controls h4 {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .controls-grid {
+        gap: 4px;
+        margin-bottom: 6px;
+    }
+
+    .control-item {
+        font-size: 9px;
+        gap: 4px;
+    }
+
+    .key {
+        font-size: 8px;
+        padding: 1px 3px;
+        min-width: 14px;
+    }
+
+    .action {
+        font-size: 8px;
+    }
+
+    .arrow-controls {
+        font-size: 8px;
+        padding-top: 4px;
     }
 
     .mobile-notice {

@@ -857,8 +857,8 @@ body {
 
 .lcd-header-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr;
-    gap: 10px;
+    grid-template-columns: auto 1fr 1fr 1fr 2fr;
+    gap: 15px;
     text-align: center;
     font-size: 0.8em;
     font-weight: 700;

@@ -50,25 +50,20 @@ class ScoreboardController {
         // Update game time
         const minutes = Math.floor(this.gameState.gameTime / 60);
         const seconds = this.gameState.gameTime % 60;
-        document.getElementById('gameTime').textContent = 
-            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+        if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+        if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
         
         // Update possession arrow
         const arrow = document.getElementById('possessionArrow');
-        if (this.gameState.possession === 'A') {
-            arrow.textContent = '←';
-            arrow.style.color = '#ffd700'; // Yellow for team A
-        } else {
-            arrow.textContent = '→';
-            arrow.style.color = '#ff8c00'; // Orange for team B
+        if (arrow) {
+            if (this.gameState.possession === 'A') {
+                arrow.textContent = '←';
+            } else {
+                arrow.textContent = '→';
+            }
         }
-        
-        // Update team indicators (visual feedback)
-        const teamAIndicator = document.querySelector('.team-indicator.a-light');
-        const teamBIndicator = document.querySelector('.team-indicator.b-dark');
-        
-        teamAIndicator.style.backgroundColor = this.gameState.indicatorA ? '#ffd700' : 'transparent';
-        teamBIndicator.style.backgroundColor = this.gameState.indicatorB ? '#ff8c00' : 'transparent';
     }
 
     addScore(team, points) {

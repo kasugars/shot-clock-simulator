@@ -20,112 +20,150 @@
         <!-- Main Title -->
         <h1 class="scoreboard-title">SCOREBOARD TRAINER</h1>
 
-        <!-- Scoreboard Control Console -->
-        <div class="console-container">
+        <!-- CC-10 Scoreboard Control Console -->
+        <div class="cc10-console">
             <!-- LCD Display Section -->
             <div class="lcd-display">
+                <!-- Header Labels -->
                 <div class="lcd-header">
-                    <span class="header-scores">SCORES</span>
-                    <span class="header-team">TEAM FOULS</span>
-                    <span class="header-time">TIME OUTS</span>
-                    <span class="header-ind">IND. (SUBS)</span>
-                    <span class="header-time-main">TIME</span>
+                    <span class="header-label">SCORES</span>
+                    <span class="header-label">TEAM FOULS</span>
+                    <span class="header-label">TIME OUTS</span>
+                    <span class="header-label">IND. (SUBS)</span>
+                    <span class="header-label">TIME</span>
                 </div>
-                <div class="lcd-main">
-                    <div class="team-labels">
-                        <div class="team-label-a">A Light</div>
-                        <div class="team-label-b">B Dark</div>
-                        <div class="power-light">POWER</div>
-                    </div>
-                    <div class="display-area">
-                        <div class="display-row team-a-row">
+                
+                <!-- Display Area -->
+                <div class="lcd-screen">
+                    <!-- Team A Row -->
+                    <div class="team-row">
+                        <div class="team-label yellow-label">A Light</div>
+                        <div class="display-cell">
                             <span id="scoreA" class="display-number">0</span>
+                        </div>
+                        <div class="display-cell">
                             <span id="foulsA" class="display-number">0</span>
+                        </div>
+                        <div class="display-cell">
                             <span id="timeoutsA" class="display-number">0</span>
                         </div>
-                        <div class="display-row team-b-row">
+                        <div class="time-section" rowspan="2">
+                            <div class="main-time">
+                                <span id="minutes">20</span>:<span id="seconds">00</span>
+                            </div>
+                            <div class="time-labels">
+                                <span>MIN</span>
+                                <span>SEC</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team B Row -->
+                    <div class="team-row">
+                        <div class="team-label orange-label">B Dark</div>
+                        <div class="display-cell">
                             <span id="scoreB" class="display-number">0</span>
+                        </div>
+                        <div class="display-cell">
                             <span id="foulsB" class="display-number">0</span>
+                        </div>
+                        <div class="display-cell">
                             <span id="timeoutsB" class="display-number">0</span>
                         </div>
                     </div>
-                    <div class="time-display">
-                        <span id="gameTime" class="main-time">20:00</span>
-                    </div>
-                    <div class="bottom-labels">
-                        <span>Per</span>
-                        <span>F/P Pos</span>
-                        <span>S/C</span>
-                    </div>
-                    <div class="siren-button-top">
-                        <button class="btn-siren-top" onclick="playSiren()">SIREN</button>
+                    
+                    <!-- Power Indicator and Bottom Labels -->
+                    <div class="bottom-section">
+                        <div class="power-indicator red-label">POWER</div>
+                        <div class="bottom-labels">
+                            <span>Per</span>
+                            <span>F/P Pos</span>
+                            <span>S/C</span>
+                        </div>
+                        <div class="possession-arrow">
+                            <span id="possessionArrow">→</span>
+                        </div>
+                        <div class="siren-top">
+                            <button class="siren-btn" onclick="playSiren()">SIREN</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Control Panel -->
-            <div class="control-panel">
-                <!-- Row 1: Team A Score, Team Fouls, Time Outs, Indicator, Error, Possession -->
-                <div class="control-row row-1">
-                    <div class="section-label">SCORE</div>
-                    <div class="section-label">TEAM FOULS</div>
-                    <div class="section-label">TIME OUTS</div>
-                    <div class="section-label">INDICATOR (SUBS)</div>
-                    <div class="section-label">ERROR</div>
-                    <div class="section-label">POSSESSION</div>
+            <!-- Control Panel - 7x3 Button Matrix -->
+            <div class="control-matrix">
+                <!-- Section Labels Row -->
+                <div class="section-labels">
+                    <span class="section-label">SCORE</span>
+                    <span class="section-label">TEAM FOULS</span>
+                    <span class="section-label">TIME OUTS</span>
+                    <span class="section-label">INDICATOR (SUBS)</span>
+                    <span class="section-label">ERROR</span>
+                    <span class="section-label">POSSESSION</span>
+                    <span class="section-label"></span>
                 </div>
-                
-                <div class="control-row row-2">
+
+                <!-- Team A Row -->
+                <div class="button-row">
                     <span class="team-letter">A</span>
-                    <button class="btn yellow" onclick="addScore('A', 1)">+1</button>
-                    <button class="btn yellow" onclick="addTeamFoul('A')">+1</button>
-                    <button class="btn yellow" onclick="addTimeout('A')">+1</button>
-                    <button class="btn yellow" onclick="toggleIndicator('A')">On/Off</button>
-                    <button class="btn blue" onclick="errorCorrection()">-1 Prev</button>
-                    <button class="btn blue" onclick="togglePossession()">←</button>
+                    <button class="control-btn yellow" onclick="addScore('A', 1)">+1</button>
+                    <button class="control-btn yellow" onclick="addTeamFoul('A')">+1</button>
+                    <button class="control-btn yellow" onclick="addTimeout('A')">+1</button>
+                    <button class="control-btn yellow" onclick="toggleIndicator('A')">On/Off</button>
+                    <button class="control-btn blue" onclick="errorCorrection()">←Prev</button>
+                    <button class="control-btn blue" onclick="togglePossession()">←</button>
+                    <div class="reset-label">RESET</div>
                 </div>
 
-                <div class="control-row row-3">
+                <!-- Team B Row -->
+                <div class="button-row">
                     <span class="team-letter">B</span>
-                    <button class="btn orange" onclick="addScore('B', 1)">+1</button>
-                    <button class="btn orange" onclick="addTeamFoul('B')">+1</button>
-                    <button class="btn orange" onclick="addTimeout('B')">+1</button>
-                    <button class="btn orange" onclick="toggleIndicator('B')">On/Off</button>
-                    <button class="btn blue" onclick="errorCorrection()">+1 Prev</button>
-                    <button class="btn blue" onclick="togglePossession()">→</button>
+                    <button class="control-btn orange" onclick="addScore('B', 1)">+1</button>
+                    <button class="control-btn orange" onclick="addTeamFoul('B')">+1</button>
+                    <button class="control-btn orange" onclick="addTimeout('B')">+1</button>
+                    <button class="control-btn orange" onclick="toggleIndicator('B')">On/Off</button>
+                    <button class="control-btn blue" onclick="errorCorrection()">+1<br>Prev</button>
+                    <button class="control-btn blue" onclick="togglePossession()">→</button>
+                    <button class="control-btn blue" onclick="newGame()">NEW GAME</button>
                 </div>
 
-                <!-- Row 4: Timer and Additional Controls -->
-                <div class="control-row row-4">
-                    <div class="timer-section">
-                        <div class="section-label">TIMER</div>
-                        <button class="btn green" onclick="resetTimer()">RESET</button>
+                <!-- Bottom Control Row -->
+                <div class="bottom-controls">
+                    <div class="timer-group">
+                        <span class="group-label">TIMER</span>
+                        <button class="control-btn green" onclick="resetTimer()">RESET</button>
                     </div>
                     
-                    <div class="adjust-section">
-                        <div class="section-label">ADJUST</div>
-                        <button class="btn green adjust-btn" onclick="adjustTime('min', 1)">+MIN</button>
-                        <button class="btn green adjust-btn" onclick="adjustTime('min', -1)">-MIN</button>
-                        <div class="yes-no">
-                            <span class="adjust-label">Yes A</span>
-                            <span class="adjust-label">No B</span>
+                    <div class="adjust-group">
+                        <span class="group-label">ADJUST</span>
+                        <button class="control-btn green" onclick="adjustTime('min', 1)">+MIN</button>
+                        <button class="control-btn green" onclick="adjustTime('min', -1)">-MIN</button>
+                        <div class="yes-no-labels">
+                            <span>Yes<br>A</span>
+                            <span>No<br>B</span>
                         </div>
                     </div>
-
-                    <div class="timer-section-right">
-                        <div class="section-label">TIMER</div>
-                        <button class="btn green" onclick="startTimer()">START</button>
-                        <button class="btn green" onclick="holdTimer()">HOLD</button>
+                    
+                    <div class="timer-group">
+                        <span class="group-label">TIMER</span>
+                        <button class="control-btn green" onclick="startTimer()">START</button>
+                        <button class="control-btn green" onclick="holdTimer()">HOLD</button>
                     </div>
-
-                    <div class="right-controls">
-                        <div class="section-label">TIME OUTS</div>
-                        <button class="btn blue reset-btn">RESET</button>
-                        <button class="btn blue new-game-btn" onclick="newGame()">NEW GAME</button>
-                        <div class="section-label">PROG'M</div>
-                        <button class="btn red fouls-btn">FOULS</button>
-                        <button class="btn red timeout-btn">TIME OUTS</button>
-                        <span class="next-label">Next ►</span>
+                    
+                    <div class="timeout-group">
+                        <span class="group-label">TIME OUTS</span>
+                        <button class="control-btn blue" onclick="startStopTimer()">START<br>STOP</button>
+                    </div>
+                    
+                    <div class="program-group">
+                        <span class="group-label">PROG'M</span>
+                        <button class="control-btn red" onclick="showFouls()">FOULS<br>OUTS</button>
+                        <button class="control-btn red" onclick="showTimeouts()">TIME<br>OUTS</button>
+                        <span class="next-arrow">Next ►</span>
+                    </div>
+                    
+                    <div class="fake-power">
+                        <button class="control-btn gray fake-btn" disabled>POWER</button>
                     </div>
                 </div>
             </div>

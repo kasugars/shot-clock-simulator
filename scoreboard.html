@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scoreboard-container">
+        
+        <!-- Back to Menu Button -->
+        <div class="back-nav">
+            <button onclick="goToMenu()" class="back-btn">🏠 Home</button>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="scoreboard-title">SCOREBOARD TRAINER</h1>
+
+        <!-- LCD Display Section -->
+        <div class="lcd-display">
+            <div class="lcd-header">
+                <span>SCORES</span>
+                <span>TEAM FOULS</span>
+                <span>TIME OUTS</span>
+                <span>IND</span>
+                <span>TIME</span>
+            </div>
+            <div class="lcd-main">
+                <div class="team-section">
+                    <div class="team-indicator a-light">A Light</div>
+                    <div class="score-display">
+                        <span id="scoreA" class="score">00</span>
+                        <span id="foulsA" class="fouls">0</span>
+                        <span id="timeoutsA" class="timeouts">0</span>
+                    </div>
+                </div>
+                
+                <div class="center-display">
+                    <div class="game-time">
+                        <span id="gameTime">20:00</span>
+                    </div>
+                    <div class="period-indicators">
+                        <span>Per</span>
+                        <span>P/P Pos</span>
+                        <span>S/C</span>
+                    </div>
+                </div>
+                
+                <div class="team-section">
+                    <div class="team-indicator b-dark">B Dark</div>
+                    <div class="score-display">
+                        <span id="scoreB" class="score">00</span>
+                        <span id="foulsB" class="fouls">0</span>
+                        <span id="timeoutsB" class="timeouts">0</span>
+                    </div>
+                </div>
+                
+                <div class="possession-arrow">
+                    <div id="possessionArrow" class="arrow-indicator">→</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel-scoreboard">
+            
+            <!-- Team A Controls (Yellow) -->
+            <div class="team-controls team-a">
+                <div class="team-label">SCORE A</div>
+                <button class="control-btn yellow" onclick="addScore('A', 1)">+1</button>
+                <button class="control-btn yellow" onclick="addTeamFoul('A')">+1</button>
+                <button class="control-btn yellow" onclick="addTimeout('A')">+1</button>
+                <button class="control-btn yellow indicator-btn" onclick="toggleIndicator('A')">On/Off</button>
+            </div>
+
+            <!-- Team B Controls (Orange) -->
+            <div class="team-controls team-b">
+                <div class="team-label">SCORE B</div>
+                <button class="control-btn orange" onclick="addScore('B', 1)">+1</button>
+                <button class="control-btn orange" onclick="addTeamFoul('B')">+1</button>
+                <button class="control-btn orange" onclick="addTimeout('B')">+1</button>
+                <button class="control-btn orange indicator-btn" onclick="toggleIndicator('B')">On/Off</button>
+            </div>
+
+            <!-- Timer Controls (Green) -->
+            <div class="timer-controls">
+                <div class="timer-label">TIMER</div>
+                <button class="control-btn green" onclick="resetTimer()">RESET</button>
+                <button class="control-btn green timer-adjust" onclick="adjustTime('min', 1)">+MIN</button>
+                <button class="control-btn green timer-adjust" onclick="adjustTime('min', -1)">-MIN</button>
+                <button class="control-btn green" onclick="startTimer()">START</button>
+                <button class="control-btn green" onclick="holdTimer()">HOLD</button>
+                <div class="timer-adjust-buttons">
+                    <span class="adjust-label">ADJUST</span>
+                    <button class="small-btn green" onclick="adjustTime('sec', 1)">+SEC</button>
+                    <button class="small-btn green" onclick="adjustTime('sec', -1)">-SEC</button>
+                </div>
+            </div>
+
+            <!-- Function Controls (Blue & Red) -->
+            <div class="function-controls">
+                <button class="control-btn blue error-btn" onclick="errorCorrection()">ERROR ←Prev</button>
+                <button class="control-btn blue possession-btn" onclick="togglePossession()">POSSESSION →</button>
+                <button class="control-btn blue" onclick="resetGame()">RESET</button>
+                <button class="control-btn blue new-game-btn" onclick="newGame()">NEW GAME</button>
+                <button class="control-btn blue siren-btn" onclick="playSiren()">SIREN</button>
+                <button class="control-btn red fouls-btn">FOULS</button>
+                <button class="control-btn red program-btn">PROG'M</button>
+            </div>
+
+        </div>
+
+        <!-- Instructions -->
+        <div class="scoreboard-instructions">
+            <h3>Scoreboard Operation Guide</h3>
+            <div class="instruction-grid">
+                <div class="instruction-item">
+                    <strong>Scoring:</strong> Use +1 buttons for Team A (yellow) or Team B (orange)
+                </div>
+                <div class="instruction-item">
+                    <strong>Timer:</strong> START to begin, HOLD to pause, RESET to restore original time
+                </div>
+                <div class="instruction-item">
+                    <strong>Fouls:</strong> Track team fouls with +1 buttons under each team
+                </div>
+                <div class="instruction-item">
+                    <strong>Timeouts:</strong> Add timeouts for each team using the timeout +1 buttons
+                </div>
+                <div class="instruction-item">
+                    <strong>Possession:</strong> Toggle possession arrow between teams
+                </div>
+                <div class="instruction-item">
+                    <strong>Error Correction:</strong> Use ERROR button to undo last action
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Section -->
+        <div class="support-section">
+            <p class="support-title">TRAINING TOOL FOR BASKETBALL SCORING</p>
+            <a href="https://paypal.me/kelvinsugars?country.x=AU&locale.x=en_AU" target="_blank" class="support-link">
+                ☕ Support Development
+            </a>
+            <p class="support-story">
+                Practice scoreboard operation without the pressure of a live game. Built for parents and volunteers to build confidence.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="scoreboard.js"></script>
+    <script>
+        function goToMenu() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1005,6 +1005,28 @@ body {
     color: #333;
 }
 
+.matrix-row-with-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 15px;
+}
+
+.row-label {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333;
+    min-width: 30px;
+    text-align: left;
+}
+
+.button-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    flex: 1;
+}
+
 .matrix-row {
     display: grid;
     grid-template-columns: repeat(7, 1fr);

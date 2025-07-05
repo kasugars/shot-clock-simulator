@@ -72,46 +72,55 @@
         <div class="button-matrix">
             <!-- Column Labels Row -->
             <div class="labels-row">
-                <span></span>
                 <span>SCORE</span>
                 <span>TEAM FOULS</span>
                 <span>TIME OUTS</span>
                 <span>INDICATOR (SUBS)</span>
                 <span>ERROR</span>
                 <span>POSSESSION</span>
+                <span>RESET</span>
             </div>
             
             <!-- Row 1: Team A -->
-            <div class="matrix-row">
-                <span class="team-letter">A</span>
-                <button class="btn-yellow" onclick="addScore('A', 1)">+1</button>
-                <button class="btn-yellow" onclick="addTeamFoul('A')">+1</button>
-                <button class="btn-yellow" onclick="addTimeout('A')">+1</button>
-                <button class="btn-yellow" onclick="toggleIndicator('A')">On/Off</button>
-                <button class="btn-blue" onclick="errorCorrection()">←Prev</button>
-                <button class="btn-blue" onclick="togglePossession()">←</button>
+            <div class="matrix-row-with-label">
+                <span class="row-label">A</span>
+                <div class="button-row">
+                    <button class="btn-yellow" onclick="addScore('A', 1)">+1</button>
+                    <button class="btn-yellow" onclick="addTeamFoul('A')">+1</button>
+                    <button class="btn-yellow" onclick="addTimeout('A')">+1</button>
+                    <button class="btn-yellow" onclick="toggleIndicator('A')">On/Off</button>
+                    <button class="btn-blue" onclick="errorCorrection()">←Prev</button>
+                    <button class="btn-blue" onclick="togglePossession()">←</button>
+                    <button class="btn-blue">RESET</button>
+                </div>
             </div>
             
             <!-- Row 2: Team B -->
-            <div class="matrix-row">
-                <span class="team-letter">B</span>
-                <button class="btn-orange" onclick="addScore('B', 1)">+1</button>
-                <button class="btn-orange" onclick="addTeamFoul('B')">+1</button>
-                <button class="btn-orange" onclick="addTimeout('B')">+1</button>
-                <button class="btn-orange" onclick="toggleIndicator('B')">On/Off</button>
-                <button class="btn-blue" onclick="errorCorrection()">+1 Prev</button>
-                <button class="btn-blue" onclick="togglePossession()">→</button>
+            <div class="matrix-row-with-label">
+                <span class="row-label">B</span>
+                <div class="button-row">
+                    <button class="btn-orange" onclick="addScore('B', 1)">+1</button>
+                    <button class="btn-orange" onclick="addTeamFoul('B')">+1</button>
+                    <button class="btn-orange" onclick="addTimeout('B')">+1</button>
+                    <button class="btn-orange" onclick="toggleIndicator('B')">On/Off</button>
+                    <button class="btn-blue" onclick="errorCorrection()">+1 Prev</button>
+                    <button class="btn-blue" onclick="togglePossession()">→</button>
+                    <button class="btn-blue">FOULS OUTS</button>
+                </div>
             </div>
             
             <!-- Row 3: Bottom Controls -->
-            <div class="matrix-row">
-                <span class="section-label">TIMER</span>
-                <button class="btn-green" onclick="resetTimer()">RESET</button>
-                <button class="btn-green" onclick="adjustTime('min', 1)">+MIN</button>
-                <button class="btn-green" onclick="adjustTime('min', -1)">-MIN</button>
-                <button class="btn-green" onclick="startTimer()">START</button>
-                <button class="btn-green" onclick="holdTimer()">HOLD</button>
-                <button class="btn-blue" onclick="newGame()">NEW GAME</button>
+            <div class="matrix-row-with-label">
+                <span class="row-label">TIMER</span>
+                <div class="button-row">
+                    <button class="btn-green" onclick="resetTimer()">RESET</button>
+                    <button class="btn-green" onclick="adjustTime('min', 1)">+MIN</button>
+                    <button class="btn-green" onclick="adjustTime('min', -1)">-MIN</button>
+                    <button class="btn-green" onclick="startTimer()">START</button>
+                    <button class="btn-green" onclick="holdTimer()">HOLD</button>
+                    <button class="btn-blue" onclick="newGame()">NEW GAME</button>
+                    <button class="btn-red">TIME OUTS</button>
+                </div>
             </div>
             
             

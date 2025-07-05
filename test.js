@@ -49,6 +49,11 @@ function testPeriod() {
         gameState.period = 1;
     }
     
+    // Reset fouls to 0 every period change
+    gameState.foulsA = 0;
+    gameState.foulsB = 0;
+    console.log('Fouls reset to 0 for both teams');
+    
     // Reset timeouts based on period
     if (gameState.period === 3) {
         // Period 3: Reset timeouts to 3 for both teams
@@ -88,6 +93,34 @@ function addTimeout(team) {
         } else {
             console.log('Team B already at 0 timeouts');
         }
+    }
+    
+    updateDisplay();
+}
+
+function addTeamFoul(team) {
+    console.log('Foul button clicked for team', team);
+    
+    if (team === 'A') {
+        gameState.foulsA += 1;
+        console.log('Team A fouls increased to:', gameState.foulsA);
+    } else if (team === 'B') {
+        gameState.foulsB += 1;
+        console.log('Team B fouls increased to:', gameState.foulsB);
+    }
+    
+    updateDisplay();
+}
+
+function addScore(team, points) {
+    console.log('Score button clicked for team', team, 'points:', points);
+    
+    if (team === 'A') {
+        gameState.scoreA += points;
+        console.log('Team A score increased to:', gameState.scoreA);
+    } else if (team === 'B') {
+        gameState.scoreB += points;
+        console.log('Team B score increased to:', gameState.scoreB);
     }
     
     updateDisplay();

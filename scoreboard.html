@@ -107,65 +107,42 @@
             <div class="matrix-row">
                 <span class="section-label">TIMER</span>
                 <button class="btn-green" onclick="resetTimer()">RESET</button>
-                <span class="section-label">ADJUST</span>
                 <button class="btn-green" onclick="adjustTime('min', 1)">+MIN</button>
                 <button class="btn-green" onclick="adjustTime('min', -1)">-MIN</button>
-                <span class="section-label">TIMER</span>
                 <button class="btn-green" onclick="startTimer()">START</button>
-            </div>
-            
-            <!-- Row 4: Additional Labels -->
-            <div class="matrix-row">
-                <span></span>
-                <span></span>
-                <span class="yes-no-label">Yes A</span>
-                <span class="yes-no-label">No B</span>
-                <span></span>
                 <button class="btn-green" onclick="holdTimer()">HOLD</button>
-                <span class="section-label">RESET</span>
-            </div>
-            
-            <!-- Row 5: More Controls -->
-            <div class="matrix-row">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
                 <button class="btn-blue" onclick="newGame()">NEW GAME</button>
-                <span class="section-label">FOULS OUTS</span>
             </div>
             
-            <!-- Row 6: Final Controls -->
-            <div class="matrix-row">
+            
+            <!-- Additional Labels for 3rd Row -->
+            <div class="sub-labels">
                 <span></span>
                 <span></span>
+                <span class="adjust-label">ADJUST</span>
+                <span class="yes-no-small">Yes A</span>
+                <span class="yes-no-small">No B</span>
+                <span class="timer-label-small">TIMER</span>
                 <span></span>
-                <span></span>
-                <span class="section-label">TIME OUTS</span>
-                <button class="btn-blue">START STOP</button>
-                <span class="section-label">PROG'M</span>
             </div>
             
-            <!-- Row 7: Program Controls -->
-            <div class="matrix-row">
+            <!-- Bottom Labels Row -->
+            <div class="bottom-labels-row">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
+                <span class="timeout-label">TIME OUTS</span>
+                <span class="program-label">PROG'M</span>
                 <span></span>
-                <button class="btn-red">FOULS OUTS</button>
-                <button class="btn-red">TIME OUTS</button>
             </div>
             
-            <!-- Row 8: Power and Next -->
-            <div class="matrix-row">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <button class="btn-gray" disabled>POWER</button>
+            <!-- Additional Function Buttons -->
+            <div class="extra-functions">
+                <button class="btn-blue function-btn">START STOP</button>
+                <button class="btn-red function-btn">FOULS OUTS</button>
+                <button class="btn-red function-btn">TIME OUTS</button>
+                <button class="btn-gray function-btn" disabled>POWER</button>
                 <span class="next-arrow">Next ►</span>
             </div>
         </div>

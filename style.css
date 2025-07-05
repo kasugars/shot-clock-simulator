@@ -798,7 +798,7 @@ button.control-btn,
 }
 
 .back-btn {
-    background: rgba(40, 167, 69, 0.8);
+    background: rgba(44, 62, 80, 0.8);
     color: white;
     border: none;
     padding: 6px 12px;
@@ -807,14 +807,14 @@ button.control-btn,
     font-size: 0.75em;
     font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);
     opacity: 0.9;
 }
 
 .back-btn:hover {
-    background: rgba(33, 136, 56, 0.9);
+    background: rgba(52, 73, 94, 0.9);
     transform: translateY(-1px);
-    box-shadow: 0 3px 12px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 3px 12px rgba(44, 62, 80, 0.3);
     opacity: 1;
 }
 

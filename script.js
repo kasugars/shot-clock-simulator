@@ -13,6 +13,10 @@ class ShotClockTimer {
         this.keyboardAltResetHeld = false;
         this.keyboardResetStartTime = 0;
         this.keyboardAltResetStartTime = 0;
+        this.keyboardResetTimer = null;
+        this.keyboardAltResetTimer = null;
+        this.keyboardResetTriggered = false;
+        this.keyboardAltResetTriggered = false;
         
         // DOM elements
         this.timeDisplay = document.getElementById('timeDisplay');
@@ -105,6 +109,12 @@ class ShotClockTimer {
             this.resetHoldTimer = setTimeout(() => {
                 this.isResetHeld = true;
                 this.resetBtn.classList.add('pressed');
+                // Reset immediately when hold is detected
+                if (!this.isStopPressed) {
+                    this.resetTimer(24);
+                    this.addButtonFeedback(this.resetBtn);
+                    this.playButtonSound();
+                }
             }, 300); // 300ms to detect hold
         });
 
@@ -117,16 +127,16 @@ class ShotClockTimer {
                 // Subtract 1 second when STOP is held
                 this.adjustTime(-1);
                 this.addButtonFeedback(this.resetBtn);
+                this.playButtonSound();
+            } else if (this.isResetHeld) {
+                // Auto-start if button was held (reset already happened)
+                setTimeout(() => this.startTimer(), 50);
             } else {
+                // Quick press - reset without auto-start
                 this.resetTimer(24);
                 this.addButtonFeedback(this.resetBtn);
-                
-                // Auto-start if button was held
-                if (this.isResetHeld) {
-                    setTimeout(() => this.startTimer(), 50);
-                }
+                this.playButtonSound();
             }
-            this.playButtonSound();
         });
 
         this.resetBtn.addEventListener('mouseleave', (e) => {
@@ -141,6 +151,12 @@ class ShotClockTimer {
             this.resetHoldTimer = setTimeout(() => {
                 this.isResetHeld = true;
                 this.resetBtn.classList.add('pressed');
+                // Reset immediately when hold is detected
+                if (!this.isStopPressed) {
+                    this.resetTimer(24);
+                    this.addButtonFeedback(this.resetBtn);
+                    this.playButtonSound();
+                }
             }, 300);
         });
 
@@ -153,16 +169,16 @@ class ShotClockTimer {
                 // Subtract 1 second when STOP is held
                 this.adjustTime(-1);
                 this.addButtonFeedback(this.resetBtn);
+                this.playButtonSound();
+            } else if (this.isResetHeld) {
+                // Auto-start if button was held (reset already happened)
+                setTimeout(() => this.startTimer(), 50);
             } else {
+                // Quick press - reset without auto-start
                 this.resetTimer(24);
                 this.addButtonFeedback(this.resetBtn);
-                
-                // Auto-start if button was held
-                if (this.isResetHeld) {
-                    setTimeout(() => this.startTimer(), 50);
-                }
+                this.playButtonSound();
             }
-            this.playButtonSound();
         });
         
         // Alt Reset button - hold detection for auto-start
@@ -172,6 +188,10 @@ class ShotClockTimer {
             this.altResetHoldTimer = setTimeout(() => {
                 this.isAltResetHeld = true;
                 this.altResetBtn.classList.add('pressed');
+                // Reset immediately when hold is detected
+                this.resetTimer(14);
+                this.addButtonFeedback(this.altResetBtn);
+                this.playButtonSound();
             }, 300); // 300ms to detect hold
         });
 
@@ -180,14 +200,15 @@ class ShotClockTimer {
             clearTimeout(this.altResetHoldTimer);
             this.altResetBtn.classList.remove('pressed');
             
-            this.resetTimer(14);
-            this.addButtonFeedback(this.altResetBtn);
-            
-            // Auto-start if button was held
             if (this.isAltResetHeld) {
+                // Auto-start if button was held (reset already happened)
                 setTimeout(() => this.startTimer(), 50);
+            } else {
+                // Quick press - reset without auto-start
+                this.resetTimer(14);
+                this.addButtonFeedback(this.altResetBtn);
+                this.playButtonSound();
             }
-            this.playButtonSound();
         });
 
         this.altResetBtn.addEventListener('mouseleave', (e) => {
@@ -202,6 +223,10 @@ class ShotClockTimer {
             this.altResetHoldTimer = setTimeout(() => {
                 this.isAltResetHeld = true;
                 this.altResetBtn.classList.add('pressed');
+                // Reset immediately when hold is detected
+                this.resetTimer(14);
+                this.addButtonFeedback(this.altResetBtn);
+                this.playButtonSound();
             }, 300);
         });
 
@@ -210,14 +235,15 @@ class ShotClockTimer {
             clearTimeout(this.altResetHoldTimer);
             this.altResetBtn.classList.remove('pressed');
             
-            this.resetTimer(14);
-            this.addButtonFeedback(this.altResetBtn);
-            
-            // Auto-start if button was held
             if (this.isAltResetHeld) {
+                // Auto-start if button was held (reset already happened)
                 setTimeout(() => this.startTimer(), 50);
+            } else {
+                // Quick press - reset without auto-start
+                this.resetTimer(14);
+                this.addButtonFeedback(this.altResetBtn);
+                this.playButtonSound();
             }
-            this.playButtonSound();
         });
         
         // Prevent context menu on long press
@@ -253,6 +279,16 @@ class ShotClockTimer {
                     if (!this.keyboardResetHeld) {
                         this.keyboardResetStartTime = Date.now();
                         this.keyboardResetHeld = true;
+                        this.keyboardResetTriggered = false;
+                        // Set timer to reset after 300ms hold
+                        this.keyboardResetTimer = setTimeout(() => {
+                            this.keyboardResetTriggered = true;
+                            if (!this.isStopPressed) {
+                                this.resetTimer(24);
+                                this.addButtonFeedback(this.resetBtn);
+                                this.playButtonSound();
+                            }
+                        }, 300);
                     }
                     break;
                 case 'KeyF':
@@ -260,6 +296,14 @@ class ShotClockTimer {
                     if (!this.keyboardAltResetHeld) {
                         this.keyboardAltResetStartTime = Date.now();
                         this.keyboardAltResetHeld = true;
+                        this.keyboardAltResetTriggered = false;
+                        // Set timer to reset after 300ms hold
+                        this.keyboardAltResetTimer = setTimeout(() => {
+                            this.keyboardAltResetTriggered = true;
+                            this.resetTimer(14);
+                            this.addButtonFeedback(this.altResetBtn);
+                            this.playButtonSound();
+                        }, 300);
                     }
                     break;
                 case 'ArrowUp':
@@ -284,40 +328,41 @@ class ShotClockTimer {
                     break;
                 case 'KeyD':
                     if (this.keyboardResetHeld) {
-                        const holdDuration = Date.now() - this.keyboardResetStartTime;
-                        const wasHeld = holdDuration >= 300; // 300ms threshold
+                        clearTimeout(this.keyboardResetTimer);
                         
                         if (this.isStopPressed) {
                             // Subtract 1 second when A (STOP) is held
                             this.adjustTime(-1);
                             this.addButtonFeedback(this.resetBtn);
+                            this.playButtonSound();
+                        } else if (this.keyboardResetTriggered) {
+                            // Auto-start if key was held (reset already happened during hold)
+                            setTimeout(() => this.startTimer(), 50);
                         } else {
+                            // Quick press - reset without auto-start
                             this.resetTimer(24);
                             this.addButtonFeedback(this.resetBtn);
-                            
-                            // Auto-start if key was held
-                            if (wasHeld) {
-                                setTimeout(() => this.startTimer(), 50);
-                            }
+                            this.playButtonSound();
                         }
-                        this.playButtonSound();
                         this.keyboardResetHeld = false;
+                        this.keyboardResetTriggered = false;
                     }
                     break;
                 case 'KeyF':
                     if (this.keyboardAltResetHeld) {
-                        const holdDuration = Date.now() - this.keyboardAltResetStartTime;
-                        const wasHeld = holdDuration >= 300; // 300ms threshold
+                        clearTimeout(this.keyboardAltResetTimer);
                         
-                        this.resetTimer(14);
-                        this.addButtonFeedback(this.altResetBtn);
-                        
-                        // Auto-start if key was held
-                        if (wasHeld) {
+                        if (this.keyboardAltResetTriggered) {
+                            // Auto-start if key was held (reset already happened during hold)
                             setTimeout(() => this.startTimer(), 50);
+                        } else {
+                            // Quick press - reset without auto-start
+                            this.resetTimer(14);
+                            this.addButtonFeedback(this.altResetBtn);
+                            this.playButtonSound();
                         }
-                        this.playButtonSound();
                         this.keyboardAltResetHeld = false;
+                        this.keyboardAltResetTriggered = false;
                     }
                     break;
             }

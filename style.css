@@ -250,6 +250,24 @@ body {
     border-radius: 5px;
 }
 
+/* Practice Tip */
+.practice-tip {
+    text-align: center;
+    font-size: 11px;
+    color: #2c5530;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 6px;
+    border-left: 4px solid #28a745;
+    line-height: 1.4;
+}
+
+.practice-tip strong {
+    color: #1e4d23;
+    font-weight: 700;
+}
+
 /* Rules Section */
 .rules-section {
     text-align: center;
@@ -402,6 +420,12 @@ body {
         padding: 6px;
     }
 
+    .practice-tip {
+        font-size: 10px;
+        margin-top: 8px;
+        padding: 8px;
+    }
+
     .rules-section {
         margin-top: 8px;
         padding: 6px;
@@ -508,6 +532,12 @@ body {
         font-size: 9px;
         margin-top: 6px;
         padding: 4px;
+    }
+
+    .practice-tip {
+        font-size: 9px;
+        margin-top: 6px;
+        padding: 6px;
     }
 
     .rules-section {

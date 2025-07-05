@@ -85,8 +85,10 @@
                     <button class="btn-yellow" onclick="addTimeout('A')">+1</button>
                     <button class="btn-yellow" onclick="toggleIndicator('A')">On/Off</button>
                     <button class="btn-blue" onclick="undoLastAction()">UNDO</button>
-                    <button class="btn-blue possession-arrow-btn" onclick="togglePossession()">←</button>
-                    <button class="btn-blue" onclick="playSiren()">SIREN</button>
+                    <div class="possession-buttons-group">
+                        <button class="btn-blue possession-arrow-btn" onclick="togglePossession()">←</button>
+                        <button class="btn-blue possession-arrow-btn" onclick="togglePossession()">→</button>
+                    </div>
                 </div>
             </div>
             
@@ -99,8 +101,10 @@
                     <button class="btn-orange" onclick="addTimeout('B')">+1</button>
                     <button class="btn-orange" onclick="toggleIndicator('B')">On/Off</button>
                     <button class="btn-blue" onclick="addPeriod()">+1P</button>
-                    <button class="btn-blue possession-arrow-btn" onclick="togglePossession()">→</button>
-                    <button class="btn-gray">-</button>
+                    <div class="possession-buttons-group">
+                        <button class="btn-blue"></button>
+                        <button class="btn-blue"></button>
+                    </div>
                 </div>
             </div>
             
@@ -114,7 +118,6 @@
                     <button class="btn-green" onclick="startTimer()">START</button>
                     <button class="btn-green" onclick="holdTimer()">HOLD</button>
                     <button class="btn-blue" onclick="newGame()">NEW GAME</button>
-                    <button class="btn-gray">-</button>
                 </div>
             </div>
         </div>

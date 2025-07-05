@@ -820,14 +820,21 @@ button.control-btn,
 
 /* Ensure shot clock page home button uses correct colors */
 .container .back-btn,
-.shot-clock .back-btn {
+.shot-clock .back-btn,
+.back-nav .back-btn,
+button.back-btn {
     background: rgba(44, 62, 80, 0.8) !important;
+    background-color: rgba(44, 62, 80, 0.8) !important;
     color: white !important;
+    border: none !important;
 }
 
 .container .back-btn:hover,
-.shot-clock .back-btn:hover {
+.shot-clock .back-btn:hover,
+.back-nav .back-btn:hover,
+button.back-btn:hover {
     background: rgba(52, 73, 94, 0.9) !important;
+    background-color: rgba(52, 73, 94, 0.9) !important;
 }
 
 /* Mobile Responsive for Basketball Court */

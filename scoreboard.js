@@ -145,12 +145,16 @@ class ScoreboardController {
 
     addTimeout(team) {
         this.saveStateToHistory('timeout', {team});
-        this.gameState.lastAction = {type: 'timeout', team, amount: 1};
+        this.gameState.lastAction = {type: 'timeout', team, amount: -1};
         
         if (team === 'A') {
-            this.gameState.timeoutsA += 1;
+            if (this.gameState.timeoutsA > 0) {
+                this.gameState.timeoutsA -= 1;
+            }
         } else {
-            this.gameState.timeoutsB += 1;
+            if (this.gameState.timeoutsB > 0) {
+                this.gameState.timeoutsB -= 1;
+            }
         }
         
         this.updateDisplay();

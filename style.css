@@ -1009,7 +1009,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
-    gap: 15px;
+    gap: 10px;
 }
 
 .row-label {

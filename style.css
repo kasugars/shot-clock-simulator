@@ -763,28 +763,30 @@ body {
 /* Back Navigation */
 .back-nav {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     z-index: 100;
 }
 
 .back-btn {
-    background: #28a745;
+    background: rgba(40, 167, 69, 0.8);
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 6px 12px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 0.75em;
+    font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+    opacity: 0.9;
 }
 
 .back-btn:hover {
-    background: #218838;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    background: rgba(33, 136, 56, 0.9);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(40, 167, 69, 0.3);
+    opacity: 1;
 }
 
 /* Mobile Responsive for Basketball Court */
@@ -854,13 +856,13 @@ body {
     }
     
     .back-nav {
-        top: 15px;
-        left: 15px;
+        top: 10px;
+        left: 10px;
     }
     
     .back-btn {
-        padding: 8px 16px;
-        font-size: 0.8em;
+        padding: 5px 10px;
+        font-size: 0.7em;
     }
 }
 

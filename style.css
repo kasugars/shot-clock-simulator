@@ -1202,7 +1202,6 @@ button.back-btn:hover {
 
 /* Simple Button Styles */
 .btn-yellow, .btn-orange, .btn-green, .btn-blue, .btn-red, .btn-gray {
-    padding: 15px 10px;
     border: 4px outset #ccc;
     border-radius: 8px;
     font-size: 0.9em;
@@ -1210,13 +1209,13 @@ button.back-btn:hover {
     cursor: pointer;
     text-align: center;
     height: 60px;
-    width: 100%;
-    min-width: 0;
+    padding: 8px;
     line-height: 1.2;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .btn-yellow, .btn-orange, .btn-green, .btn-blue, .btn-red, .btn-gray:active {

@@ -1,4 +1,4 @@
-console.log('scoreboard.js file loaded successfully');
+
 
 class ScoreboardController {
     constructor() {
@@ -7,8 +7,8 @@ class ScoreboardController {
             scoreB: 0,
             foulsA: 0,
             foulsB: 0,
-            timeoutsA: 0,
-            timeoutsB: 0,
+            timeoutsA: 2,
+            timeoutsB: 2,
             gameTime: 20 * 60, // 20 minutes in seconds
             isRunning: false,
             possession: 'A', // 'A' or 'B'
@@ -103,15 +103,11 @@ class ScoreboardController {
         // Update period display
         const periodElement = document.getElementById('period');
         if (periodElement) {
-            console.log('Updating period display, period value:', this.gameState.period);
             if (this.gameState.period <= 4) {
                 periodElement.textContent = this.gameState.period;
             } else if (this.gameState.period === 5) {
                 periodElement.textContent = 'OT';
             }
-            console.log('Period element text is now:', periodElement.textContent);
-        } else {
-            console.log('Period element not found!');
         }
     }
 
@@ -208,9 +204,7 @@ class ScoreboardController {
             this.gameState.timeoutsB = 2;
         }
         
-        console.log('Period is now:', this.gameState.period);
-        console.log('Timeouts A:', this.gameState.timeoutsA, 'B:', this.gameState.timeoutsB);
-        console.log('Fouls A:', this.gameState.foulsA, 'B:', this.gameState.foulsB);
+
         this.updateDisplay();
         this.playButtonSound();
     }
@@ -309,8 +303,8 @@ class ScoreboardController {
             scoreB: 0,
             foulsA: 0,
             foulsB: 0,
-            timeoutsA: 0,
-            timeoutsB: 0,
+            timeoutsA: 2,
+            timeoutsB: 2,
             gameTime: 20 * 60,
             isRunning: false,
             possession: 'A',
@@ -376,9 +370,7 @@ class ScoreboardController {
 let scoreboard;
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Initializing scoreboard...');
     scoreboard = new ScoreboardController();
-    console.log('Scoreboard initialized successfully');
 });
 
 // Global functions for button clicks
@@ -439,10 +431,7 @@ function undoLastAction() {
 }
 
 function addPeriod() {
-    console.log('Global addPeriod function called');
     if (scoreboard) {
         scoreboard.addPeriod();
-    } else {
-        console.log('ERROR: Scoreboard not initialized!');
     }
 }

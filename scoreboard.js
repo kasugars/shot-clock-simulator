@@ -349,7 +349,9 @@ class ScoreboardController {
 let scoreboard;
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Initializing scoreboard...');
     scoreboard = new ScoreboardController();
+    console.log('Scoreboard initialized successfully');
 });
 
 // Global functions for button clicks
@@ -410,5 +412,10 @@ function undoLastAction() {
 }
 
 function addPeriod() {
-    scoreboard.addPeriod();
+    console.log('Global addPeriod function called');
+    if (scoreboard) {
+        scoreboard.addPeriod();
+    } else {
+        console.log('ERROR: Scoreboard not initialized!');
+    }
 }

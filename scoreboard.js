@@ -15,6 +15,7 @@ class ScoreboardController {
             lastAction: null // For error correction
         };
         
+        this.actionHistory = []; // Track all actions for undo functionality
         this.timerInterval = null;
         this.initializeDisplay();
         this.initializeAudio();
@@ -32,6 +33,37 @@ class ScoreboardController {
         } catch (e) {
             console.log('Audio context not supported');
         }
+    }
+
+    saveStateToHistory(actionType, actionDetails) {
+        // Save current state before making changes
+        const stateCopy = JSON.parse(JSON.stringify(this.gameState));
+        this.actionHistory.push({
+            state: stateCopy,
+            action: actionType,
+            details: actionDetails,
+            timestamp: Date.now()
+        });
+        
+        // Limit history to prevent memory issues (keep last 50 actions)
+        if (this.actionHistory.length > 50) {
+            this.actionHistory.shift();
+        }
+    }
+
+    undoLastAction() {
+        if (this.actionHistory.length === 0) {
+            console.log('No actions to undo');
+            return;
+        }
+
+        // Restore the previous state
+        const previousEntry = this.actionHistory.pop();
+        this.gameState = JSON.parse(JSON.stringify(previousEntry.state));
+        this.updateDisplay();
+        this.playButtonSound();
+        
+        console.log(`Undid action: ${previousEntry.action}`);
     }
 
     updateDisplay() {
@@ -67,6 +99,7 @@ class ScoreboardController {
     }
 
     addScore(team, points) {
+        this.saveStateToHistory('score', {team, points});
         this.gameState.lastAction = {type: 'score', team, amount: points};
         
         if (team === 'A') {
@@ -80,6 +113,7 @@ class ScoreboardController {
     }
 
     addTeamFoul(team) {
+        this.saveStateToHistory('foul', {team});
         this.gameState.lastAction = {type: 'foul', team, amount: 1};
         
         if (team === 'A') {
@@ -93,6 +127,7 @@ class ScoreboardController {
     }
 
     addTimeout(team) {
+        this.saveStateToHistory('timeout', {team});
         this.gameState.lastAction = {type: 'timeout', team, amount: 1};
         
         if (team === 'A') {
@@ -106,6 +141,7 @@ class ScoreboardController {
     }
 
     toggleIndicator(team) {
+        this.saveStateToHistory('indicator', {team});
         if (team === 'A') {
             this.gameState.indicatorA = !this.gameState.indicatorA;
         } else {
@@ -117,6 +153,7 @@ class ScoreboardController {
     }
 
     togglePossession() {
+        this.saveStateToHistory('possession', {});
         this.gameState.possession = this.gameState.possession === 'A' ? 'B' : 'A';
         this.updateDisplay();
         this.playButtonSound();
@@ -149,6 +186,7 @@ class ScoreboardController {
     }
 
     resetTimer() {
+        this.saveStateToHistory('timer_reset', {});
         this.holdTimer();
         this.gameState.gameTime = 20 * 60; // Reset to 20 minutes
         this.updateDisplay();
@@ -156,6 +194,7 @@ class ScoreboardController {
     }
 
     adjustTime(type, amount) {
+        this.saveStateToHistory('time_adjust', {type, amount});
         if (type === 'min') {
             this.gameState.gameTime += amount * 60;
         } else if (type === 'sec') {
@@ -223,6 +262,7 @@ class ScoreboardController {
             indicatorB: false,
             lastAction: null
         };
+        this.actionHistory = []; // Clear undo history on game reset
         this.updateDisplay();
         this.playButtonSound();
     }
@@ -333,4 +373,8 @@ function newGame() {
 
 function playSiren() {
     scoreboard.playSiren();
+}
+
+function undoLastAction() {
+    scoreboard.undoLastAction();
 }

@@ -97,8 +97,16 @@ This project is a basketball training suite featuring two applications: a shot c
 - July 05, 2025. Implemented scoring, fouls, timeouts, timer controls with proper button colors
 - July 05, 2025. Added possession arrow toggle and error correction functionality
 - July 05, 2025. Included buzzer/siren audio feedback and button press sounds
+- July 05, 2025. **Critical Issue**: Browser caching preventing home button color changes despite multiple CSS and HTML approaches
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+User experiencing frustration with button styling changes not taking effect due to aggressive browser caching.
 Contact: kasugars@gmail.com for support/donations
+
+## Known Issues
+
+- Home button color change from green to gray requires browser cache clearing
+- Scoreboard button alignment affected by CSS version conflicts  
+- Multiple cache-busting attempts unsuccessful (inline styles, new files, timestamp versioning)

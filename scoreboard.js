@@ -209,6 +209,8 @@ class ScoreboardController {
         }
         
         console.log('Period is now:', this.gameState.period);
+        console.log('Timeouts A:', this.gameState.timeoutsA, 'B:', this.gameState.timeoutsB);
+        console.log('Fouls A:', this.gameState.foulsA, 'B:', this.gameState.foulsB);
         this.updateDisplay();
         this.playButtonSound();
     }

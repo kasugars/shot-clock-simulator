@@ -1,41 +1,48 @@
-/* Mobile-specific fixes for scoreboard display issues */
+/* Ultra-specific mobile fixes - highest priority override */
 @media screen and (max-width: 768px) {
-    /* Force override all mobile styles for LCD display */
-    .lcd-container .team-row-a,
-    .lcd-container .team-row-b {
+    body .scoreboard-container .lcd-container .lcd-screen .team-row-a,
+    body .scoreboard-container .lcd-container .lcd-screen .team-row-b {
         height: auto !important;
-        min-height: 70px !important;
-        padding: 12px 0 !important;
-        margin: 8px 0 !important;
+        min-height: 80px !important;
+        padding: 15px 0 !important;
+        margin: 10px 0 !important;
         transform: none !important;
         line-height: normal !important;
         align-items: center !important;
         display: grid !important;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px !important;
+        gap: 5px !important;
     }
     
-    .lcd-container .number-display,
-    .lcd-container .time-display {
+    body .scoreboard-container .lcd-container .lcd-screen .team-row-a .number-display,
+    body .scoreboard-container .lcd-container .lcd-screen .team-row-b .number-display,
+    body .scoreboard-container .lcd-container .lcd-screen .team-row-a .time-display,
+    body .scoreboard-container .lcd-container .lcd-screen .team-row-b .time-display {
         height: auto !important;
-        min-height: 60px !important;
-        padding: 20px 4px !important;
-        line-height: 1.3 !important;
-        font-size: 1.4em !important;
+        min-height: 70px !important;
+        padding: 25px 4px !important;
+        line-height: 1.4 !important;
+        font-size: 1.3em !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         overflow: visible !important;
         box-sizing: border-box !important;
-        margin: 2px 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        background: #d3d3d3 !important;
+        color: #000000 !important;
     }
     
-    .lcd-container .team-label-yellow,
-    .lcd-container .team-label-orange {
+    body .scoreboard-container .lcd-container .lcd-screen .team-row-a .team-label-yellow,
+    body .scoreboard-container .lcd-container .lcd-screen .team-row-b .team-label-orange {
         height: auto !important;
-        min-height: 60px !important;
-        padding: 20px 8px !important;
-        margin: 8px 0 !important;
+        min-height: 70px !important;
+        padding: 25px 8px !important;
+        margin: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        font-size: 0.6em !important;
     }
 }

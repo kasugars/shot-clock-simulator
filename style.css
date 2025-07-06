@@ -1879,7 +1879,7 @@ button.back-btn:hover {
     
     .number-display {
         font-size: 1.6em;
-        padding: 4px 1px;
+        padding: 6px 1px;
         line-height: 1;
         min-width: 30px;
         margin: 0;
@@ -1887,50 +1887,54 @@ button.back-btn:hover {
         align-items: center;
         justify-content: center;
         height: 100%;
+        min-height: 35px;
     }
     
     .scoreboard-container .time-display {
         font-size: 1.8em;
-        padding: 3px 2px;
+        padding: 6px 2px;
         line-height: 1;
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+        min-height: 35px;
     }
     
     .team-row-a, .team-row-b {
-        min-height: 35px;
-        height: 35px;
+        min-height: 40px;
+        height: 40px;
     }
     
     .team-row-b {
-        transform: translateY(-4px);
-        min-height: 35px;
-        height: 35px;
+        transform: translateY(-2px);
+        min-height: 40px;
+        height: 40px;
     }
     
     .team-label-yellow {
-        padding: 3px;
+        padding: 5px;
         font-size: 0.6em;
         line-height: 1;
-        margin: 0 0 4px 0;
+        margin: 0 0 5px 0;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+        min-height: 35px;
     }
     
     .team-label-orange {
-        padding: 3px;
+        padding: 5px;
         font-size: 0.6em;
         line-height: 1;
-        margin: 4px 0 0 0;
+        margin: 5px 0 0 0;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+        min-height: 35px;
     }
     
     .button-matrix {

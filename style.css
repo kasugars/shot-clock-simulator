@@ -1898,9 +1898,9 @@ button.back-btn:hover {
     }
     
     .display-grid {
-        gap: 1px !important;
+        gap: 0px !important;
         grid-template-rows: 15px 1fr 1fr !important;
-        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        grid-template-columns: 80px 50px 60px 70px 70px 40px !important;
         width: 100% !important;
         height: 100% !important;
         overflow: hidden !important;
@@ -1918,17 +1918,19 @@ button.back-btn:hover {
     }
     
     .number-display {
-        font-size: 0.7rem !important;
+        font-size: 0.6rem !important;
         padding: 0 !important;
         min-height: auto !important;
         line-height: 1 !important;
+        overflow: hidden !important;
     }
     
     .time-display {
-        font-size: 0.7rem !important;
+        font-size: 0.6rem !important;
         padding: 0 !important;
         min-height: auto !important;
         line-height: 1 !important;
+        overflow: hidden !important;
     }
     
     .button-matrix {

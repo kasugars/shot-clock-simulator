@@ -11,47 +11,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
     <script>
-        // Apply mobile-specific inline styles only on mobile devices
-        function applyMobileStyles() {
-            if (window.innerWidth <= 768) {
-                // Apply mobile styles to Team A row
+        // Force mobile styles immediately
+        function forceMobileStyles() {
+            const isMobile = window.innerWidth <= 768;
+            console.log('Screen width:', window.innerWidth, 'Mobile:', isMobile);
+            
+            if (isMobile) {
+                // Force apply mobile styles to Team A row - much more aggressive
                 const teamARow = document.querySelector('.team-row-a');
                 if (teamARow) {
-                    teamARow.style.cssText = 'min-height: 90px !important; height: auto !important; padding: 20px 0 !important; margin: 15px 0 !important; transform: none !important; align-items: center !important;';
+                    teamARow.style.setProperty('min-height', '100px', 'important');
+                    teamARow.style.setProperty('height', 'auto', 'important');
+                    teamARow.style.setProperty('padding', '25px 0', 'important');
+                    teamARow.style.setProperty('margin', '20px 0', 'important');
+                    teamARow.style.setProperty('transform', 'none', 'important');
+                    teamARow.style.setProperty('align-items', 'center', 'important');
+                    console.log('Applied row styles');
                 }
                 
-                // Apply mobile styles to Team A elements
+                // Force apply to all number displays
                 const teamADisplays = document.querySelectorAll('.team-row-a .number-display, .team-row-a .time-display');
-                teamADisplays.forEach(display => {
-                    display.style.cssText = 'min-height: 80px !important; height: auto !important; padding: 30px 4px !important; line-height: 1.5 !important; font-size: 1.2em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important; margin: 5px 0 !important;';
+                teamADisplays.forEach((display, index) => {
+                    display.style.setProperty('min-height', '90px', 'important');
+                    display.style.setProperty('height', 'auto', 'important');
+                    display.style.setProperty('padding', '35px 4px', 'important');
+                    display.style.setProperty('line-height', '1.6', 'important');
+                    display.style.setProperty('font-size', '1.1em', 'important');
+                    display.style.setProperty('display', 'flex', 'important');
+                    display.style.setProperty('align-items', 'center', 'important');
+                    display.style.setProperty('justify-content', 'center', 'important');
+                    display.style.setProperty('overflow', 'visible', 'important');
+                    display.style.setProperty('box-sizing', 'border-box', 'important');
+                    display.style.setProperty('margin', '8px 0', 'important');
+                    console.log('Applied display styles to element', index);
                 });
                 
                 const teamALabel = document.querySelector('.team-row-a .team-label-yellow');
                 if (teamALabel) {
-                    teamALabel.style.cssText = 'min-height: 80px !important; height: auto !important; padding: 30px 8px !important; display: flex !important; align-items: center !important; justify-content: center !important; margin: 5px 0 !important;';
-                }
-            } else {
-                // Remove mobile styles on desktop
-                const teamARow = document.querySelector('.team-row-a');
-                if (teamARow) {
-                    teamARow.style.cssText = '';
-                }
-                
-                const teamADisplays = document.querySelectorAll('.team-row-a .number-display, .team-row-a .time-display');
-                teamADisplays.forEach(display => {
-                    display.style.cssText = '';
-                });
-                
-                const teamALabel = document.querySelector('.team-row-a .team-label-yellow');
-                if (teamALabel) {
-                    teamALabel.style.cssText = '';
+                    teamALabel.style.setProperty('min-height', '90px', 'important');
+                    teamALabel.style.setProperty('height', 'auto', 'important');
+                    teamALabel.style.setProperty('padding', '35px 8px', 'important');
+                    teamALabel.style.setProperty('margin', '8px 0', 'important');
+                    console.log('Applied label styles');
                 }
             }
         }
         
-        // Apply on page load and window resize
-        window.addEventListener('load', applyMobileStyles);
-        window.addEventListener('resize', applyMobileStyles);
+        // Apply immediately and on events
+        forceMobileStyles();
+        document.addEventListener('DOMContentLoaded', forceMobileStyles);
+        window.addEventListener('load', forceMobileStyles);
+        window.addEventListener('resize', forceMobileStyles);
+        
+        // Force again after a short delay
+        setTimeout(forceMobileStyles, 500);
+        setTimeout(forceMobileStyles, 1000);
     </script>
 </head>
 <body>

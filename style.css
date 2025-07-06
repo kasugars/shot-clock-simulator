@@ -922,23 +922,7 @@ button.control-btn,
     opacity: 0.8;
 }
 
-.paypal-link {
-    display: inline-block;
-    background: #ff6b35;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255,107,53,0.3);
-}
-
-.paypal-link:hover {
-    background: #e55a2b;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255,107,53,0.4);
-}
+/* Buy Me a Coffee button styling is handled by external script */
 
 /* Back Navigation */
 .back-nav {

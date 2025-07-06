@@ -111,6 +111,7 @@ This project is a basketball training suite featuring two applications: a shot c
 - July 06, 2025. **OPTIMIZED**: Button sizing and spacing for mobile touch interfaces
 - July 06, 2025. **RESOLVED**: Mobile display number cutoff issue - implemented JavaScript-based responsive styling solution
 - July 06, 2025. **ENHANCED**: Added aggressive mobile detection and dynamic style application for optimal mobile experience
+- July 06, 2025. **UPDATED**: Replaced PayPal donation links with Buy Me a Coffee widget across all three pages (index.html, shot-clock.html, scoreboard.html)
 
 ## User Preferences
 

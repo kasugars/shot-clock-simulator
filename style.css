@@ -1300,14 +1300,23 @@ button.back-btn:hover {
 }
 
 .time-display {
-    font-family: 'Orbitron', monospace;
-    font-size: 2.2em;
-    font-weight: 900;
+    font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
+    font-size: 2.4em;
+    font-weight: normal;
     color: #000000;
     background: #d3d3d3;
-    padding: 8px;
-    border-radius: 6px;
+    padding: 4px 6px;
+    border-radius: 2px;
     text-align: center;
+    letter-spacing: 0.05em;
+    text-rendering: optimizeSpeed;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .possession-section {

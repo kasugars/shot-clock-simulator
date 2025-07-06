@@ -1164,6 +1164,19 @@ button.back-btn:hover {
     position: relative;
 }
 
+/* Scoreboard-specific time display - black text, no glow */
+.scoreboard-container .time-display {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.2em;
+    font-weight: 900;
+    color: #000000 !important;
+    background: #d3d3d3;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    text-shadow: none !important;
+}
+
 .scoreboard-title {
     text-align: center;
     font-family: 'Orbitron', monospace;

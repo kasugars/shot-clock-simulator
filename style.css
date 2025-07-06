@@ -1903,6 +1903,12 @@ button.back-btn:hover {
         grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
         width: 100% !important;
         height: 100% !important;
+        overflow: hidden !important;
+    }
+    
+    .team-row-a,
+    .team-row-b {
+        display: contents !important;
     }
     
     .team-labels {

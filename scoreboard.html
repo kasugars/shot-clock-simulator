@@ -11,23 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
     <script>
-        // Apply desktop layout scaling for mobile
-        function applyMobileOptimizations() {
-            const isMobile = window.innerWidth <= 768;
+        // Mobile detection and content management
+        function handleMobileDisplay() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+            const mobileMessage = document.getElementById('mobile-message');
+            const scoreboardContent = document.getElementById('scoreboard-content');
             
             if (isMobile) {
-                console.log('Mobile detected - applying desktop replica');
-                // CSS handles the desktop replica, minimal JS intervention needed
+                if (mobileMessage) mobileMessage.style.display = 'block';
+                if (scoreboardContent) scoreboardContent.style.display = 'none';
+            } else {
+                if (mobileMessage) mobileMessage.style.display = 'none';
+                if (scoreboardContent) scoreboardContent.style.display = 'block';
             }
         }
         
-        // Apply mobile optimizations
-        applyMobileOptimizations();
-        document.addEventListener('DOMContentLoaded', applyMobileOptimizations);
-        window.addEventListener('load', applyMobileOptimizations);
-        window.addEventListener('resize', applyMobileOptimizations);
-        
-        // Apply again after delay to ensure styles take effect
+        // Apply on load and resize
+        document.addEventListener('DOMContentLoaded', handleMobileDisplay);
+        window.addEventListener('load', handleMobileDisplay);
+        window.addEventListener('resize', handleMobileDisplay);
         setTimeout(applyMobileOptimizations, 300);
     </script>
 </head>
@@ -39,8 +41,30 @@
             <button onclick="goToMenu()" class="back-btn">🏀 Home</button>
         </div>
 
-        <!-- Main Title -->
-        <h1 class="scoreboard-title">SCOREBOARD TRAINER</h1>
+        <!-- Mobile Message (Hidden on Desktop) -->
+        <div id="mobile-message" style="display: none;">
+            <div style="text-align: center; padding: 40px 20px; background: rgba(0,0,0,0.8); margin: 20px; border-radius: 15px; color: white;">
+                <h2 style="color: #ff8c00; margin-bottom: 30px; font-family: 'Orbitron', monospace;">📱 MOBILE NOTICE</h2>
+                <h3 style="color: white; margin-bottom: 20px; font-family: 'Orbitron', monospace;">SCOREBOARD TRAINER</h3>
+                <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px; color: #ccc;">
+                    For the best experience with this scoreboard trainer, please switch to <strong style="color: #ff8c00;">Desktop View</strong> in your browser settings, then use pinch and zoom to resize the page to your preference.
+                </p>
+                <div style="background: rgba(255,140,0,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <p style="margin: 0; color: #ffaa33; font-weight: bold;">💡 How to enable Desktop View:</p>
+                    <p style="margin: 10px 0 0 0; color: #ccc; font-size: 0.9em;">
+                        Look for "Desktop Site" or "Request Desktop Version" in your browser's menu options
+                    </p>
+                </div>
+                <p style="color: #999; font-size: 0.9em; margin-top: 30px;">
+                    The scoreboard has many buttons and controls that work best on larger screens
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Scoreboard Content (Hidden on Mobile) -->
+        <div id="scoreboard-content">
+            <!-- Main Title -->
+            <h1 class="scoreboard-title">SCOREBOARD TRAINER</h1>
 
         <!-- Simple LCD Display (Gray with Green Numbers) -->
         <div class="lcd-container">
@@ -141,6 +165,8 @@
                 This resource was created by a parent who once found scoring stressful—built to support our kids and the game. The website has some costs, but that's okay. If this is helpful to you and you wish to contribute, you're welcome to.
             </p>
         </div>
+
+        </div> <!-- End scoreboard-content -->
 
     </div>
 

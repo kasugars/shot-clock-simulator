@@ -1178,7 +1178,8 @@ button.back-btn:hover {
     letter-spacing: 0.05em;
     text-rendering: optimizeSpeed;
     font-variant-numeric: tabular-nums;
-    line-height: 0.8;
+    line-height: 0.6;
+    margin: 0;
 }
 
 .scoreboard-title {
@@ -1227,9 +1228,14 @@ button.back-btn:hover {
     display: grid;
     grid-template-columns: 100px 80px 120px 100px 140px 80px;
     gap: 12px;
-    align-items: center;
+    align-items: stretch;
     margin: 0;
     padding: 0;
+    line-height: 0.6;
+}
+
+.team-row-b {
+    transform: translateY(-4px);
 }
 
 .team-label-yellow {
@@ -1269,7 +1275,8 @@ button.back-btn:hover {
     letter-spacing: 0.05em;
     text-rendering: optimizeSpeed;
     font-variant-numeric: tabular-nums;
-    line-height: 0.8;
+    line-height: 0.6;
+    margin: 0;
 }
 
 .time-display {
@@ -1853,14 +1860,20 @@ button.back-btn:hover {
     .number-display {
         font-size: 1.6em;
         padding: 0px 1px;
-        line-height: 0.7;
+        line-height: 0.5;
         min-width: 30px;
+        margin: 0;
     }
     
     .scoreboard-container .time-display {
         font-size: 1.8em;
         padding: 0px 2px;
-        line-height: 0.7;
+        line-height: 0.5;
+        margin: 0;
+    }
+    
+    .team-row-b {
+        transform: translateY(-6px);
     }
     
     .team-label-yellow,

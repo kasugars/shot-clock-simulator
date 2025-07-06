@@ -1,0 +1,43 @@
+[build]
+  # No build process needed for static site
+  publish = "."
+  
+[build.environment]
+  # Environment variables (none needed for static site)
+
+[[headers]]
+  # Security headers for all pages
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+[[headers]]
+  # Cache static assets
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[redirects]]
+  # Redirect root to index.html (fallback)
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  # Handle 404s by redirecting to index
+  from = "/*"
+  to = "/index.html"
+  status = 404

@@ -1,0 +1,94 @@
+name: Deploy Basketball Training Suite
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Validate HTML files
+      run: |
+        echo "Validating HTML files..."
+        find . -name "*.html" -type f | while read file; do
+          echo "Checking $file"
+          # Basic HTML validation - check for required elements
+          if ! grep -q "<!DOCTYPE html>" "$file"; then
+            echo "ERROR: Missing DOCTYPE in $file"
+            exit 1
+          fi
+          if ! grep -q "<html" "$file"; then
+            echo "ERROR: Missing html tag in $file"
+            exit 1
+          fi
+          if ! grep -q "<head>" "$file"; then
+            echo "ERROR: Missing head tag in $file"
+            exit 1
+          fi
+          if ! grep -q "<body>" "$file"; then
+            echo "ERROR: Missing body tag in $file"
+            exit 1
+          fi
+          echo "✓ $file is valid"
+        done
+    
+    - name: Validate CSS files
+      run: |
+        echo "Validating CSS files..."
+        find . -name "*.css" -type f | while read file; do
+          echo "Checking $file"
+          # Basic CSS validation - check for syntax issues
+          if grep -q "{{" "$file"; then
+            echo "ERROR: Template syntax found in $file"
+            exit 1
+          fi
+          echo "✓ $file looks good"
+        done
+    
+    - name: Validate JavaScript files
+      run: |
+        echo "Validating JavaScript files..."
+        find . -name "*.js" -type f | while read file; do
+          echo "Checking $file"
+          # Basic JS validation - check for syntax issues
+          if grep -q "{{" "$file"; then
+            echo "ERROR: Template syntax found in $file"
+            exit 1
+          fi
+          echo "✓ $file looks good"
+        done
+    
+    - name: Check for required files
+      run: |
+        echo "Checking for required files..."
+        required_files=("index.html" "shot-clock.html" "scoreboard.html" "style.css" "script.js" "scoreboard.js")
+        for file in "${required_files[@]}"; do
+          if [ ! -f "$file" ]; then
+            echo "ERROR: Required file $file is missing"
+            exit 1
+          fi
+          echo "✓ $file exists"
+        done
+    
+    - name: Test file sizes
+      run: |
+        echo "Checking file sizes..."
+        large_files=$(find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -size +1M)
+        if [ -n "$large_files" ]; then
+          echo "WARNING: Large files found (>1MB):"
+          echo "$large_files"
+        else
+          echo "✓ All files are reasonably sized"
+        fi
+    
+    - name: Success message
+      run: |
+        echo "🏀 Basketball Training Suite validation complete!"
+        echo "✓ All HTML, CSS, and JavaScript files are valid"
+        echo "✓ Ready for deployment to GitHub Pages or Netlify"

@@ -1870,179 +1870,160 @@ button.back-btn:hover {
     }
 }
 
-/* Mobile Version - Exact Desktop Layout Scaled Down */
+/* Mobile Version - Exact Desktop Replica */
 @media (max-width: 768px) {
     .scoreboard-container {
-        padding: 8px;
-        transform: scale(0.8);
+        padding: 15px;
+        transform: scale(0.75);
         transform-origin: top center;
-        width: 125%;
-        margin-left: -12.5%;
-        margin-bottom: -20vh;
+        width: 133%;
+        margin-left: -16.5%;
+        margin-bottom: -25vh;
     }
     
     .scoreboard-title {
-        font-size: 2em;
-        margin: 20px 0;
+        font-size: 2.2em;
+        margin: 25px 0;
         text-align: center;
     }
     
     .lcd-container {
-        padding: 8px;
-        border-width: 3px;
-        margin: 0 auto 20px auto;
+        max-width: 800px;
+        margin: 0 auto 0 auto;
+        background: #c0c0c0;
+        border: 6px solid #666;
+        border-radius: 10px 10px 0 0;
+        border-bottom: none;
+        padding: 1px 4px 0px 4px;
     }
     
-    /* Match exact desktop LCD grid layout with perfect alignment */
     .lcd-header-row {
-        display: grid !important;
-        grid-template-columns: 100px 80px 120px 100px 140px 80px !important;
-        gap: 12px !important;
-        font-size: 0.6em;
-        padding: 0px 4px !important;
-        margin: 0;
+        display: grid;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px;
+        gap: 12px;
         text-align: center;
+        font-size: 0.6em;
         font-weight: 700;
         color: #333;
+        margin: 0;
         background: #b0b0b0;
+        padding: 0px;
         border-radius: 2px;
     }
     
-    .team-row-a, .team-row-b {
-        display: grid !important;
-        grid-template-columns: 100px 80px 120px 100px 140px 80px !important;
-        gap: 12px !important;
-        align-items: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        line-height: 0.6 !important;
-        min-height: 35px !important;
-        height: 35px !important;
-        position: relative !important;
-        overflow: visible !important;
-    }
-    
-    .team-row-b {
-        transform: none !important;
-        min-height: 35px !important;
-        height: 35px !important;
-        margin-top: 0px !important;
-    }
-    
     .lcd-screen {
-        background: #d3d3d3 !important;
-        padding: 0px 4px !important;
-        border-radius: 3px !important;
-        margin: 0 !important;
-        position: relative !important;
-        overflow: hidden !important;
-    }
-    
-    .number-display {
-        font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace !important;
-        font-size: 1.8em !important;
-        font-weight: normal !important;
-        color: #000000 !important;
-        background: #d3d3d3 !important;
-        padding: 2px 1px !important;
-        border-radius: 2px !important;
-        text-align: center !important;
-        min-width: 35px !important;
-        letter-spacing: 0.05em !important;
-        text-rendering: optimizeSpeed !important;
-        font-variant-numeric: tabular-nums !important;
-        line-height: 1 !important;
-        margin: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: 100% !important;
-    }
-    
-    .scoreboard-container .time-display {
-        font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace !important;
-        font-size: 2.0em !important;
-        font-weight: normal !important;
-        color: #000000 !important;
-        background: #d3d3d3 !important;
-        padding: 2px 4px !important;
-        border-radius: 2px !important;
-        text-align: center !important;
-        letter-spacing: 0.05em !important;
-        text-rendering: optimizeSpeed !important;
-        font-variant-numeric: tabular-nums !important;
-        line-height: 1 !important;
-        margin: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: 100% !important;
-        position: static !important;
-        grid-column: 5 !important;
-        z-index: 1 !important;
+        background: #d3d3d3;
+        padding: 0px 4px;
+        border-radius: 3px;
+        margin: 0;
     }
     
     .team-row-a, .team-row-b {
-        min-height: 35px !important;
-        height: 35px !important;
-        margin: 0 !important;
-        align-items: center !important;
+        display: grid;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px;
+        gap: 12px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        line-height: 0.6;
+        min-height: 45px;
+        height: 45px;
     }
     
     .team-row-b {
-        transform: none !important;
-        min-height: 35px !important;
-        height: 35px !important;
-        margin: 0 !important;
+        transform: translateY(-4px);
+        min-height: 45px;
+        height: 45px;
     }
     
     .team-label-yellow {
-        background: #ffd700 !important;
-        color: #333 !important;
-        padding: 2px !important;
-        border-radius: 2px !important;
-        font-weight: 700 !important;
-        font-size: 0.7em !important;
-        text-align: center !important;
-        line-height: 1 !important;
-        margin: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: 100% !important;
+        background: #ffd700;
+        color: #333;
+        padding: 4px;
+        border-radius: 2px;
+        font-weight: 700;
+        font-size: 0.8em;
+        text-align: center;
+        line-height: 1;
+        margin: 0 0 3px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     
     .team-label-orange {
-        background: #ff8c00 !important;
-        color: white !important;
-        padding: 2px !important;
-        border-radius: 2px !important;
-        font-weight: 700 !important;
-        font-size: 0.7em !important;
-        text-align: center !important;
-        line-height: 1 !important;
-        margin: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: 100% !important;
+        background: #ff8c00;
+        color: white;
+        padding: 4px;
+        border-radius: 2px;
+        font-weight: 700;
+        font-size: 0.8em;
+        text-align: center;
+        line-height: 1;
+        margin: 3px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .number-display {
+        font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
+        font-size: 2.0em;
+        font-weight: normal;
+        color: #000000;
+        background: #d3d3d3;
+        padding: 4px 2px;
+        border-radius: 2px;
+        text-align: center;
+        min-width: 40px;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeSpeed;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .time-display {
+        font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
+        font-size: 2.4em;
+        font-weight: normal;
+        color: #000000;
+        background: #d3d3d3;
+        padding: 4px 6px;
+        border-radius: 2px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeSpeed;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     
     .possession-section {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        font-size: 1.5em !important;
-        color: #000 !important;
-        background: #d3d3d3 !important;
-        border-radius: 2px !important;
-        height: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        color: #000;
+        background: #d3d3d3;
+        border-radius: 2px;
+        height: 100%;
     }
     
     .period-spacer {
-        background: #d3d3d3 !important;
-        border-radius: 2px !important;
-        height: 100% !important;
+        background: #d3d3d3;
+        border-radius: 2px;
+        height: 100%;
     }
     
     .button-matrix {

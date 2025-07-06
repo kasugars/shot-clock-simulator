@@ -613,6 +613,157 @@ button.control-btn,
     100% { transform: scale(1); }
 }
 
+/* Enhanced Mobile Touch Support */
+.control-btn {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Landscape Mobile Optimizations */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    body {
+        padding: 5px;
+    }
+    
+    .container {
+        max-width: 90vw;
+        padding: 15px;
+        margin: 5px auto;
+    }
+    
+    .main-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .shot-clock-display {
+        padding: 15px;
+        margin-bottom: 8px;
+    }
+    
+    .time-display {
+        font-size: 50px;
+        min-height: 50px;
+    }
+    
+    .control-panel {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .button-row {
+        gap: 12px;
+        padding: 8px;
+    }
+    
+    .control-btn {
+        height: 55px;
+        width: 75px;
+        font-size: 11px;
+    }
+    
+    .instructions {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+    
+    .keyboard-controls {
+        margin-top: 8px;
+        padding: 10px;
+    }
+    
+    .controls-grid {
+        gap: 6px;
+    }
+    
+    .practice-tip,
+    .rules-section,
+    .support-section {
+        margin-top: 8px;
+        padding: 8px;
+    }
+}
+
+/* Ultra Small Landscape - Very Compact */
+@media screen and (max-width: 600px) and (orientation: landscape) and (max-height: 450px) {
+    .container {
+        padding: 10px;
+        max-width: 95vw;
+    }
+    
+    .main-title {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .shot-clock-display {
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .time-display {
+        font-size: 40px;
+        min-height: 40px;
+    }
+    
+    .control-panel {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .button-row {
+        gap: 8px;
+        padding: 6px;
+    }
+    
+    .control-btn {
+        height: 45px;
+        width: 65px;
+        font-size: 10px;
+    }
+    
+    .btn-small-text {
+        font-size: 7px;
+    }
+    
+    .instructions {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+    
+    .keyboard-controls {
+        margin-top: 6px;
+        padding: 6px;
+    }
+    
+    .keyboard-controls h4 {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    
+    .controls-grid {
+        gap: 4px;
+        margin-bottom: 6px;
+    }
+    
+    .control-item {
+        font-size: 9px;
+    }
+    
+    .practice-tip,
+    .rules-section,
+    .support-section {
+        margin-top: 6px;
+        padding: 6px;
+        font-size: 10px;
+    }
+}
+
 /* Basketball Court Navigation Styles */
 .main-menu {
     min-height: 100vh;
@@ -894,6 +1045,66 @@ button.back-btn:hover {
     
     .court-content {
         padding: 25px 15px;
+    }
+    
+    .court-half {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Basketball Court Landscape Optimizations */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .main-menu {
+        padding: 10px;
+        min-height: 100vh;
+    }
+    
+    .menu-header {
+        margin-bottom: 20px;
+    }
+    
+    .menu-header h1 {
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+    
+    .menu-header h2 {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+    
+    .court-container {
+        min-height: 280px;
+        max-height: 320px;
+    }
+    
+    .court-content {
+        padding: 15px 10px;
+    }
+    
+    .training-option h2 {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+    }
+    
+    .training-option p {
+        font-size: 0.85em;
+        margin-bottom: 10px;
+    }
+    
+    .court-icon {
+        font-size: 1.5em;
+        margin-top: 5px;
+    }
+    
+    .menu-footer {
+        margin-top: 20px;
+    }
+    
+    .menu-footer p {
+        font-size: 0.8em;
+        margin-bottom: 10px;
     }
 }
 
@@ -1430,6 +1641,147 @@ button.back-btn:hover {
     .control-btn {
         padding: 12px 8px;
         font-size: 0.8em;
+    }
+}
+
+/* Scoreboard Landscape Mobile Optimizations */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .scoreboard-container {
+        padding: 10px;
+    }
+    
+    .scoreboard-title {
+        font-size: 1.6em;
+        margin: 20px 0 15px 0;
+    }
+    
+    .lcd-container {
+        margin-bottom: 15px;
+        padding: 12px;
+    }
+    
+    .lcd-header-row {
+        font-size: 0.7em;
+        padding: 6px;
+        margin-bottom: 12px;
+    }
+    
+    .team-row-a, .team-row-b {
+        margin-bottom: 12px;
+    }
+    
+    .number-display {
+        font-size: 1.5em;
+        padding: 4px;
+    }
+    
+    .time-display {
+        font-size: 1.8em;
+        padding: 6px;
+    }
+    
+    .button-matrix {
+        padding: 15px;
+    }
+    
+    .labels-row {
+        font-size: 0.7em;
+        margin-bottom: 12px;
+        gap: 8px;
+    }
+    
+    .labels-row-with-offset {
+        font-size: 0.7em;
+        margin-bottom: 12px;
+        gap: 8px;
+    }
+    
+    .matrix-row-with-label {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .matrix-btn {
+        height: 35px;
+        font-size: 0.7em;
+        padding: 2px 4px;
+    }
+    
+    .footer-message {
+        margin-top: 15px;
+        padding: 8px;
+        font-size: 9px;
+    }
+}
+
+/* Ultra Small Landscape for Scoreboard */
+@media screen and (max-width: 600px) and (orientation: landscape) and (max-height: 450px) {
+    .scoreboard-container {
+        padding: 8px;
+    }
+    
+    .scoreboard-title {
+        font-size: 1.4em;
+        margin: 15px 0 10px 0;
+    }
+    
+    .lcd-container {
+        margin-bottom: 10px;
+        padding: 8px;
+        border-width: 4px;
+    }
+    
+    .lcd-header-row {
+        font-size: 0.6em;
+        padding: 4px;
+        margin-bottom: 8px;
+    }
+    
+    .team-row-a, .team-row-b {
+        margin-bottom: 8px;
+    }
+    
+    .number-display {
+        font-size: 1.2em;
+        padding: 3px;
+    }
+    
+    .time-display {
+        font-size: 1.4em;
+        padding: 4px;
+    }
+    
+    .button-matrix {
+        padding: 10px;
+    }
+    
+    .labels-row {
+        font-size: 0.6em;
+        margin-bottom: 8px;
+        gap: 6px;
+    }
+    
+    .labels-row-with-offset {
+        font-size: 0.6em;
+        margin-bottom: 8px;
+        gap: 6px;
+    }
+    
+    .matrix-row-with-label {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+    
+    .matrix-btn {
+        height: 30px;
+        font-size: 0.6em;
+        padding: 1px 3px;
+    }
+    
+    .footer-message {
+        margin-top: 10px;
+        padding: 6px;
+        font-size: 8px;
     }
 }
 

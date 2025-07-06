@@ -1912,12 +1912,14 @@ button.back-btn:hover {
         display: grid !important;
         grid-template-columns: 100px 80px 120px 100px 140px 80px !important;
         gap: 12px !important;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        line-height: 0.6;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 0.6 !important;
         min-height: 35px !important;
         height: 35px !important;
+        position: relative !important;
+        overflow: visible !important;
     }
     
     .team-row-b {
@@ -1928,10 +1930,12 @@ button.back-btn:hover {
     }
     
     .lcd-screen {
-        background: #d3d3d3;
+        background: #d3d3d3 !important;
         padding: 0px 4px !important;
-        border-radius: 3px;
-        margin: 0;
+        border-radius: 3px !important;
+        margin: 0 !important;
+        position: relative !important;
+        overflow: hidden !important;
     }
     
     .number-display {
@@ -1973,6 +1977,9 @@ button.back-btn:hover {
         align-items: center !important;
         justify-content: center !important;
         height: 100% !important;
+        position: static !important;
+        grid-column: 5 !important;
+        z-index: 1 !important;
     }
     
     .team-row-a, .team-row-b {

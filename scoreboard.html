@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoreboard Trainer</title>
-    <link rel="stylesheet" href="style.css?aligned-compact=38">
+    <link rel="stylesheet" href="style.css?grid-locked=39">
     <link rel="stylesheet" href="mobile-fix.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,14 +58,24 @@
                     lcdScreen.style.setProperty('padding', '0px 4px', 'important');
                 }
                 
-                // Ensure time display is properly positioned
-                const timeDisplay = document.querySelector('.time-display');
+                // Ensure time display is properly positioned in Team A row
+                const timeDisplay = document.querySelector('.team-row-a .time-display');
                 if (timeDisplay) {
                     timeDisplay.style.setProperty('grid-column', '5', 'important');
+                    timeDisplay.style.setProperty('grid-row', '1', 'important');
                     timeDisplay.style.setProperty('display', 'flex', 'important');
                     timeDisplay.style.setProperty('align-items', 'center', 'important');
                     timeDisplay.style.setProperty('justify-content', 'center', 'important');
+                    timeDisplay.style.setProperty('position', 'static', 'important');
+                    timeDisplay.style.setProperty('z-index', '1', 'important');
                 }
+                
+                // Ensure all elements stay within their grid cells
+                const allDisplays = document.querySelectorAll('.team-row-a > *, .team-row-b > *');
+                allDisplays.forEach((element, index) => {
+                    element.style.setProperty('position', 'static', 'important');
+                    element.style.setProperty('grid-column', `${index + 1}`, 'important');
+                });
                 
                 // Ensure button matrix preserves exact desktop layout
                 const labelsRowWithOffset = document.querySelectorAll('.labels-row-with-offset');

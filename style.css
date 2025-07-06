@@ -1166,9 +1166,9 @@ button.back-btn:hover {
 
 /* Scoreboard-specific time display - black text, no glow */
 .scoreboard-container .time-display {
-    font-family: 'JetBrains Mono', 'Courier New', 'Lucida Console', monospace;
+    font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
     font-size: 2.2em;
-    font-weight: 800;
+    font-weight: normal;
     color: #000000 !important;
     background: #d3d3d3;
     padding: 8px;
@@ -1249,9 +1249,9 @@ button.back-btn:hover {
 }
 
 .number-display {
-    font-family: 'JetBrains Mono', 'Courier New', 'Lucida Console', monospace;
+    font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
     font-size: 1.8em;
-    font-weight: 800;
+    font-weight: normal;
     color: #000000;
     background: #d3d3d3;
     padding: 5px;

@@ -10,7 +10,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
-
+    <script>
+        // Apply mobile-specific inline styles only on mobile devices
+        function applyMobileStyles() {
+            if (window.innerWidth <= 768) {
+                // Apply mobile styles to Team A row
+                const teamARow = document.querySelector('.team-row-a');
+                if (teamARow) {
+                    teamARow.style.cssText = 'min-height: 80px !important; height: auto !important; padding: 15px 0 !important; margin: 10px 0 !important; transform: none !important; align-items: center !important;';
+                }
+                
+                // Apply mobile styles to Team A elements
+                const teamADisplays = document.querySelectorAll('.team-row-a .number-display, .team-row-a .time-display');
+                teamADisplays.forEach(display => {
+                    display.style.cssText = 'min-height: 70px !important; height: auto !important; padding: 25px 4px !important; line-height: 1.4 !important; font-size: 1.3em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important;';
+                });
+                
+                const teamALabel = document.querySelector('.team-row-a .team-label-yellow');
+                if (teamALabel) {
+                    teamALabel.style.cssText = 'min-height: 70px !important; height: auto !important; padding: 25px 8px !important; display: flex !important; align-items: center !important; justify-content: center !important;';
+                }
+            } else {
+                // Remove mobile styles on desktop
+                const teamARow = document.querySelector('.team-row-a');
+                if (teamARow) {
+                    teamARow.style.cssText = '';
+                }
+                
+                const teamADisplays = document.querySelectorAll('.team-row-a .number-display, .team-row-a .time-display');
+                teamADisplays.forEach(display => {
+                    display.style.cssText = '';
+                });
+                
+                const teamALabel = document.querySelector('.team-row-a .team-label-yellow');
+                if (teamALabel) {
+                    teamALabel.style.cssText = '';
+                }
+            }
+        }
+        
+        // Apply on page load and window resize
+        window.addEventListener('load', applyMobileStyles);
+        window.addEventListener('resize', applyMobileStyles);
+    </script>
 </head>
 <body>
     <div class="scoreboard-container">
@@ -36,15 +78,15 @@
             
             <div class="lcd-screen">
                 <!-- Team A Row -->
-                <div class="team-row-a" style="min-height: 80px !important; height: auto !important; padding: 15px 0 !important; margin: 10px 0 !important; transform: none !important; align-items: center !important;">
-                    <div class="team-label-yellow" style="min-height: 70px !important; height: auto !important; padding: 25px 8px !important; display: flex !important; align-items: center !important; justify-content: center !important;">A Light</div>
-                    <div class="number-display" id="scoreA" style="min-height: 70px !important; height: auto !important; padding: 25px 4px !important; line-height: 1.4 !important; font-size: 1.3em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important;">0</div>
-                    <div class="number-display" id="foulsA" style="min-height: 70px !important; height: auto !important; padding: 25px 4px !important; line-height: 1.4 !important; font-size: 1.3em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important;">0</div>
-                    <div class="number-display" id="timeoutsA" style="min-height: 70px !important; height: auto !important; padding: 25px 4px !important; line-height: 1.4 !important; font-size: 1.3em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important;">0</div>
-                    <div class="time-display" style="min-height: 70px !important; height: auto !important; padding: 25px 4px !important; line-height: 1.4 !important; font-size: 1.3em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important;">
+                <div class="team-row-a">
+                    <div class="team-label-yellow">A Light</div>
+                    <div class="number-display" id="scoreA">0</div>
+                    <div class="number-display" id="foulsA">0</div>
+                    <div class="number-display" id="timeoutsA">0</div>
+                    <div class="time-display">
                         <span id="minutes">20</span>:<span id="seconds">00</span>
                     </div>
-                    <div class="number-display" id="period" style="min-height: 70px !important; height: auto !important; padding: 25px 4px !important; line-height: 1.4 !important; font-size: 1.3em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important;">1</div>
+                    <div class="number-display" id="period">1</div>
                 </div>
                 
                 <!-- Team B Row -->

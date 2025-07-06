@@ -1878,63 +1878,65 @@ button.back-btn:hover {
     }
     
     .number-display {
-        font-size: 1.6em;
-        padding: 6px 1px;
-        line-height: 1;
+        font-size: 1.6em !important;
+        padding: 8px 1px !important;
+        line-height: 1.1 !important;
         min-width: 30px;
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
-        min-height: 35px;
+        min-height: 40px !important;
+        overflow: visible !important;
     }
     
     .scoreboard-container .time-display {
-        font-size: 1.8em;
-        padding: 6px 2px;
-        line-height: 1;
+        font-size: 1.8em !important;
+        padding: 8px 2px !important;
+        line-height: 1.1 !important;
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
-        min-height: 35px;
+        min-height: 40px !important;
+        overflow: visible !important;
     }
     
     .team-row-a, .team-row-b {
-        min-height: 40px;
-        height: 40px;
+        min-height: 45px !important;
+        height: 45px !important;
     }
     
     .team-row-b {
-        transform: translateY(-2px);
-        min-height: 40px;
-        height: 40px;
+        transform: translateY(0px) !important;
+        min-height: 45px !important;
+        height: 45px !important;
     }
     
     .team-label-yellow {
-        padding: 5px;
+        padding: 6px !important;
         font-size: 0.6em;
         line-height: 1;
-        margin: 0 0 5px 0;
+        margin: 0 0 8px 0 !important;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
-        min-height: 35px;
+        min-height: 40px !important;
     }
     
     .team-label-orange {
-        padding: 5px;
+        padding: 6px !important;
         font-size: 0.6em;
         line-height: 1;
-        margin: 5px 0 0 0;
+        margin: 8px 0 0 0 !important;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
-        min-height: 35px;
+        min-height: 40px !important;
     }
     
     .button-matrix {

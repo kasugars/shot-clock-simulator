@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoreboard Trainer</title>
-    <link rel="stylesheet" href="style.css?exact-desktop=35">
+    <link rel="stylesheet" href="style.css?alignment-fix=36">
     <link rel="stylesheet" href="mobile-fix.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,19 +27,42 @@
                     lcdHeaderRow.style.setProperty('display', 'grid', 'important');
                     lcdHeaderRow.style.setProperty('grid-template-columns', '100px 80px 120px 100px 140px 80px', 'important');
                     lcdHeaderRow.style.setProperty('gap', '12px', 'important');
+                    lcdHeaderRow.style.setProperty('padding', '0px 4px', 'important');
+                    lcdHeaderRow.style.setProperty('text-align', 'center', 'important');
                 }
                 
                 if (teamRowA) {
                     teamRowA.style.setProperty('display', 'grid', 'important');
                     teamRowA.style.setProperty('grid-template-columns', '100px 80px 120px 100px 140px 80px', 'important');
                     teamRowA.style.setProperty('gap', '12px', 'important');
+                    teamRowA.style.setProperty('align-items', 'center', 'important');
+                    teamRowA.style.setProperty('min-height', '45px', 'important');
+                    teamRowA.style.setProperty('height', '45px', 'important');
                 }
                 
                 if (teamRowB) {
                     teamRowB.style.setProperty('display', 'grid', 'important');
                     teamRowB.style.setProperty('grid-template-columns', '100px 80px 120px 100px 140px 80px', 'important');
                     teamRowB.style.setProperty('gap', '12px', 'important');
+                    teamRowB.style.setProperty('align-items', 'center', 'important');
                     teamRowB.style.setProperty('transform', 'translateY(-4px)', 'important');
+                    teamRowB.style.setProperty('min-height', '45px', 'important');
+                    teamRowB.style.setProperty('height', '45px', 'important');
+                }
+                
+                // Ensure LCD screen has proper padding to match header
+                const lcdScreen = document.querySelector('.lcd-screen');
+                if (lcdScreen) {
+                    lcdScreen.style.setProperty('padding', '0px 4px', 'important');
+                }
+                
+                // Ensure time display is properly positioned
+                const timeDisplay = document.querySelector('.time-display');
+                if (timeDisplay) {
+                    timeDisplay.style.setProperty('grid-column', '5', 'important');
+                    timeDisplay.style.setProperty('display', 'flex', 'important');
+                    timeDisplay.style.setProperty('align-items', 'center', 'important');
+                    timeDisplay.style.setProperty('justify-content', 'center', 'important');
                 }
                 
                 // Ensure button matrix preserves exact desktop layout

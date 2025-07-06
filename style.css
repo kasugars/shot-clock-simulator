@@ -1893,13 +1893,13 @@ button.back-btn:hover {
         margin: 0 auto 30px auto;
     }
     
-    /* Match exact desktop LCD grid layout */
+    /* Match exact desktop LCD grid layout with perfect alignment */
     .lcd-header-row {
-        display: grid;
-        grid-template-columns: 100px 80px 120px 100px 140px 80px;
-        gap: 12px;
+        display: grid !important;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px !important;
+        gap: 12px !important;
         font-size: 0.6em;
-        padding: 0px;
+        padding: 0px 4px !important;
         margin: 0;
         text-align: center;
         font-weight: 700;
@@ -1909,9 +1909,9 @@ button.back-btn:hover {
     }
     
     .team-row-a, .team-row-b {
-        display: grid;
-        grid-template-columns: 100px 80px 120px 100px 140px 80px;
-        gap: 12px;
+        display: grid !important;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px !important;
+        gap: 12px !important;
         align-items: center;
         margin: 0;
         padding: 0;
@@ -1920,8 +1920,16 @@ button.back-btn:hover {
         height: 45px;
     }
     
+    .team-row-b {
+        transform: translateY(-4px) !important;
+        min-height: 45px !important;
+        height: 45px !important;
+    }
+    
     .lcd-screen {
-        padding: 15px;
+        background: #d3d3d3;
+        padding: 0px 4px !important;
+        border-radius: 3px;
         margin: 0;
     }
     
@@ -1947,23 +1955,23 @@ button.back-btn:hover {
     }
     
     .scoreboard-container .time-display {
-        font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
-        font-size: 2.4em;
-        font-weight: normal;
-        color: #000000;
-        background: #d3d3d3;
-        padding: 4px 6px;
-        border-radius: 2px;
-        text-align: center;
-        letter-spacing: 0.05em;
-        text-rendering: optimizeSpeed;
-        font-variant-numeric: tabular-nums;
-        line-height: 1;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+        font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace !important;
+        font-size: 2.4em !important;
+        font-weight: normal !important;
+        color: #000000 !important;
+        background: #d3d3d3 !important;
+        padding: 4px 6px !important;
+        border-radius: 2px !important;
+        text-align: center !important;
+        letter-spacing: 0.05em !important;
+        text-rendering: optimizeSpeed !important;
+        font-variant-numeric: tabular-nums !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 100% !important;
     }
     
     .team-row-a, .team-row-b {

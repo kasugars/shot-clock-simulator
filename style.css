@@ -1859,13 +1859,13 @@ button.back-btn:hover {
 @media screen and (max-width: 768px) {
     .lcd-screen .team-row-a,
     .lcd-screen .team-row-b {
-        height: auto !important;
-        min-height: 45px !important;
-        padding: 6px 0 !important;
-        margin: 4px 0 !important;
-        grid-template-columns: 85px 52px 62px 75px 70px 38px !important;
-        gap: 4px !important;
-        font-size: 0.85rem !important;
+        height: 50px !important;
+        min-height: 50px !important;
+        padding: 8px 0 !important;
+        margin: 2px 0 !important;
+        grid-template-columns: 95px 60px 70px 90px 80px 45px !important;
+        gap: 6px !important;
+        align-items: center !important;
     }
     
     .lcd-screen .team-row-b {
@@ -1898,8 +1898,8 @@ button.back-btn:hover {
     .scoreboard-display {
         width: 100% !important;
         max-width: none !important;
-        height: 30vh !important;
-        padding: 6px !important;
+        height: 35vh !important;
+        padding: 8px !important;
         overflow: hidden !important;
     }
     
@@ -1919,32 +1919,46 @@ button.back-btn:hover {
         font-size: 0.6rem !important;
     }
     
-    .team-labels {
-        font-size: 0.5rem !important;
-        padding: 1px !important;
+    .lcd-screen .team-label-yellow,
+    .lcd-screen .team-label-orange {
+        font-size: 0.75rem !important;
+        font-weight: bold !important;
+        padding: 8px !important;
+        min-height: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
         line-height: 1 !important;
     }
     
-    .number-display {
-        font-size: 0.6rem !important;
-        padding: 0 !important;
-        min-height: auto !important;
-        line-height: 1 !important;
+    .lcd-screen .number-display {
+        font-size: 1.1rem !important;
+        font-weight: bold !important;
+        padding: 4px !important;
+        min-height: 30px !important;
+        line-height: 1.2 !important;
         overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     
-    .time-display {
-        font-size: 0.6rem !important;
-        padding: 0 !important;
-        min-height: auto !important;
-        line-height: 1 !important;
+    .lcd-screen .time-display {
+        font-size: 1.1rem !important;
+        font-weight: bold !important;
+        padding: 4px !important;
+        min-height: 30px !important;
+        line-height: 1.2 !important;
         overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     
     .button-matrix {
         width: 100% !important;
         padding: 5px !important;
-        height: 70vh !important;
+        height: 65vh !important;
     }
     
     .control-btn {

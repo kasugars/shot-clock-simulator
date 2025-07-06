@@ -1199,57 +1199,61 @@ button.back-btn:hover {
     border: 6px solid #666;
     border-radius: 10px 10px 0 0;
     border-bottom: none;
-    padding: 2px 6px 1px 6px;
+    padding: 1px 4px 0px 4px;
 }
 
 .lcd-header-row {
     display: grid;
     grid-template-columns: 100px 80px 120px 100px 140px 80px;
-    gap: 15px;
+    gap: 12px;
     text-align: center;
     font-size: 0.6em;
     font-weight: 700;
     color: #333;
-    margin-bottom: 0px;
+    margin: 0;
     background: #b0b0b0;
-    padding: 1px;
+    padding: 0px;
     border-radius: 2px;
 }
 
 .lcd-screen {
     background: #d3d3d3;
-    padding: 1px 6px;
-    border-radius: 4px;
+    padding: 0px 4px;
+    border-radius: 3px;
+    margin: 0;
 }
 
 .team-row-a, .team-row-b {
     display: grid;
     grid-template-columns: 100px 80px 120px 100px 140px 80px;
-    gap: 15px;
+    gap: 12px;
     align-items: center;
-    margin-bottom: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .team-label-yellow {
     background: #ffd700;
     color: #333;
-    padding: 1px 6px;
-    border-radius: 3px;
+    padding: 0px 4px;
+    border-radius: 2px;
     font-weight: 700;
     font-size: 0.8em;
     text-align: center;
-    line-height: 0.9;
+    line-height: 0.8;
+    margin: 0;
 }
 
 .team-label-orange {
     background: #ff8c00;
     color: white;
-    padding: 1px 6px;
-    border-radius: 3px;
+    padding: 0px 4px;
+    border-radius: 2px;
     font-weight: 700;
     font-size: 0.8em;
     text-align: center;
-    line-height: 0.9;
+    line-height: 0.8;
+    margin: 0;
 }
 
 .number-display {
@@ -1824,24 +1828,26 @@ button.back-btn:hover {
     }
     
     .lcd-container {
-        padding: 1px 4px 0px 4px;
+        padding: 0px 3px 0px 3px;
         border-width: 3px;
     }
     
     .lcd-header-row {
         font-size: 0.5em;
         padding: 0px;
-        margin-bottom: 0px;
-        gap: 6px;
+        margin: 0;
+        gap: 5px;
     }
     
     .team-row-a, .team-row-b {
-        margin-bottom: 0px;
-        gap: 6px;
+        margin: 0;
+        padding: 0;
+        gap: 5px;
     }
     
     .lcd-screen {
-        padding: 0px 4px;
+        padding: 0px 3px;
+        margin: 0;
     }
     
     .number-display {
@@ -1859,9 +1865,10 @@ button.back-btn:hover {
     
     .team-label-yellow,
     .team-label-orange {
-        padding: 0px 4px;
+        padding: 0px 3px;
         font-size: 0.6em;
-        line-height: 0.8;
+        line-height: 0.7;
+        margin: 0;
     }
     
     .button-matrix {

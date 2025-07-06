@@ -1872,27 +1872,91 @@ button.back-btn:hover {
 
 }
 
-/* Mobile Only - Portrait: Scale desktop to fit */
+/* Mobile Only - Portrait: Proper fit without horizontal scroll */
 @media screen and (max-width: 768px) and (orientation: portrait) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
     .scoreboard-container {
-        transform: scale(0.75) !important;
-        transform-origin: top center !important;
-        width: 133% !important;
-        margin-left: -16.5% !important;
-        margin-bottom: -20vh !important;
-        overflow-x: visible !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 8px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .scoreboard-display {
+        width: 100% !important;
+        max-width: none !important;
+    }
+    
+    .button-matrix {
+        width: 100% !important;
+        padding: 8px !important;
+    }
+    
+    .control-btn {
+        font-size: 0.65rem !important;
+        padding: 8px 4px !important;
+        min-height: 35px !important;
+    }
+    
+    .number-display {
+        font-size: 1.1rem !important;
+        padding: 2px !important;
+    }
+    
+    .time-display {
+        font-size: 1.3rem !important;
+        padding: 3px !important;
     }
 }
 
-/* Mobile Only - Landscape: Scale desktop to fit */
+/* Mobile Only - Landscape: Proper fit without horizontal scroll */
 @media screen and (max-width: 768px) and (orientation: landscape) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
     .scoreboard-container {
-        transform: scale(0.65) !important;
-        transform-origin: top center !important;
-        width: 154% !important;
-        margin-left: -27% !important;
-        margin-bottom: -35vh !important;
-        overflow-x: visible !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 6px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .scoreboard-display {
+        width: 100% !important;
+        max-width: none !important;
+    }
+    
+    .button-matrix {
+        width: 100% !important;
+        padding: 6px !important;
+    }
+    
+    .control-btn {
+        font-size: 0.6rem !important;
+        padding: 6px 3px !important;
+        min-height: 30px !important;
+    }
+    
+    .number-display {
+        font-size: 1rem !important;
+        padding: 2px !important;
+    }
+    
+    .time-display {
+        font-size: 1.2rem !important;
+        padding: 2px !important;
     }
 }
 

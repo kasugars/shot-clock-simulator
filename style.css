@@ -1863,7 +1863,7 @@ button.back-btn:hover {
         min-height: 50px !important;
         padding: 8px 0 !important;
         margin: 2px 0 !important;
-        grid-template-columns: 95px 60px 70px 90px 80px 45px !important;
+        grid-template-columns: 95px 60px 70px 90px 80px 50px !important;
         gap: 6px !important;
         align-items: center !important;
     }
@@ -1879,6 +1879,14 @@ button.back-btn:hover {
 @media screen and (max-width: 768px) and (orientation: portrait) {
     html, body {
         overflow-x: hidden !important;
+    }
+    
+    .header-labels {
+        grid-template-columns: 95px 60px 70px 90px 80px 50px !important;
+        gap: 6px !important;
+        font-size: 0.7rem !important;
+        text-align: center !important;
+        font-weight: bold !important;
     }
     body {
         margin: 0;
@@ -1932,27 +1940,29 @@ button.back-btn:hover {
     }
     
     .lcd-screen .number-display {
-        font-size: 1.1rem !important;
+        font-size: 1.3rem !important;
         font-weight: bold !important;
-        padding: 4px !important;
+        padding: 4px 2px !important;
         min-height: 30px !important;
-        line-height: 1.2 !important;
+        line-height: 1.1 !important;
         overflow: hidden !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        text-align: center !important;
     }
     
     .lcd-screen .time-display {
-        font-size: 1.1rem !important;
+        font-size: 1.3rem !important;
         font-weight: bold !important;
-        padding: 4px !important;
+        padding: 4px 2px !important;
         min-height: 30px !important;
-        line-height: 1.2 !important;
+        line-height: 1.1 !important;
         overflow: hidden !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        text-align: center !important;
     }
     
     .button-matrix {

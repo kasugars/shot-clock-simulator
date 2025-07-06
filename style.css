@@ -1236,10 +1236,14 @@ button.back-btn:hover {
     margin: 0;
     padding: 0;
     line-height: 0.6;
+    min-height: 45px;
+    height: 45px;
 }
 
 .team-row-b {
     transform: translateY(-4px);
+    min-height: 45px;
+    height: 45px;
 }
 
 .team-label-yellow {
@@ -1896,8 +1900,15 @@ button.back-btn:hover {
         height: 100%;
     }
     
+    .team-row-a, .team-row-b {
+        min-height: 35px;
+        height: 35px;
+    }
+    
     .team-row-b {
         transform: translateY(-6px);
+        min-height: 35px;
+        height: 35px;
     }
     
     .team-label-yellow,

@@ -1860,11 +1860,12 @@ button.back-btn:hover {
     .lcd-screen .team-row-a,
     .lcd-screen .team-row-b {
         height: auto !important;
-        min-height: 55px !important;
-        padding: 8px 0 !important;
-        margin: 6px 0 !important;
-        grid-template-columns: 60px 38px 45px 53px 50px 28px !important;
-        gap: 2px !important;
+        min-height: 45px !important;
+        padding: 6px 0 !important;
+        margin: 4px 0 !important;
+        grid-template-columns: 85px 52px 62px 75px 70px 38px !important;
+        gap: 4px !important;
+        font-size: 0.85rem !important;
     }
     
     .lcd-screen .team-row-b {
@@ -1897,8 +1898,8 @@ button.back-btn:hover {
     .scoreboard-display {
         width: 100% !important;
         max-width: none !important;
-        height: 25vh !important;
-        padding: 4px !important;
+        height: 30vh !important;
+        padding: 6px !important;
         overflow: hidden !important;
     }
     
@@ -1943,7 +1944,7 @@ button.back-btn:hover {
     .button-matrix {
         width: 100% !important;
         padding: 5px !important;
-        height: 75vh !important;
+        height: 70vh !important;
     }
     
     .control-btn {

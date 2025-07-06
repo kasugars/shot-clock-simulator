@@ -1167,7 +1167,7 @@ button.back-btn:hover {
 /* Scoreboard-specific time display - black text, no glow */
 .scoreboard-container .time-display {
     font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
-    font-size: 2.2em;
+    font-size: 2.6em;
     font-weight: normal;
     color: #000000 !important;
     background: #d3d3d3;
@@ -1250,7 +1250,7 @@ button.back-btn:hover {
 
 .number-display {
     font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
-    font-size: 1.8em;
+    font-size: 2.2em;
     font-weight: normal;
     color: #000000;
     background: #d3d3d3;

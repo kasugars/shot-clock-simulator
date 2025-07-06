@@ -1317,6 +1317,9 @@ button.back-btn:hover {
     align-items: center;
     justify-content: center;
     height: 100%;
+    position: static;
+    grid-column: auto;
+    grid-row: auto;
 }
 
 .possession-section {

@@ -4,50 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoreboard Trainer</title>
-    <link rel="stylesheet" href="style.css?desktop-mobile=33">
+    <link rel="stylesheet" href="style.css?grid-fix=34">
     <link rel="stylesheet" href="mobile-fix.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
     <script>
-        // Apply desktop-like mobile styles
+        // Ensure mobile preserves desktop grid layout
         function applyMobileOptimizations() {
             const isMobile = window.innerWidth <= 768;
             
             if (isMobile) {
-                // Apply scaling to make mobile look like desktop
-                const container = document.querySelector('.scoreboard-container');
-                if (container) {
-                    container.style.setProperty('transform', 'scale(0.85)', 'important');
-                    container.style.setProperty('transform-origin', 'top center', 'important');
-                    container.style.setProperty('width', '117%', 'important');
-                    container.style.setProperty('margin-left', '-8.5%', 'important');
+                console.log('Mobile detected - preserving desktop grid layout');
+                
+                // Ensure grid layouts are preserved
+                const lcdHeaderRow = document.querySelector('.lcd-header-row');
+                const teamRowA = document.querySelector('.team-row-a');
+                const teamRowB = document.querySelector('.team-row-b');
+                
+                if (lcdHeaderRow) {
+                    lcdHeaderRow.style.setProperty('display', 'grid', 'important');
+                    lcdHeaderRow.style.setProperty('grid-template-columns', '140px 120px 120px 120px 120px 80px 80px', 'important');
                 }
                 
-                // Ensure all display elements maintain desktop appearance
-                const allDisplays = document.querySelectorAll('.team-row-a .number-display, .team-row-a .time-display, .team-row-b .number-display, .team-row-b .time-display');
-                allDisplays.forEach(display => {
-                    display.style.setProperty('font-size', '1.8em', 'important');
-                    display.style.setProperty('padding', '20px 8px', 'important');
-                    display.style.setProperty('min-height', '70px', 'important');
-                    display.style.setProperty('line-height', '1.4', 'important');
-                });
+                if (teamRowA) {
+                    teamRowA.style.setProperty('display', 'grid', 'important');
+                    teamRowA.style.setProperty('grid-template-columns', '140px 120px 120px 120px 120px 80px 80px', 'important');
+                }
                 
-                // Apply desktop styling to time displays
-                const timeDisplays = document.querySelectorAll('.time-display');
-                timeDisplays.forEach(display => {
-                    display.style.setProperty('font-size', '2.2em', 'important');
-                    display.style.setProperty('padding', '20px 10px', 'important');
-                });
+                if (teamRowB) {
+                    teamRowB.style.setProperty('display', 'grid', 'important');
+                    teamRowB.style.setProperty('grid-template-columns', '140px 120px 120px 120px 120px 80px 80px', 'important');
+                }
                 
-                // Apply desktop styling to team labels
-                const teamLabels = document.querySelectorAll('.team-label-yellow, .team-label-orange');
-                teamLabels.forEach(label => {
-                    label.style.setProperty('font-size', '0.8em', 'important');
-                    label.style.setProperty('padding', '20px 8px', 'important');
-                    label.style.setProperty('height', '70px', 'important');
-                    label.style.setProperty('min-height', '70px', 'important');
+                // Ensure button matrix preserves 7-column layout
+                const matrixRows = document.querySelectorAll('.labels-row, .labels-row-with-offset, .matrix-row-with-label');
+                matrixRows.forEach(row => {
+                    row.style.setProperty('display', 'grid', 'important');
+                    row.style.setProperty('grid-template-columns', '120px 100px 100px 100px 100px 100px 100px', 'important');
                 });
             }
         }

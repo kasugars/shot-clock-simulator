@@ -1874,6 +1874,9 @@ button.back-btn:hover {
 
 /* Mobile Only - Portrait: Proper fit without horizontal scroll */
 @media screen and (max-width: 768px) and (orientation: portrait) {
+    html, body {
+        overflow-x: hidden !important;
+    }
     body {
         margin: 0;
         padding: 0;
@@ -1897,7 +1900,7 @@ button.back-btn:hover {
         overflow: hidden !important;
     }
     
-    .display-grid {
+    .scoreboard-container .scoreboard-display .display-grid {
         gap: 0px !important;
         grid-template-rows: 15px 1fr 1fr !important;
         grid-template-columns: 80px 50px 60px 70px 70px 40px !important;

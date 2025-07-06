@@ -1863,6 +1863,8 @@ button.back-btn:hover {
         min-height: 55px !important;
         padding: 8px 0 !important;
         margin: 6px 0 !important;
+        grid-template-columns: 60px 38px 45px 53px 50px 28px !important;
+        gap: 2px !important;
     }
     
     .lcd-screen .team-row-b {

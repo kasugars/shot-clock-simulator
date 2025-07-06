@@ -2254,32 +2254,34 @@ button.back-btn:hover {
     }
 }
 
-/* CRITICAL MOBILE HEADER FIX - MUST BE LAST */
+/* CRITICAL MOBILE HEADER FIX - MATCH DESKTOP EXACTLY */
 @media screen and (max-width: 768px) {
     .lcd-screen .lcd-header-row {
-        grid-template-columns: 110px 75px 85px 105px 95px 65px !important;
-        gap: 4px !important;
-        font-size: 1.0rem !important;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px !important;
+        gap: 12px !important;
+        font-size: 0.8rem !important;
         text-align: center !important;
-        font-weight: bold !important;
+        font-weight: 700 !important;
         padding: 0 !important;
         margin: 0 !important;
+        color: #333 !important;
     }
     
     .lcd-screen .team-row-a,
     .lcd-screen .team-row-b {
-        grid-template-columns: 110px 75px 85px 105px 95px 65px !important;
-        gap: 4px !important;
-        height: 60px !important;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px !important;
+        gap: 12px !important;
+        height: 45px !important;
         align-items: center !important;
+        min-height: 45px !important;
     }
     
     .lcd-screen .number-display,
     .lcd-screen .time-display {
-        font-size: 1.6rem !important;
+        font-size: 1.4rem !important;
         font-weight: bold !important;
         text-align: center !important;
-        padding: 8px 2px !important;
+        padding: 4px 2px !important;
         line-height: 1.1 !important;
         display: flex !important;
         align-items: center !important;

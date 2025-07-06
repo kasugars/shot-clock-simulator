@@ -1881,7 +1881,7 @@ button.back-btn:hover {
         overflow-x: hidden !important;
     }
     
-    .header-labels {
+    .lcd-header-row {
         grid-template-columns: 95px 60px 70px 90px 80px 50px !important;
         gap: 6px !important;
         font-size: 0.7rem !important;

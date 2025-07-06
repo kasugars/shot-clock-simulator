@@ -4,51 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoreboard Trainer</title>
-    <link rel="stylesheet" href="style.css?mobile-optimized=32">
+    <link rel="stylesheet" href="style.css?desktop-mobile=33">
     <link rel="stylesheet" href="mobile-fix.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
     <script>
-        // Apply optimized mobile styles
+        // Apply desktop-like mobile styles
         function applyMobileOptimizations() {
             const isMobile = window.innerWidth <= 768;
             
             if (isMobile) {
-                // Optimize scoreboard for mobile portrait
+                // Apply scaling to make mobile look like desktop
                 const container = document.querySelector('.scoreboard-container');
                 if (container) {
-                    container.style.setProperty('padding', '5px', 'important');
+                    container.style.setProperty('transform', 'scale(0.85)', 'important');
+                    container.style.setProperty('transform-origin', 'top center', 'important');
+                    container.style.setProperty('width', '117%', 'important');
+                    container.style.setProperty('margin-left', '-8.5%', 'important');
                 }
                 
-                // Ensure Team A row displays properly on mobile
-                const teamARow = document.querySelector('.team-row-a');
-                if (teamARow) {
-                    teamARow.style.setProperty('min-height', '45px', 'important');
-                    teamARow.style.setProperty('height', 'auto', 'important');
-                    teamARow.style.setProperty('padding', '8px 0', 'important');
-                    teamARow.style.setProperty('margin', '5px 0', 'important');
-                    teamARow.style.setProperty('transform', 'none', 'important');
-                }
-                
-                // Optimize display elements for mobile
+                // Ensure all display elements maintain desktop appearance
                 const allDisplays = document.querySelectorAll('.team-row-a .number-display, .team-row-a .time-display, .team-row-b .number-display, .team-row-b .time-display');
                 allDisplays.forEach(display => {
-                    display.style.setProperty('min-height', '40px', 'important');
-                    display.style.setProperty('height', 'auto', 'important');
-                    display.style.setProperty('padding', '10px 2px', 'important');
-                    display.style.setProperty('font-size', '1.1em', 'important');
-                    display.style.setProperty('line-height', '1.2', 'important');
+                    display.style.setProperty('font-size', '1.8em', 'important');
+                    display.style.setProperty('padding', '20px 8px', 'important');
+                    display.style.setProperty('min-height', '70px', 'important');
+                    display.style.setProperty('line-height', '1.4', 'important');
                 });
                 
-                // Optimize team labels
+                // Apply desktop styling to time displays
+                const timeDisplays = document.querySelectorAll('.time-display');
+                timeDisplays.forEach(display => {
+                    display.style.setProperty('font-size', '2.2em', 'important');
+                    display.style.setProperty('padding', '20px 10px', 'important');
+                });
+                
+                // Apply desktop styling to team labels
                 const teamLabels = document.querySelectorAll('.team-label-yellow, .team-label-orange');
                 teamLabels.forEach(label => {
-                    label.style.setProperty('min-height', '40px', 'important');
-                    label.style.setProperty('height', 'auto', 'important');
-                    label.style.setProperty('padding', '10px 4px', 'important');
-                    label.style.setProperty('font-size', '0.5em', 'important');
+                    label.style.setProperty('font-size', '0.8em', 'important');
+                    label.style.setProperty('padding', '20px 8px', 'important');
+                    label.style.setProperty('height', '70px', 'important');
+                    label.style.setProperty('min-height', '70px', 'important');
                 });
             }
         }

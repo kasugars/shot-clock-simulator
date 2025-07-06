@@ -1870,180 +1870,179 @@ button.back-btn:hover {
     }
 }
 
-/* Enhanced Mobile Layout for Portrait Phones */
+/* Mobile Version - Desktop Appearance Scaled for Portrait */
 @media (max-width: 768px) {
     .scoreboard-container {
-        padding: 5px;
-        min-height: auto;
+        padding: 8px;
+        min-height: 100vh;
+        transform: scale(0.85);
+        transform-origin: top center;
+        width: 117%;
+        margin-left: -8.5%;
     }
     
     .scoreboard-title {
-        font-size: 1.3em;
-        margin: 10px 0 8px 0;
+        font-size: 1.8em;
+        margin: 15px 0;
         text-align: center;
     }
     
     .lcd-container {
-        padding: 2px;
-        border-width: 2px;
-        margin: 0 auto 15px auto;
-        max-width: 100%;
-        border-radius: 8px;
+        padding: 10px;
+        border-width: 4px;
+        margin: 0 auto 25px auto;
+        max-width: none;
+        width: auto;
     }
     
     .lcd-header-row {
-        font-size: 0.45em;
-        padding: 2px;
+        font-size: 0.7em;
+        padding: 5px;
         margin: 0;
-        gap: 3px;
-        grid-template-columns: 70px 60px 80px 70px 90px 50px;
+        gap: 8px;
+        grid-template-columns: auto;
     }
     
     .team-row-a, .team-row-b {
         margin: 0;
         padding: 0;
-        gap: 3px;
-        grid-template-columns: 70px 60px 80px 70px 90px 50px;
+        gap: 8px;
+        grid-template-columns: auto;
     }
     
     .lcd-screen {
-        padding: 2px;
+        padding: 10px;
         margin: 0;
-        border-radius: 5px;
     }
     
     .number-display {
-        font-size: 1.1em !important;
-        padding: 8px 1px !important;
-        line-height: 1.1 !important;
-        min-width: 25px;
+        font-size: 1.8em !important;
+        padding: 20px 8px !important;
+        line-height: 1.4 !important;
+        min-width: 60px;
         margin: 0;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         height: auto !important;
-        min-height: 35px !important;
+        min-height: 70px !important;
         overflow: visible !important;
         box-sizing: border-box !important;
-        border-radius: 2px;
     }
     
     .scoreboard-container .time-display {
-        font-size: 1.3em !important;
-        padding: 8px 2px !important;
-        line-height: 1.1 !important;
+        font-size: 2.2em !important;
+        padding: 20px 10px !important;
+        line-height: 1.4 !important;
         margin: 0;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         height: auto !important;
-        min-height: 35px !important;
+        min-height: 70px !important;
         overflow: visible !important;
         box-sizing: border-box !important;
-        border-radius: 2px;
     }
     
     .team-row-a, .team-row-b {
-        min-height: 40px !important;
+        min-height: 75px !important;
         height: auto !important;
-        margin-bottom: 5px !important;
+        margin-bottom: 10px !important;
         align-items: center !important;
     }
     
     .team-row-b {
         transform: none !important;
-        min-height: 40px !important;
+        min-height: 75px !important;
         height: auto !important;
-        margin-top: 5px !important;
+        margin-top: 10px !important;
         margin-bottom: 0 !important;
     }
     
     .team-label-yellow,
     .team-label-orange {
-        padding: 4px !important;
-        font-size: 0.5em !important;
+        padding: 20px 8px !important;
+        font-size: 0.8em !important;
         line-height: 1;
-        margin: 2px 0 !important;
+        margin: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        height: 35px !important;
-        min-height: 35px !important;
-        border-radius: 2px;
+        height: 70px !important;
+        min-height: 70px !important;
     }
     
     .button-matrix {
-        padding: 8px;
-        border-width: 2px;
-        margin: 10px auto;
-        max-width: 100%;
-        border-radius: 8px;
+        padding: 15px;
+        border-width: 4px;
+        margin: 25px auto;
+        max-width: none;
+        width: auto;
     }
     
     .labels-row,
     .labels-row-with-offset {
-        font-size: 0.5em;
-        gap: 3px;
-        margin-bottom: 4px;
-        grid-template-columns: 50px repeat(6, 1fr);
+        font-size: 0.7em;
+        gap: 8px;
+        margin-bottom: 8px;
+        grid-template-columns: auto;
     }
     
     .matrix-row-with-label {
-        gap: 3px;
-        margin-bottom: 4px;
-        grid-template-columns: 50px repeat(6, 1fr);
+        gap: 8px;
+        margin-bottom: 8px;
+        grid-template-columns: auto;
     }
     
     .btn-yellow, .btn-orange, .btn-green, .btn-blue, .btn-red, .btn-gray {
-        height: 30px;
-        font-size: 0.55em;
-        padding: 2px;
-        border-width: 2px;
-        border-radius: 3px;
-        min-width: 0;
+        height: 45px;
+        font-size: 0.8em;
+        padding: 8px;
+        border-width: 3px;
+        min-width: auto;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: visible;
+        text-overflow: clip;
     }
     
     .row-label {
-        font-size: 0.6em;
+        font-size: 0.8em;
         writing-mode: horizontal-tb;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2px;
+        padding: 8px;
     }
     
     .footer-message {
-        margin-top: 8px;
-        padding: 6px;
-        font-size: 8px;
-        line-height: 1.2;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 10px;
+        line-height: 1.3;
     }
     
-    /* Mobile Support Section */
+    /* Mobile Support Section - Desktop Appearance */
     .scoreboard-container > div[style*="background: rgba(0,0,0,0.3)"] {
-        padding: 15px 10px !important;
-        margin-top: 20px !important;
+        padding: 25px 20px !important;
+        margin-top: 30px !important;
     }
     
     .scoreboard-container h3 {
-        font-size: 1em !important;
-        margin-bottom: 15px !important;
+        font-size: 1.3em !important;
+        margin-bottom: 20px !important;
     }
     
     .scoreboard-container a[href*="paypal"] {
-        padding: 10px 20px !important;
-        font-size: 0.9em !important;
-        margin-bottom: 10px !important;
+        padding: 15px 30px !important;
+        font-size: 1.1em !important;
+        margin-bottom: 15px !important;
     }
     
     .scoreboard-container p {
-        font-size: 0.75em !important;
-        line-height: 1.3 !important;
-        margin: 0 !important;
+        font-size: 0.9em !important;
+        line-height: 1.4 !important;
+        margin: 10px 0 !important;
     }
     
     .console-container {

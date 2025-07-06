@@ -1171,15 +1171,19 @@ button.back-btn:hover {
     font-weight: normal;
     color: #000000 !important;
     background: #d3d3d3;
-    padding: 0px 3px;
+    padding: 4px 3px;
     border-radius: 3px;
     text-align: center;
     text-shadow: none !important;
     letter-spacing: 0.05em;
     text-rendering: optimizeSpeed;
     font-variant-numeric: tabular-nums;
-    line-height: 0.6;
+    line-height: 1;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .scoreboard-title {
@@ -1228,7 +1232,7 @@ button.back-btn:hover {
     display: grid;
     grid-template-columns: 100px 80px 120px 100px 140px 80px;
     gap: 12px;
-    align-items: stretch;
+    align-items: center;
     margin: 0;
     padding: 0;
     line-height: 0.6;
@@ -1241,25 +1245,33 @@ button.back-btn:hover {
 .team-label-yellow {
     background: #ffd700;
     color: #333;
-    padding: 0px 4px;
+    padding: 4px;
     border-radius: 2px;
     font-weight: 700;
     font-size: 0.8em;
     text-align: center;
-    line-height: 0.8;
+    line-height: 1;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .team-label-orange {
     background: #ff8c00;
     color: white;
-    padding: 0px 4px;
+    padding: 4px;
     border-radius: 2px;
     font-weight: 700;
     font-size: 0.8em;
     text-align: center;
-    line-height: 0.8;
+    line-height: 1;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .number-display {
@@ -1268,15 +1280,19 @@ button.back-btn:hover {
     font-weight: normal;
     color: #000000;
     background: #d3d3d3;
-    padding: 0px 2px;
+    padding: 4px 2px;
     border-radius: 2px;
     text-align: center;
     min-width: 40px;
     letter-spacing: 0.05em;
     text-rendering: optimizeSpeed;
     font-variant-numeric: tabular-nums;
-    line-height: 0.6;
+    line-height: 1;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .time-display {
@@ -1859,17 +1875,25 @@ button.back-btn:hover {
     
     .number-display {
         font-size: 1.6em;
-        padding: 0px 1px;
-        line-height: 0.5;
+        padding: 3px 1px;
+        line-height: 1;
         min-width: 30px;
         margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     
     .scoreboard-container .time-display {
         font-size: 1.8em;
-        padding: 0px 2px;
-        line-height: 0.5;
+        padding: 3px 2px;
+        line-height: 1;
         margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     
     .team-row-b {
@@ -1878,10 +1902,14 @@ button.back-btn:hover {
     
     .team-label-yellow,
     .team-label-orange {
-        padding: 0px 3px;
+        padding: 3px;
         font-size: 0.6em;
-        line-height: 0.7;
+        line-height: 1;
         margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     
     .button-matrix {

@@ -1897,8 +1897,10 @@ button.back-btn:hover {
     }
     
     .display-grid {
-        gap: 3px !important;
+        gap: 2px !important;
         grid-template-rows: auto auto auto !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        width: 100% !important;
     }
     
     .team-labels {
@@ -1960,8 +1962,10 @@ button.back-btn:hover {
     }
     
     .display-grid {
-        gap: 2px !important;
+        gap: 1px !important;
         grid-template-rows: auto auto auto !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        width: 100% !important;
     }
     
     .team-labels {

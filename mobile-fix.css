@@ -1,0 +1,41 @@
+/* Mobile-specific fixes for scoreboard display issues */
+@media screen and (max-width: 768px) {
+    /* Force override all mobile styles for LCD display */
+    .lcd-container .team-row-a,
+    .lcd-container .team-row-b {
+        height: auto !important;
+        min-height: 70px !important;
+        padding: 12px 0 !important;
+        margin: 8px 0 !important;
+        transform: none !important;
+        line-height: normal !important;
+        align-items: center !important;
+        display: grid !important;
+    }
+    
+    .lcd-container .number-display,
+    .lcd-container .time-display {
+        height: auto !important;
+        min-height: 60px !important;
+        padding: 20px 4px !important;
+        line-height: 1.3 !important;
+        font-size: 1.4em !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+        margin: 2px 0 !important;
+    }
+    
+    .lcd-container .team-label-yellow,
+    .lcd-container .team-label-orange {
+        height: auto !important;
+        min-height: 60px !important;
+        padding: 20px 8px !important;
+        margin: 8px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}

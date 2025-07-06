@@ -118,6 +118,7 @@ Contact: kasugars@gmail.com for support/donations
 
 ## Known Issues
 
+- **CRITICAL MOBILE BUG**: Numbers in Team A row are cut off at bottom on mobile devices - multiple CSS approaches have failed
 - Home button color change from green to gray requires browser cache clearing
 - Scoreboard button alignment affected by CSS version conflicts  
 - Multiple cache-busting attempts unsuccessful (inline styles, new files, timestamp versioning)

@@ -1885,34 +1885,53 @@ button.back-btn:hover {
         max-width: 100vw !important;
         transform: none !important;
         margin: 0 !important;
-        padding: 8px !important;
+        padding: 5px !important;
         box-sizing: border-box !important;
     }
     
     .scoreboard-display {
         width: 100% !important;
         max-width: none !important;
+        min-height: 120px !important;
+        padding: 8px !important;
+    }
+    
+    .display-grid {
+        gap: 3px !important;
+        grid-template-rows: auto auto auto !important;
+    }
+    
+    .team-labels {
+        font-size: 0.6rem !important;
+        padding: 2px !important;
+    }
+    
+    .number-display {
+        font-size: 0.9rem !important;
+        padding: 1px !important;
+        min-height: 25px !important;
+    }
+    
+    .time-display {
+        font-size: 0.9rem !important;
+        padding: 1px !important;
+        min-height: 25px !important;
     }
     
     .button-matrix {
         width: 100% !important;
-        padding: 8px !important;
+        padding: 5px !important;
     }
     
     .control-btn {
-        font-size: 0.65rem !important;
-        padding: 8px 4px !important;
-        min-height: 35px !important;
+        font-size: 0.55rem !important;
+        padding: 6px 2px !important;
+        min-height: 32px !important;
     }
     
-    .number-display {
-        font-size: 1.1rem !important;
-        padding: 2px !important;
-    }
-    
-    .time-display {
-        font-size: 1.3rem !important;
-        padding: 3px !important;
+    .labels-row {
+        font-size: 0.5rem !important;
+        margin-bottom: 4px !important;
     }
 }
 
@@ -1929,34 +1948,53 @@ button.back-btn:hover {
         max-width: 100vw !important;
         transform: none !important;
         margin: 0 !important;
-        padding: 6px !important;
+        padding: 3px !important;
         box-sizing: border-box !important;
     }
     
     .scoreboard-display {
         width: 100% !important;
         max-width: none !important;
+        min-height: 80px !important;
+        padding: 4px !important;
+    }
+    
+    .display-grid {
+        gap: 2px !important;
+        grid-template-rows: auto auto auto !important;
+    }
+    
+    .team-labels {
+        font-size: 0.5rem !important;
+        padding: 1px !important;
+    }
+    
+    .number-display {
+        font-size: 0.75rem !important;
+        padding: 1px !important;
+        min-height: 20px !important;
+    }
+    
+    .time-display {
+        font-size: 0.75rem !important;
+        padding: 1px !important;
+        min-height: 20px !important;
     }
     
     .button-matrix {
         width: 100% !important;
-        padding: 6px !important;
+        padding: 3px !important;
     }
     
     .control-btn {
-        font-size: 0.6rem !important;
-        padding: 6px 3px !important;
-        min-height: 30px !important;
+        font-size: 0.45rem !important;
+        padding: 4px 1px !important;
+        min-height: 25px !important;
     }
     
-    .number-display {
-        font-size: 1rem !important;
-        padding: 2px !important;
-    }
-    
-    .time-display {
-        font-size: 1.2rem !important;
-        padding: 2px !important;
+    .labels-row {
+        font-size: 0.4rem !important;
+        margin-bottom: 2px !important;
     }
 }
 

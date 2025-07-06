@@ -2253,3 +2253,27 @@ button.back-btn:hover {
         font-size: 1.2em;
     }
 }
+
+/* CRITICAL MOBILE HEADER FIX - MUST BE LAST */
+@media screen and (max-width: 768px) {
+    .lcd-screen .lcd-header-row {
+        grid-template-columns: 95px 60px 70px 90px 80px 50px !important;
+        gap: 6px !important;
+        font-size: 0.8rem !important;
+        text-align: center !important;
+        font-weight: bold !important;
+    }
+    
+    .lcd-screen .team-row-a,
+    .lcd-screen .team-row-b {
+        grid-template-columns: 95px 60px 70px 90px 80px 50px !important;
+        gap: 6px !important;
+    }
+    
+    .lcd-screen .number-display,
+    .lcd-screen .time-display {
+        font-size: 1.4rem !important;
+        font-weight: bold !important;
+        text-align: center !important;
+    }
+}

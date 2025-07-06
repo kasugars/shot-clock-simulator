@@ -17,18 +17,18 @@
                 // Apply mobile styles to Team A row
                 const teamARow = document.querySelector('.team-row-a');
                 if (teamARow) {
-                    teamARow.style.cssText = 'min-height: 80px !important; height: auto !important; padding: 15px 0 !important; margin: 10px 0 !important; transform: none !important; align-items: center !important;';
+                    teamARow.style.cssText = 'min-height: 90px !important; height: auto !important; padding: 20px 0 !important; margin: 15px 0 !important; transform: none !important; align-items: center !important;';
                 }
                 
                 // Apply mobile styles to Team A elements
                 const teamADisplays = document.querySelectorAll('.team-row-a .number-display, .team-row-a .time-display');
                 teamADisplays.forEach(display => {
-                    display.style.cssText = 'min-height: 70px !important; height: auto !important; padding: 25px 4px !important; line-height: 1.4 !important; font-size: 1.3em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important;';
+                    display.style.cssText = 'min-height: 80px !important; height: auto !important; padding: 30px 4px !important; line-height: 1.5 !important; font-size: 1.2em !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: visible !important; box-sizing: border-box !important; margin: 5px 0 !important;';
                 });
                 
                 const teamALabel = document.querySelector('.team-row-a .team-label-yellow');
                 if (teamALabel) {
-                    teamALabel.style.cssText = 'min-height: 70px !important; height: auto !important; padding: 25px 8px !important; display: flex !important; align-items: center !important; justify-content: center !important;';
+                    teamALabel.style.cssText = 'min-height: 80px !important; height: auto !important; padding: 30px 8px !important; display: flex !important; align-items: center !important; justify-content: center !important; margin: 5px 0 !important;';
                 }
             } else {
                 // Remove mobile styles on desktop

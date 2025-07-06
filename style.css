@@ -1911,7 +1911,7 @@ button.back-btn:hover {
     
     .team-row-a,
     .team-row-b {
-        grid-template-columns: 70px 45px 55px 65px 60px 35px !important;
+        grid-template-columns: 60px 38px 45px 53px 50px 28px !important;
         gap: 2px !important;
         font-size: 0.6rem !important;
     }

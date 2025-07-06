@@ -1843,6 +1843,33 @@ button.back-btn:hover {
     }
 }
 
+/* Mobile Fix for Number Cutoff - Priority Override */
+@media screen and (max-width: 768px) {
+    .lcd-screen .team-row-a,
+    .lcd-screen .team-row-b {
+        height: auto !important;
+        min-height: 55px !important;
+        padding: 8px 0 !important;
+        margin: 6px 0 !important;
+    }
+    
+    .lcd-screen .team-row-b {
+        transform: none !important;
+    }
+    
+    .lcd-screen .number-display,
+    .lcd-screen .time-display {
+        height: auto !important;
+        min-height: 50px !important;
+        padding: 15px 3px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1.2 !important;
+        overflow: visible !important;
+    }
+}
+
 /* Scoreboard Mobile Responsive */
 @media (max-width: 768px) {
     .scoreboard-container {

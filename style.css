@@ -1893,22 +1893,31 @@ button.back-btn:hover {
         margin: 0 auto 30px auto;
     }
     
-    /* Preserve exact desktop grid layout */
+    /* Match exact desktop LCD grid layout */
     .lcd-header-row {
         display: grid;
-        grid-template-columns: 140px 120px 120px 120px 120px 80px 80px;
-        gap: 8px;
-        font-size: 0.7em;
-        padding: 5px;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px;
+        gap: 12px;
+        font-size: 0.6em;
+        padding: 0px;
         margin: 0;
+        text-align: center;
+        font-weight: 700;
+        color: #333;
+        background: #b0b0b0;
+        border-radius: 2px;
     }
     
     .team-row-a, .team-row-b {
         display: grid;
-        grid-template-columns: 140px 120px 120px 120px 120px 80px 80px;
-        gap: 8px;
+        grid-template-columns: 100px 80px 120px 100px 140px 80px;
+        gap: 12px;
+        align-items: center;
         margin: 0;
         padding: 0;
+        line-height: 0.6;
+        min-height: 45px;
+        height: 45px;
     }
     
     .lcd-screen {
@@ -1917,32 +1926,44 @@ button.back-btn:hover {
     }
     
     .number-display {
-        font-size: 1.8em !important;
-        padding: 20px 8px !important;
-        line-height: 1.4 !important;
-        min-width: 60px;
+        font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
+        font-size: 2.0em;
+        font-weight: normal;
+        color: #000000;
+        background: #d3d3d3;
+        padding: 4px 2px;
+        border-radius: 2px;
+        text-align: center;
+        min-width: 40px;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeSpeed;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
         margin: 0;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: auto !important;
-        min-height: 70px !important;
-        overflow: visible !important;
-        box-sizing: border-box !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     
     .scoreboard-container .time-display {
-        font-size: 2.2em !important;
-        padding: 20px 10px !important;
-        line-height: 1.4 !important;
+        font-family: 'Digital-7 Mono', 'DSEG7 Classic', 'Orbitron', monospace;
+        font-size: 2.4em;
+        font-weight: normal;
+        color: #000000;
+        background: #d3d3d3;
+        padding: 4px 6px;
+        border-radius: 2px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeSpeed;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
         margin: 0;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: auto !important;
-        min-height: 70px !important;
-        overflow: visible !important;
-        box-sizing: border-box !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     
     .team-row-a, .team-row-b {
@@ -1960,17 +1981,36 @@ button.back-btn:hover {
         margin-bottom: 0 !important;
     }
     
-    .team-label-yellow,
-    .team-label-orange {
-        padding: 20px 8px !important;
-        font-size: 0.8em !important;
+    .team-label-yellow {
+        background: #ffd700;
+        color: #333;
+        padding: 4px;
+        border-radius: 2px;
+        font-weight: 700;
+        font-size: 0.8em;
+        text-align: center;
         line-height: 1;
-        margin: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: 70px !important;
-        min-height: 70px !important;
+        margin: 0 0 3px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .team-label-orange {
+        background: #ff8c00;
+        color: white;
+        padding: 4px;
+        border-radius: 2px;
+        font-weight: 700;
+        font-size: 0.8em;
+        text-align: center;
+        line-height: 1;
+        margin: 3px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     
     .button-matrix {
@@ -1981,49 +2021,60 @@ button.back-btn:hover {
         width: auto;
     }
     
-    /* Preserve exact desktop button matrix layout */
+    /* Match exact desktop button matrix layout */
     .labels-row {
         display: grid;
-        grid-template-columns: 120px 100px 100px 100px 100px 100px 100px;
-        gap: 8px;
-        font-size: 0.65em;
-        margin-bottom: 8px;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 0.7em;
+        font-weight: 700;
+        color: #333;
     }
     
     .labels-row-with-offset {
         display: grid;
-        grid-template-columns: 120px 100px 100px 100px 100px 100px 100px;
+        grid-template-columns: 25px repeat(7, 1fr);
         gap: 8px;
-        font-size: 0.65em;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 0.7em;
+        font-weight: 700;
+        color: #333;
+        align-items: center;
     }
     
     .matrix-row-with-label {
         display: grid;
-        grid-template-columns: 120px 100px 100px 100px 100px 100px 100px;
+        grid-template-columns: 25px repeat(7, 1fr);
         gap: 8px;
         margin-bottom: 8px;
+        align-items: center;
     }
     
     .btn-yellow, .btn-orange, .btn-green, .btn-blue, .btn-red, .btn-gray {
-        height: 40px;
-        font-size: 0.65em;
-        padding: 6px 4px;
-        border-width: 3px;
-        min-width: 95px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        border: 4px outset #ccc;
+        border-radius: 8px;
+        font-size: 0.8em;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: center;
+        height: 45px;
+        padding: 6px;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
     }
     
     .row-label {
         font-size: 0.7em;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 4px;
+        font-weight: 700;
+        color: #333;
+        min-width: 25px;
+        text-align: left;
     }
     
     .footer-message {

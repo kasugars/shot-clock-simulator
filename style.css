@@ -1888,9 +1888,9 @@ button.back-btn:hover {
     }
     
     .lcd-container {
-        padding: 15px;
-        border-width: 4px;
-        margin: 0 auto 30px auto;
+        padding: 8px;
+        border-width: 3px;
+        margin: 0 auto 20px auto;
     }
     
     /* Match exact desktop LCD grid layout with perfect alignment */
@@ -1921,10 +1921,10 @@ button.back-btn:hover {
     }
     
     .team-row-b {
-        transform: translateY(0px) !important;
+        transform: none !important;
         min-height: 35px !important;
         height: 35px !important;
-        margin-top: 2px !important;
+        margin-top: 0px !important;
     }
     
     .lcd-screen {
@@ -1976,18 +1976,17 @@ button.back-btn:hover {
     }
     
     .team-row-a, .team-row-b {
-        min-height: 75px !important;
-        height: auto !important;
-        margin-bottom: 10px !important;
+        min-height: 35px !important;
+        height: 35px !important;
+        margin: 0 !important;
         align-items: center !important;
     }
     
     .team-row-b {
         transform: none !important;
-        min-height: 75px !important;
-        height: auto !important;
-        margin-top: 10px !important;
-        margin-bottom: 0 !important;
+        min-height: 35px !important;
+        height: 35px !important;
+        margin: 0 !important;
     }
     
     .team-label-yellow {

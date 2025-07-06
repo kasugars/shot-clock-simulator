@@ -1171,13 +1171,14 @@ button.back-btn:hover {
     font-weight: normal;
     color: #000000 !important;
     background: #d3d3d3;
-    padding: 8px;
+    padding: 2px 6px;
     border-radius: 6px;
     text-align: center;
     text-shadow: none !important;
     letter-spacing: 0.05em;
     text-rendering: optimizeSpeed;
     font-variant-numeric: tabular-nums;
+    line-height: 1;
 }
 
 .scoreboard-title {
@@ -1198,7 +1199,7 @@ button.back-btn:hover {
     border: 6px solid #666;
     border-radius: 10px 10px 0 0;
     border-bottom: none;
-    padding: 12px;
+    padding: 8px 12px 6px 12px;
 }
 
 .lcd-header-row {
@@ -1209,15 +1210,15 @@ button.back-btn:hover {
     font-size: 0.7em;
     font-weight: 700;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     background: #b0b0b0;
-    padding: 6px;
+    padding: 4px;
     border-radius: 5px;
 }
 
 .lcd-screen {
     background: #d3d3d3;
-    padding: 12px;
+    padding: 6px 12px;
     border-radius: 8px;
 }
 
@@ -1226,7 +1227,7 @@ button.back-btn:hover {
     grid-template-columns: 100px 80px 120px 100px 140px 80px;
     gap: 15px;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 .team-label-yellow {
@@ -1255,13 +1256,14 @@ button.back-btn:hover {
     font-weight: normal;
     color: #000000;
     background: #d3d3d3;
-    padding: 5px;
+    padding: 2px 4px;
     border-radius: 4px;
     text-align: center;
     min-width: 50px;
     letter-spacing: 0.05em;
     text-rendering: optimizeSpeed;
     font-variant-numeric: tabular-nums;
+    line-height: 1;
 }
 
 .time-display {
@@ -1820,34 +1822,36 @@ button.back-btn:hover {
     }
     
     .lcd-container {
-        padding: 8px;
+        padding: 6px 8px 4px 8px;
         border-width: 4px;
     }
     
     .lcd-header-row {
         font-size: 0.6em;
-        padding: 4px;
-        margin-bottom: 6px;
+        padding: 3px;
+        margin-bottom: 3px;
         gap: 10px;
     }
     
     .team-row-a, .team-row-b {
-        margin-bottom: 6px;
+        margin-bottom: 1px;
         gap: 10px;
     }
     
     .lcd-screen {
-        padding: 8px;
+        padding: 4px 8px;
     }
     
     .number-display {
         font-size: 1.8em;
-        padding: 3px;
+        padding: 1px 3px;
+        line-height: 1;
     }
     
     .scoreboard-container .time-display {
         font-size: 2.0em;
-        padding: 5px;
+        padding: 1px 4px;
+        line-height: 1;
     }
     
     .button-matrix {

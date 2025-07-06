@@ -1929,10 +1929,7 @@ button.back-btn:hover {
         grid-template-rows: repeat(2, 1fr);
     }
     
-    .time-display {
-        grid-column: 1;
-        grid-row: 3;
-    }
+
     
     .bottom-labels {
         grid-column: 1;

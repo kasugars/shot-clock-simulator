@@ -1872,26 +1872,26 @@ button.back-btn:hover {
 
 }
 
-/* Mobile Only - Portrait */
+/* Mobile Only - Portrait: Scale desktop to fit */
 @media screen and (max-width: 768px) and (orientation: portrait) {
     .scoreboard-container {
-        transform: scale(0.85) !important;
+        transform: scale(0.75) !important;
         transform-origin: top center !important;
-        width: 117.6% !important;
-        margin-left: -8.8% !important;
-        margin-bottom: -15vh !important;
+        width: 133% !important;
+        margin-left: -16.5% !important;
+        margin-bottom: -20vh !important;
         overflow-x: visible !important;
     }
 }
 
-/* Mobile Only - Landscape */
+/* Mobile Only - Landscape: Scale desktop to fit */
 @media screen and (max-width: 768px) and (orientation: landscape) {
     .scoreboard-container {
-        transform: scale(0.75) !important;
+        transform: scale(0.65) !important;
         transform-origin: top center !important;
-        width: 133.3% !important;
-        margin-left: -16.65% !important;
-        margin-bottom: -25vh !important;
+        width: 154% !important;
+        margin-left: -27% !important;
+        margin-bottom: -35vh !important;
         overflow-x: visible !important;
     }
 }

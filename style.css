@@ -1905,45 +1905,46 @@ button.back-btn:hover {
     }
     
     .number-display {
-        font-size: 1.5em !important;
-        padding: 12px 2px !important;
-        line-height: 1 !important;
+        font-size: 1.4em !important;
+        padding: 15px 2px !important;
+        line-height: 1.2 !important;
         min-width: 30px;
         margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 48px !important;
-        min-height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: auto !important;
+        min-height: 55px !important;
         overflow: visible !important;
         box-sizing: border-box !important;
     }
     
     .scoreboard-container .time-display {
-        font-size: 1.7em !important;
-        padding: 12px 3px !important;
-        line-height: 1 !important;
+        font-size: 1.6em !important;
+        padding: 15px 3px !important;
+        line-height: 1.2 !important;
         margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 48px !important;
-        min-height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: auto !important;
+        min-height: 55px !important;
         overflow: visible !important;
         box-sizing: border-box !important;
     }
     
     .team-row-a, .team-row-b {
-        min-height: 50px !important;
-        height: 50px !important;
-        margin-bottom: 8px !important;
+        min-height: 60px !important;
+        height: auto !important;
+        margin-bottom: 10px !important;
+        align-items: center !important;
     }
     
     .team-row-b {
-        transform: translateY(0px) !important;
-        min-height: 50px !important;
-        height: 50px !important;
-        margin-top: 8px !important;
+        transform: none !important;
+        min-height: 60px !important;
+        height: auto !important;
+        margin-top: 10px !important;
         margin-bottom: 0 !important;
     }
     

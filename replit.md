@@ -114,6 +114,10 @@ This project is a basketball training suite featuring two applications: a shot c
 - July 06, 2025. **UPDATED**: Replaced PayPal donation links with Buy Me a Coffee widget across all pages (index.html, shot-clock.html, shot-clock-fixed.html, scoreboard.html)
 - July 06, 2025. **IMPLEMENTED**: Mobile-responsive solution for scoreboard trainer - shows helpful desktop view instructions on mobile devices instead of problematic mobile layout
 - July 06, 2025. **PREPARED**: Complete deployment package for GitHub and Netlify hosting with README, configuration files, and documentation
+- July 12, 2025. **ENHANCED**: Improved B Dark row number positioning (moved from -13% to -8% vertical alignment)
+- July 12, 2025. **CLEANED**: Removed "CONTROLS" and "TIMER" text labels for cleaner interface
+- July 12, 2025. **UPDATED**: Changed default timer from 20:00 to 10:00 for new games and quarters
+- July 12, 2025. **FIXED**: Synchronized HTML display and JavaScript logic to show 10:00 as default timer value
 
 ## User Preferences
 

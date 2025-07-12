@@ -9,7 +9,7 @@ class ScoreboardController {
             foulsB: 0,
             timeoutsA: 2,
             timeoutsB: 2,
-            gameTime: 20 * 60, // 20 minutes in seconds
+            gameTime: 10 * 60, // 10 minutes in seconds
             isRunning: false,
             possession: 'A', // 'A' or 'B'
             indicatorA: false,
@@ -189,6 +189,9 @@ class ScoreboardController {
         this.gameState.foulsA = 0;
         this.gameState.foulsB = 0;
         
+        // Reset timer to 10:00 for new period
+        this.gameState.gameTime = 10 * 60;
+        
         // Reset timeouts based on period
         if (this.gameState.period === 3) {
             // Period 3: Reset timeouts to 3 for both teams
@@ -238,7 +241,7 @@ class ScoreboardController {
     resetTimer() {
         this.saveStateToHistory('timer_reset', {});
         this.holdTimer();
-        this.gameState.gameTime = 20 * 60; // Reset to 20 minutes
+        this.gameState.gameTime = 10 * 60; // Reset to 10 minutes
         this.updateDisplay();
         this.playButtonSound();
     }
@@ -305,7 +308,7 @@ class ScoreboardController {
             foulsB: 0,
             timeoutsA: 2,
             timeoutsB: 2,
-            gameTime: 20 * 60,
+            gameTime: 10 * 60,
             isRunning: false,
             possession: 'A',
             indicatorA: false,

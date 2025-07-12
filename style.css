@@ -1189,6 +1189,7 @@ button.back-btn:hover {
     border-radius: 10px 10px 0 0;
     border-bottom: none;
     padding: 1px 4px 0px 4px;
+    transform: scaleY(1.1);
 }
 
 .lcd-header-row {
@@ -1196,13 +1197,17 @@ button.back-btn:hover {
     grid-template-columns: 100px 80px 120px 100px 140px 80px;
     gap: 12px;
     text-align: center;
-    font-size: 0.6em;
-    font-weight: 700;
-    color: #333;
+    font-size: 0.7em;
+    font-weight: 900;
+    color: #000;
     margin: 0;
-    background: #b0b0b0;
-    padding: 0px;
+    background: #a8a8a8;
+    padding: 6px 0;
     border-radius: 2px;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 10;
 }
 
 .lcd-screen {
@@ -1220,14 +1225,16 @@ button.back-btn:hover {
     margin: 0;
     padding: 0;
     line-height: 0.6;
-    min-height: 45px;
-    height: 45px;
+    min-height: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 1;
 }
 
 .team-row-b {
     transform: translateY(-4px);
-    min-height: 45px;
-    height: 45px;
+    min-height: 40px;
+    height: 40px;
 }
 
 .team-label-yellow {
@@ -1281,6 +1288,12 @@ button.back-btn:hover {
     align-items: center;
     justify-content: center;
     height: 100%;
+    transform: translateY(-20%);
+}
+
+/* Specific positioning for B Dark row numbers */
+.team-row-b .number-display {
+    transform: translateY(-8%);
 }
 
 .time-display {

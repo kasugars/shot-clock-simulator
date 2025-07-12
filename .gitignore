@@ -36,6 +36,9 @@ tmp/
 *.backup
 *.bak
 *.old
+*_working.*
+*-fixed.*
+temp.*
 
 # Local environment files
 .env

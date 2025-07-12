@@ -84,7 +84,7 @@
                     <div class="number-display" id="foulsA">0</div>
                     <div class="number-display" id="timeoutsA">0</div>
                     <div class="time-display">
-                        <span id="minutes">20</span>:<span id="seconds">00</span>
+                        <span id="minutes">10</span>:<span id="seconds">00</span>
                     </div>
                     <div class="number-display" id="period">1</div>
                 </div>
@@ -116,7 +116,7 @@
                 <span class="wrapped-label">INDICATOR<br>(SUBS)</span>
                 <span>ERROR</span>
                 <span>POSSESSION</span>
-                <span>CONTROLS</span>
+                <span></span>
             </div>
             
             <!-- Row 1: Team A -->
@@ -145,7 +145,7 @@
             
             <!-- Row 3: Bottom Controls -->
             <div class="matrix-row-with-label">
-                <span class="row-label">TIMER</span>
+                <span class="row-label"></span>
                 <button class="btn-green" onclick="resetTimer()">RESET</button>
                 <button class="btn-green" onclick="adjustTime('min', 1)">+MIN</button>
                 <button class="btn-green" onclick="adjustTime('min', -1)">-MIN</button>
@@ -169,7 +169,7 @@
 
     </div>
 
-    <script src="scoreboard.js"></script>
+    <script src="scoreboard.js?v=2"></script>
     <script>
         function goToMenu() {
             window.location.href = 'index.html';

@@ -132,10 +132,16 @@ class ShotClockTimer {
                 // Auto-start if button was held (reset already happened)
                 setTimeout(() => this.startTimer(), 50);
             } else {
-                // Quick press - reset without auto-start
+                // Quick press - reset and auto-start if clock was running
+                const wasRunning = this.isRunning;
                 this.resetTimer(24);
                 this.addButtonFeedback(this.resetBtn);
                 this.playButtonSound();
+                
+                if (wasRunning) {
+                    // Auto-start if clock was running before reset
+                    setTimeout(() => this.startTimer(), 50);
+                }
             }
         });
 
@@ -174,10 +180,16 @@ class ShotClockTimer {
                 // Auto-start if button was held (reset already happened)
                 setTimeout(() => this.startTimer(), 50);
             } else {
-                // Quick press - reset without auto-start
+                // Quick press - reset and auto-start if clock was running
+                const wasRunning = this.isRunning;
                 this.resetTimer(24);
                 this.addButtonFeedback(this.resetBtn);
                 this.playButtonSound();
+                
+                if (wasRunning) {
+                    // Auto-start if clock was running before reset
+                    setTimeout(() => this.startTimer(), 50);
+                }
             }
         });
         
@@ -204,10 +216,16 @@ class ShotClockTimer {
                 // Auto-start if button was held (reset already happened)
                 setTimeout(() => this.startTimer(), 50);
             } else {
-                // Quick press - reset without auto-start
+                // Quick press - reset and auto-start if clock was running
+                const wasRunning = this.isRunning;
                 this.resetTimer(14);
                 this.addButtonFeedback(this.altResetBtn);
                 this.playButtonSound();
+                
+                if (wasRunning) {
+                    // Auto-start if clock was running before reset
+                    setTimeout(() => this.startTimer(), 50);
+                }
             }
         });
 
@@ -239,10 +257,16 @@ class ShotClockTimer {
                 // Auto-start if button was held (reset already happened)
                 setTimeout(() => this.startTimer(), 50);
             } else {
-                // Quick press - reset without auto-start
+                // Quick press - reset and auto-start if clock was running
+                const wasRunning = this.isRunning;
                 this.resetTimer(14);
                 this.addButtonFeedback(this.altResetBtn);
                 this.playButtonSound();
+                
+                if (wasRunning) {
+                    // Auto-start if clock was running before reset
+                    setTimeout(() => this.startTimer(), 50);
+                }
             }
         });
         
@@ -263,7 +287,7 @@ class ShotClockTimer {
                     this.stopTimer();
                     this.playButtonSound();
                     break;
-                case 'KeyS':
+                case 'KeyF':
                     e.preventDefault();
                     if (this.isStopPressed) {
                         // Add 1 second when A (STOP) is held
@@ -274,7 +298,7 @@ class ShotClockTimer {
                     this.addButtonFeedback(this.startBtn);
                     this.playButtonSound();
                     break;
-                case 'KeyD':
+                case 'KeyJ':
                     e.preventDefault();
                     if (!this.keyboardResetHeld) {
                         this.keyboardResetStartTime = Date.now();
@@ -291,7 +315,7 @@ class ShotClockTimer {
                         }, 300);
                     }
                     break;
-                case 'KeyF':
+                case 'Semicolon':
                     e.preventDefault();
                     if (!this.keyboardAltResetHeld) {
                         this.keyboardAltResetStartTime = Date.now();
@@ -326,7 +350,7 @@ class ShotClockTimer {
                     this.isStopPressed = false;
                     this.stopBtn.classList.remove('pressed');
                     break;
-                case 'KeyD':
+                case 'KeyJ':
                     if (this.keyboardResetHeld) {
                         clearTimeout(this.keyboardResetTimer);
                         
@@ -339,16 +363,22 @@ class ShotClockTimer {
                             // Auto-start if key was held (reset already happened during hold)
                             setTimeout(() => this.startTimer(), 50);
                         } else {
-                            // Quick press - reset without auto-start
+                            // Quick press - reset and auto-start if clock was running
+                            const wasRunning = this.isRunning;
                             this.resetTimer(24);
                             this.addButtonFeedback(this.resetBtn);
                             this.playButtonSound();
+                            
+                            if (wasRunning) {
+                                // Auto-start if clock was running before reset
+                                setTimeout(() => this.startTimer(), 50);
+                            }
                         }
                         this.keyboardResetHeld = false;
                         this.keyboardResetTriggered = false;
                     }
                     break;
-                case 'KeyF':
+                case 'Semicolon':
                     if (this.keyboardAltResetHeld) {
                         clearTimeout(this.keyboardAltResetTimer);
                         
@@ -356,10 +386,16 @@ class ShotClockTimer {
                             // Auto-start if key was held (reset already happened during hold)
                             setTimeout(() => this.startTimer(), 50);
                         } else {
-                            // Quick press - reset without auto-start
+                            // Quick press - reset and auto-start if clock was running
+                            const wasRunning = this.isRunning;
                             this.resetTimer(14);
                             this.addButtonFeedback(this.altResetBtn);
                             this.playButtonSound();
+                            
+                            if (wasRunning) {
+                                // Auto-start if clock was running before reset
+                                setTimeout(() => this.startTimer(), 50);
+                            }
                         }
                         this.keyboardAltResetHeld = false;
                         this.keyboardAltResetTriggered = false;

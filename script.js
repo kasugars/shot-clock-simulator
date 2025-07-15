@@ -281,16 +281,18 @@ class ShotClockTimer {
         document.addEventListener('keydown', (e) => {
             switch(e.code) {
                 case 'KeyA':
+                case 'KeyS':
                     e.preventDefault();
                     this.isStopPressed = true;
                     this.stopBtn.classList.add('pressed');
                     this.stopTimer();
                     this.playButtonSound();
                     break;
+                case 'KeyD':
                 case 'KeyF':
                     e.preventDefault();
                     if (this.isStopPressed) {
-                        // Add 1 second when A (STOP) is held
+                        // Add 1 second when A/S (STOP) is held
                         this.adjustTime(1);
                     } else {
                         this.startTimer();
@@ -298,7 +300,8 @@ class ShotClockTimer {
                     this.addButtonFeedback(this.startBtn);
                     this.playButtonSound();
                     break;
-                case 'KeyJ':
+                case 'KeyG':
+                case 'KeyH':
                     e.preventDefault();
                     if (!this.keyboardResetHeld) {
                         this.keyboardResetStartTime = Date.now();
@@ -315,7 +318,9 @@ class ShotClockTimer {
                         }, 300);
                     }
                     break;
-                case 'Semicolon':
+                case 'KeyJ':
+                case 'KeyK':
+                case 'KeyL':
                     e.preventDefault();
                     if (!this.keyboardAltResetHeld) {
                         this.keyboardAltResetStartTime = Date.now();
@@ -347,15 +352,17 @@ class ShotClockTimer {
         document.addEventListener('keyup', (e) => {
             switch(e.code) {
                 case 'KeyA':
+                case 'KeyS':
                     this.isStopPressed = false;
                     this.stopBtn.classList.remove('pressed');
                     break;
-                case 'KeyJ':
+                case 'KeyG':
+                case 'KeyH':
                     if (this.keyboardResetHeld) {
                         clearTimeout(this.keyboardResetTimer);
                         
                         if (this.isStopPressed) {
-                            // Subtract 1 second when A (STOP) is held
+                            // Subtract 1 second when A/S (STOP) is held
                             this.adjustTime(-1);
                             this.addButtonFeedback(this.resetBtn);
                             this.playButtonSound();
@@ -378,7 +385,9 @@ class ShotClockTimer {
                         this.keyboardResetTriggered = false;
                     }
                     break;
-                case 'Semicolon':
+                case 'KeyJ':
+                case 'KeyK':
+                case 'KeyL':
                     if (this.keyboardAltResetHeld) {
                         clearTimeout(this.keyboardAltResetTimer);
                         
